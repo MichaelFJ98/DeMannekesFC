@@ -1,4 +1,19 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/Oswald-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("./assets/fonts/Oswald-Light.ttf") format("truetype");
+  font-weight: lighter;
+}
+
 .main {
-    background: linear-gradient(to bottom, #333333, #000000);
+    background: black;
     color: #ffffff;
   }
+
+
+  /* add new scroll + better design */

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Nav.css";
 
+import { Link, animateScroll as scroll } from "react-scroll";
+
 export default function Nav() {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
@@ -17,16 +19,27 @@ export default function Nav() {
   }, [prevScrollPos]);
 
   return (
-    <nav className={`navbar ${visible ? "" : "hidden"}`}>
-      <a href="/" id="navbar-logo">
+    <nav id="home" className={`navbar ${visible ? "" : "hidden"}`}>
+      <a
+        href="#"
+        className="navbar-logo-link"
+        onClick={() => scroll.scrollToTop()}
+      >
         PORTFOLIO
       </a>
       <div className="navbar-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <Link to="about" smooth={true} duration={500}>
+          About
+        </Link>
+        <Link to="portfolio" smooth={true} duration={500}>
+          Portfolio
+        </Link>
+        <Link to="services" smooth={true} duration={500}>
+          Services
+        </Link>
+        <Link to="contact" smooth={true} duration={500}>
+          Contact
+        </Link>
       </div>
     </nav>
   );

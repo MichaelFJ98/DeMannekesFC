@@ -1,0 +1,41 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url('../../assets/fonts/Oswald-Bold.ttf') format('truetype');
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: 'Oswald';
+    src: url('../../assets/fonts/Oswald-Light.ttf') format('truetype');
+    font-weight: lighter;
+  }
+
+.navbar {
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .navbar a {
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+  }
+
+  #navbar-logo{
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 32px;
+  }
+
+  .navbar-links{
+    font-weight: lighter;
+    font-size: 24px;
+  }
+
+  .navbar a + a {
+    margin-left: 24px;
+  }
+  

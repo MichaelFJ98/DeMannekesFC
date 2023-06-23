@@ -9,12 +9,14 @@ body {
   justify-content: space-around;
   align-items: center;
   padding: 10px;
-  background-color: #333;
+  background-color: #0F0F0F;
+  border-bottom: 1px solid #FF5B66;
   color: white;
   position: sticky;
   top: 0;
   z-index: 999;
   transition: transform 0.3s ease;
+  height: 4rem;
 }
 
 .navbar-logo-link {
@@ -53,17 +55,6 @@ body {
   color: white;
 }
 
-.section:nth-child(even) {
-  background-color: #333;
-}
-
-.section:nth-child(odd) {
-  background-color: #555;
-}
-
-.section-content {
-  text-align: center;
-}
 
 .navbar a + a {
   margin-left: 24px;

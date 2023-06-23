@@ -10,8 +10,8 @@ export default function About() {
         <h1>Based in Belgium.</h1>
       </div>
       <div id="pictures">
-        <img src="/assets/images/Bryan.png" alt="Bryan" width="200px"></img>
-        <img src="/assets/images/Michel.png" alt="Michael" width="200px"></img>
+        <img src="/assets/images/Bryan.png" alt="Bryan" width="250px"></img>
+        <img src="/assets/images/Michel.png" alt="Michael" width="250px"></img>
       </div>
     </div>
   );

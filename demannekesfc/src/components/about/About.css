@@ -1,0 +1,29 @@
+#about h1,h2,h3 {
+    margin: 0;
+    font-family: "Oswald", sans-serif;
+}
+
+#about {
+    color: white;
+    background: #0F0F0F;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+#about #titles h1:nth-child(3){
+    color: #FF5B66;
+}
+
+#about #titles {
+    text-align: left;
+}
+
+#about #titles p {
+    margin-bottom: 0.1em;
+}
+
+#about p {
+    color: #9A999B;
+}

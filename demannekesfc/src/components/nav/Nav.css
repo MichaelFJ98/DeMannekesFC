@@ -22,7 +22,7 @@ body {
   letter-spacing: 5px;
   font-size: 32px;
   text-decoration: none;
-  color: white;
+  color: #FF5B66;
 }
 
 .navbar-links {
@@ -41,7 +41,7 @@ body {
 .navbar-links a:hover,
 .navbar-links a:active,
 .navbar-links a:focus {
-  color: #ffca28;
+  color: #FF5B66;
 }
 
 .section {

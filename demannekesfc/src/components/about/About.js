@@ -22,8 +22,8 @@ export default function About() {
         </div>
       </div>
       <div id="buttons">
-        <button>Hire Us</button>
-        <button>Learn More</button>
+        <button>Hire us</button>
+        <button>Learn more</button>
       </div>
     </div>
   );

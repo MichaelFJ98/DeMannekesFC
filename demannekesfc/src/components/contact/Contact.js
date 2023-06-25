@@ -1,6 +1,17 @@
 import "./Contact.css";
 
 export default function Contact() {
+
+  const handleEmailClick = () => {
+    const emailAddress = "info@mannekes.be";
+    navigator.clipboard.writeText(emailAddress);
+    window.location.href = `mailto:${emailAddress}`;
+  };
+
+  const handleInstagramClick = () => {
+    window.open("https://www.instagram.com/bryan_langhendries");
+  };
+
   return (
     <div id="contact">
       <div id="text">
@@ -18,9 +29,9 @@ export default function Contact() {
 
       <div id="info">
         <small>EMAIL</small>
-        <p>Info@mannekes.be</p>
+        <p onClick={handleEmailClick}>Info@mannekes.be</p>
         <small>INSTAGRAM</small>
-        <p>@Mannekes</p>
+        <p onClick={handleInstagramClick}>@Mannekes</p>
       </div>
       <div id="logo">
         <img src="/assets/images/Logo.png"></img>

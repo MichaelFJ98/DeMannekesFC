@@ -42,7 +42,6 @@ button {
   justify-self: start;
   display: flex;
   align-items: start;
-  width: 65%;
 }
 
 #about #buttons button {

@@ -67,6 +67,11 @@
   font-size: 1.5rem;
 }
 
+#contact #info p:hover {
+  cursor: pointer;
+  color: #ff5b66;
+}
+
 #contact #form {
   grid-area: input;
   display: flex;

@@ -1,0 +1,53 @@
+.services {
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "title title"
+    "service service";
+}
+
+.services h1,
+h5,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.services #text {
+  grid-area: title;
+  text-align: center;
+  font-size: 3.5rem;
+  align-self: center;
+}
+
+.services #list {
+  font-size: 2rem;
+  grid-area: service;
+  align-self: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.services #list div {
+}
+
+.services #list .logo,
+h5 {
+  font-size: 3rem;
+}
+
+.services #list div {
+  border-radius: 1rem;
+  text-align: center;
+  padding: 3rem;
+  background-color: transparent;
+  color: white;
+  border: 1px solid #ff5b66;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in, border-color 0.2s ease-in;
+}
+
+.services #list div:hover {
+  background-color: #ff5b66;
+  border-color: white;
+}

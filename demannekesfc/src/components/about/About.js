@@ -1,30 +1,23 @@
-import "./About.css";
+import { useState } from 'react'
+import { Dialog } from '@headlessui/react'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
-export default function About() {
+
+
+export default function Example() {
+
   return (
-    <div id="about">
-      <div id="titles">
-        <p>Dreams To Reality</p>
-        <h1>Hi, We are Bryan And Michael</h1>
-        <h1>Full Stack Developers</h1>
-        <h1>Based in Belgium.</h1>
-      </div>
-      <div id="pictures">
-        <div id="bryan-wrapper">
-          <img src="/assets/images/Bryan.png" alt="Bryan" width="250px"></img>
-        </div>
-        <div id="michael-wrapper">
-          <img
-            src="/assets/images/Michel.png"
-            alt="Michael"
-            width="250px"
-          ></img>
-        </div>
-      </div>
-      <div id="buttons">
-        <button>Hire us</button>
-        <button>Learn more</button>
-      </div>
+    <div className="flex bg-zinc-100 h-screen flex-row items-center justify-around">
+      <div className=''>
+        <p className='text-sm font-semibold leading-6 text-gray-400'>Dreams To Reality</p>
+        <h1 className='text-2xl font-bold tracking-tight text-stone-950 sm:text-6xl'>Hi, We are Bryan and Michael</h1>
+        <h1 className='text-2xl font-bold tracking-tight text-blue-500 sm:text-6xl'>Full-Stack Developers</h1>
+        <h1 className='text-2xl font-bold tracking-tight  text-stone-950 sm:text-6xl'>Based In Belgium.</h1>
+        <button class="bg-transparent hover:bg-blue-500 text-stone-950 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        Button
+        </button>
+        <button></button>
+      </div> 
     </div>
-  );
+  )
 }

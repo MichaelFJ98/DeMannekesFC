@@ -29,7 +29,7 @@ export default function Nav() {
           className="flex items-center cursor-pointer"
         >
           <span className="hover:text-blue-700 self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            <img src="assets/images/Dev.png"/>
+            Portfolio
           </span>
         </Link>
         <button

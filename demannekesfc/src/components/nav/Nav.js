@@ -25,7 +25,7 @@ export default function Nav() {
         className="navbar-logo-link"
         onClick={() => scroll.scrollToTop()}
       >
-        PORTFOLIO
+        <img src="assets/images/Dev.png"/>
       </a>
       <div className="navbar-links">
         <Link to="about" smooth={true} duration={500}>

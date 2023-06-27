@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import "./About.css"
 
 
 
@@ -8,11 +9,12 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 export default function Example() {
 
   return (
-    <div className="flex bg-zinc-100 h-screen flex-col items-center justify-center gap-6">
+    <div id="about" className="flex bg-blue-50 h-screen flex-col items-center justify-center gap-6">
       <div className='text-center'>
+        
         <p className='text-sm font-sans font-medium italic leading-6 text-gray-400 '>Dreams to Reality</p>
-        <h1 className='text-2xl font-bold tracking-tight text-stone-950 sm:text-6xl '>Hi, We are Bryan and Michael</h1>
-        <h1 className='py-2 text-2xl font-mono font-bold tracking-tight text-blue-500 sm:text-6xl overflow-hidden whitespace-nowrap animate-typing border-r-2 border-black'>Full-Stack Developers</h1>
+        <h1 className=' text-2xl font-bold tracking-tight text-stone-950 sm:text-6xl '>Hi, We are Bryan and Michael</h1>
+        <h1 className='inline-block overflow-hidden whitespace-nowrap font-mono font-bold text-2xl py-2 tracking-tight text-blue-500 sm:text-6xl animate-typing border-r-2 border-black'>Full-Stack Developers</h1>
         <h1 className='text-2xl font-bold tracking-tight  text-stone-950 sm:text-6xl'>Based in Belgium.</h1>
       </div> 
       <div className='flex flex-row gap-4 items-center'>

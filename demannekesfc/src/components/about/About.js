@@ -9,7 +9,7 @@ import "./About.css"
 export default function Example() {
 
   return (
-    <div id="about" className="flex bg-blue-50 h-screen flex-col items-center justify-center gap-6">
+    <div id="about" className="flex h-screen flex-col items-center justify-center gap-6">
       <div className='text-center'>
         
         <p className='text-sm font-sans font-medium italic leading-6 text-gray-400 '>Dreams to Reality</p>

@@ -18,19 +18,17 @@ export default function Nav() {
 
   return (
     <nav
-      className={`navbar bg-black fixed top-0 w-full bg-transparent transition-opacity ${
+      className={`navbar shadow drop-shadow-2xl bg-black fixed top-0 w-full bg-transparent transition-opacity ${
         visible ? "opacity-100" : "opacity-0"
       }`}
-      style={{ zIndex: 999 }}
+      style={{ zIndex: 999, boxShadow: "0 2px 6px rgba(59, 130, 246, 0.5)" }}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
           onClick={() => scroll.scrollToTop()}
           className="flex items-center cursor-pointer"
         >
-          <span className="hover:text-blue-700 self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            <img src="assets/images/Dev.png"/>
-          </span>
+          <img src="assets/images/Dev.png" />
         </Link>
         <button
           data-collapse-toggle="navbar-default"

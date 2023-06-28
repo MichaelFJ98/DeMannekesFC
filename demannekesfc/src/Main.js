@@ -2,9 +2,9 @@ import "./Main.css";
 import Nav from "./components/nav/Nav.js";
 import About from "./components/about/About.js";
 import Portfolio from "./components/portfolio/Portfolio.js";
-import Services from "./components/services/Services";
+import Pricing from "./components/pricing/Pricing.js";
 import Contact from "./components/contact/Contact.js";
-import Footer from "./components/footer/Footer";
+import Footer from "./components/footer/Footer.js";
 
 export default function Main() {
   return (
@@ -13,7 +13,7 @@ export default function Main() {
         <Nav />
         <About />
         <Portfolio />
-        <Services />
+        <Pricing />
         <Contact />
         <Footer />
       </div>

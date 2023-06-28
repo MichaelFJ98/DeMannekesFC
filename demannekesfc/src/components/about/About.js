@@ -1,15 +1,7 @@
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-import "./About.css"
-
-
-
-
-export default function Example() {
+export default function Home() {
 
   return (
-    <div id="about" className="flex h-screen flex-col items-center justify-center gap-6">
+    <div id="home" className="flex h-screen flex-col items-center justify-center gap-6">
       <div className='text-center'>
         
         <p className='text-sm font-sans font-medium italic leading-6 text-gray-400 '>Dreams to Reality</p>

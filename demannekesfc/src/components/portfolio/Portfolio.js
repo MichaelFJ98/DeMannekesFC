@@ -1,5 +1,3 @@
-import "./Portfolio.css";
-
 export default function Portfolio() {
     return (
       <div id="portfolio" className="  bg-blue-50 space-y-6 p-12">

@@ -1,7 +1,3 @@
-import "./Contact.css";
-
-import Form from "../Form.js";
-
 export default function Contact() {
   const handleEmailClick = () => {
     const emailAddress = "info@mannekes.be";

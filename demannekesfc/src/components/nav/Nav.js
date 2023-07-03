@@ -18,22 +18,21 @@ export default function Nav() {
 
   return (
     <nav
-      className={`navbar shadow drop-shadow-2xl bg-black fixed top-0 w-full bg-transparent transition-opacity ${
+      className={`navbar bg-primaryBlue fixed top-0 w-full transition-opacity z-50 ${
         visible ? "opacity-100" : "opacity-0"
       }`}
-      style={{ zIndex: 999, boxShadow: "0 2px 6px rgba(59, 130, 246, 0.5)" }}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <Link
           onClick={() => scroll.scrollToTop()}
           className="flex items-center cursor-pointer"
         >
-          <img src="assets/images/Dev.png" />
+          <img src="assets/images/Dev.png" alt="Logo" />
         </Link>
         <button
           data-collapse-toggle="navbar-default"
           type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+          className="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-white hover:text-primaryBlue focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
           aria-controls="navbar-default"
           aria-expanded="false"
         >
@@ -53,13 +52,13 @@ export default function Nav() {
           </svg>
         </button>
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0">
+          <ul className="font-medium flex flex-col p-0 m-0 md:flex-row md:space-x-8">
             <li>
               <Link
                 to="home"
                 smooth={true}
                 duration={500}
-                className="block py-2 pl-3 pr-4 text-gray-900 cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="cursor-pointer text-white hover:border-b-2 hover:border-white"
               >
                 Home
               </Link>
@@ -69,7 +68,7 @@ export default function Nav() {
                 to="about"
                 smooth={true}
                 duration={500}
-                className="block py-2 pl-3 pr-4 text-gray-900 cursor-pointer rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="cursor-pointer text-white hover:border-b-2 hover:border-white"
               >
                 About
               </Link>
@@ -79,7 +78,7 @@ export default function Nav() {
                 to="portfolio"
                 smooth={true}
                 duration={500}
-                className="block py-2 pl-3 pr-4 cursor-pointer text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="cursor-pointer text-white hover:border-b-2 hover:border-white"
               >
                 Portfolio
               </Link>
@@ -89,7 +88,7 @@ export default function Nav() {
                 to="pricing"
                 smooth={true}
                 duration={500}
-                className="block py-2 cursor-pointer pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className=" cursor-pointer text-white hover:border-b-2 hover:border-white"
               >
                 Pricing
               </Link>
@@ -99,7 +98,7 @@ export default function Nav() {
                 to="contact"
                 smooth={true}
                 duration={500}
-                className="block py-2 pl-3 pr-4 cursor-pointer text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className="cursor-pointer text-white hover:border-b-2 hover:border-white"
               >
                 Contact
               </Link>

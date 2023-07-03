@@ -9,7 +9,7 @@ import AboutUs from "./components/aboutUs/AboutUs.js"
 
 export default function Main() {
   return(
-  <div className="main">
+  <div className="main" id="main">
     <Nav/>
     <About/>
     <AboutUs/>

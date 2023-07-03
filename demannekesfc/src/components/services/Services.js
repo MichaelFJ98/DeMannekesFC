@@ -1,45 +1,55 @@
-import "./Services.css";
+import { GoCommandPalette } from "react-icons/go";
+import { FaLaptopCode } from "react-icons/fa";
+import { FaTools } from "react-icons/fa";
 
-import { FaPaintbrush } from "react-icons/fa6";
-import {BsGraphUpArrow} from "react-icons/bs";
+import { TfiHtml5 } from "react-icons/tfi";
+import { FaCss3Alt } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { FaReact } from "react-icons/fa";
+import { SiTailwindcss } from "react-icons/si";
+import { FaBootstrap } from "react-icons/fa";
 
 export default function Services() {
   return (
-    <div id="Skills" className="bg-blue-950 p-12">
-      <h1 className="text-2xl font-bold tracking-tight text-blue-50 sm:text-6xl text-center pb-6">Our Skillset</h1>
-      
-      <div id="skillBox" className="flex flex-row justify-around">
-        <div id="Frontend" className="bg-blue-50 w-96 h-96 min-h-max rounded-lg text-stone-950 p-4 drop-shadow-lg ">
-          <h1 className="text-2xl font-bold tracking-tight text-stone-950 sm:text-4xl  text-center">Frontend</h1>
-          <ul className="text-center">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Tailwind CSS</li>
-            <li>Boostrap</li>
-          </ul>
+    <div id="skills" className="bg-blue-950 flex flex-row h-screen">
+      <div className="h-full w-1/3 flex flex-col text-white border-r-2">
+        <div className="w-full h-1/4 flex flex-col justify-center items-center">
+          <FaLaptopCode className="text-7xl" />
+          <p>Front End</p>
         </div>
-
-        <div id="Back-end" className="bg-blue-50 w-96 h-96 min-h-max rounded-lg text-stone-950 p-4 drop-shadow-lg ">
-          <h1 className="text-2xl font-bold tracking-tight text-stone-950 sm:text-4xl  text-center">Back-end</h1>
-          <ul className="text-center">
-            <li>.NET</li>
-            <li>NodeJS</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>Express</li>
-            <li>MongoDB</li>
-            <li>FireBase</li>
-          </ul>
+        <div className="w-full h-1/4 flex flex-col justify-center items-center">
+          <GoCommandPalette className="text-7xl" />
+          <p>Back End</p>
         </div>
-
-        <div id="Other" className="bg-blue-50 w-96 h-96 min-h-max rounded-lg text-stone-950 p-4 drop-shadow-lg ">
-          <h1 className="text-2xl font-bold tracking-tight text-stone-950 sm:text-4xl  text-center">Other</h1>
-          <ul className="text-center">
-            <li>Git</li>
-            <li>Rest API</li>
-          </ul>
+        <div className="w-full h-1/4 flex flex-col justify-center items-center">
+          <FaTools className="text-7xl" />
+          <p>Tools</p>
+        </div>
+      </div>
+      <div className="text-white h-full w-1/2 flex flex-row flex-wrap justify-auto content-start p-4">
+        <div className="w-40 h-40 border flex flex-col justify-center items-center m-2">
+          <TfiHtml5 className="text-7xl" />
+          <p>HTML</p>
+        </div>
+        <div className="w-40 h-40 border flex flex-col justify-center items-center m-2">
+          <FaCss3Alt className="text-7xl" />
+          <p>CSS</p>
+        </div>
+        <div className="w-40 h-40 border flex flex-col justify-center items-center m-2">
+          <IoLogoJavascript className="text-7xl" />
+          <p>Javascript</p>
+        </div>
+        <div className="w-40 h-40 border flex flex-col justify-center items-center m-2">
+          <FaReact className="text-7xl" />
+          <p>React</p>
+        </div>
+        <div className="w-40 h-40 border flex flex-col justify-center items-center m-2">
+          <SiTailwindcss className="text-7xl" />
+          <p>Tailwind</p>
+        </div>
+        <div className="w-40 h-40 border flex flex-col justify-center items-center m-2">
+          <FaBootstrap className="text-7xl" />
+          <p>Bootstrap</p>
         </div>
       </div>
     </div>

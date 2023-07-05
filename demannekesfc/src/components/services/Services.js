@@ -1,47 +1,122 @@
-import "./Services.css";
+// Skill Icons
+import { GoCommandPalette } from "react-icons/go";
+import { FaLaptopCode } from "react-icons/fa";
+import { FaTools } from "react-icons/fa";
 
-import { FaPaintbrush } from "react-icons/fa6";
-import {BsGraphUpArrow} from "react-icons/bs";
+// Front End Icons
+import { FaHtml5, FaCss3Alt, FaReact, FaBootstrap } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiTailwindcss } from "react-icons/si";
+
+// Back End Icons
+import { SiDotnet, SiExpress, SiMongodb, SiFirebase } from "react-icons/si";
+import { FaNodeJs, FaJava, FaPython } from "react-icons/fa";
+
+
+// Tools Icons
+import { FaGit } from "react-icons/fa";
+import { TbApi } from "react-icons/tb";
+
+
+import { useState } from "react";
+
+const frontIcons = {
+  HTML: FaHtml5,
+  CSS: FaCss3Alt,
+  JavaScript: IoLogoJavascript,
+  React: FaReact,
+  TailwindCSS: SiTailwindcss,
+  Bootstrap: FaBootstrap,
+};
+
+const backIcons = {
+  DotNet: SiDotnet,
+  Express: SiExpress,
+  MongoDB: SiMongodb,
+  Firebase: SiFirebase,
+  NodeJS: FaNodeJs,
+  Java: FaJava,
+  Python: FaPython,
+};
+
+const toolIcons = {
+  Git: FaGit,
+  RESTAPI: TbApi,
+};
 
 export default function Services() {
+  const [selectedSkill, setSelectedSkill] = useState("front");
+
   return (
-    <div id="Skills" className="bg-blue-950 p-12">
-      <h1 className="text-2xl font-bold tracking-tight text-blue-50 sm:text-6xl text-center pb-6">Our Skillset</h1>
-      
-      <div id="skillBox" className="flex flex-row justify-around">
-        <div id="Frontend" className="bg-blue-50 w-96 h-96 min-h-max rounded-lg text-stone-950 p-4 drop-shadow-lg ">
-          <h1 className="text-2xl font-bold tracking-tight text-stone-950 sm:text-4xl  text-center">Frontend</h1>
-          <ul className="text-center">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Tailwind CSS</li>
-            <li>Boostrap</li>
-          </ul>
+    // Main container
+    <div id="skills" className="bg-blue-950 flex flex-col items-center">
+      {/* Title */}
+      <div className="text-white text-3xl md:text-6xl w-full text-center py-4">
+        <h1>SKILLS</h1>
+      </div>
+      {/* Skill list */}
+      <div className="flex flex-col md:flex-row text-white justify-around w-full pb-4 ">
+        <div
+          onClick={() => setSelectedSkill("front")}
+          className={`flex flex-col md:flex-row justify-center md:justify-around items-center cursor-pointer w-full p-2 ${
+            selectedSkill === "front" ? "border-2 rounded bg-primaryBlue" : ""
+          }`}
+        >
+          <FaLaptopCode className="text-6xl md:text-9xl" />
+          <p className="md:text-3xl lg:text-6xl">Front End</p>
         </div>
-
-        <div id="Back-end" className="bg-blue-50 w-96 h-96 min-h-max rounded-lg text-stone-950 p-4 drop-shadow-lg ">
-          <h1 className="text-2xl font-bold tracking-tight text-stone-950 sm:text-4xl  text-center">Back-end</h1>
-          <ul className="text-center">
-            <li>.NET</li>
-            <li>NodeJS</li>
-            <li>Java</li>
-            <li>Python</li>
-            <li>Express</li>
-            <li>MongoDB</li>
-            <li>FireBase</li>
-          </ul>
+        <div
+          onClick={() => setSelectedSkill("back")}
+          className={`flex flex-col md:flex-row justify-center md:justify-around items-center cursor-pointer w-full p-2 ${
+            selectedSkill === "back" ? "border-2 rounded bg-primaryBlue" : ""
+          }`}
+        >
+          <GoCommandPalette className="text-6xl md:text-9xl" />
+          <p className="md:text-3xl lg:text-6xl">Back End</p>
         </div>
-
-        <div id="Other" className="bg-blue-50 w-96 h-96 min-h-max rounded-lg text-stone-950 p-4 drop-shadow-lg ">
-          <h1 className="text-2xl font-bold tracking-tight text-stone-950 sm:text-4xl  text-center">Other</h1>
-          <ul className="text-center">
-            <li>Git</li>
-            <li>Rest API</li>
-          </ul>
+        <div
+          onClick={() => setSelectedSkill("tools")}
+          className={`flex flex-col md:flex-row justify-center md:justify-around items-center cursor-pointer w-full p-2 ${
+            selectedSkill === "tools" ? "border-2 rounded bg-primaryBlue" : ""
+          }`}
+        >
+          <FaTools className="text-6xl md:text-9xl" />
+          <p className="md:text-3xl lg:text-6xl">Tools</p>
         </div>
       </div>
+      {/* Border */}
+      <div className="border-2 w-full"></div>
+      {/* SubSkills */}
+      <ShowSkills selectedSkill={selectedSkill} />
+    </div>
+  );
+}
+
+function ShowSkills(props) {
+  const { selectedSkill } = props;
+
+  // Access the icon dictionary based on the selected skill
+  const icons = {
+    front: frontIcons,
+    back: backIcons,
+    tools: toolIcons,
+  }[selectedSkill];
+
+  if (!icons) {
+    return null;
+  }
+
+  return (
+    <div className="flex flex-row flex-wrap justify-around items-center text-white w-full py-4">
+      {Object.keys(icons).map((name) => {
+        const Icon = icons[name];
+        return (
+          <div key={name} className="flex flex-col items-center">
+            {Icon && <Icon className="text-5xl mb-2" />}
+            <p className="hidden sm:block">{name}</p>
+          </div>
+        );
+      })}
     </div>
   );
 }

@@ -58,30 +58,30 @@ export default function Services() {
       <div className="flex flex-col md:flex-row text-white justify-around w-full pb-4 ">
         <div
           onClick={() => setSelectedSkill("front")}
-          className={`flex flex-col justify-center items-center cursor-pointer ${
-            selectedSkill === "front" ? "border-2 rounded p-2" : ""
+          className={`flex flex-col md:flex-row justify-center md:justify-around items-center cursor-pointer w-full p-2 ${
+            selectedSkill === "front" ? "border-2 rounded bg-primaryBlue" : ""
           }`}
         >
           <FaLaptopCode className="text-6xl md:text-9xl" />
-          <p>Front End</p>
+          <p className="md:text-3xl lg:text-6xl">Front End</p>
         </div>
         <div
           onClick={() => setSelectedSkill("back")}
-          className={`flex flex-col justify-center items-center cursor-pointer ${
-            selectedSkill === "back" ? "border-2 rounded p-2" : ""
+          className={`flex flex-col md:flex-row justify-center md:justify-around items-center cursor-pointer w-full p-2 ${
+            selectedSkill === "back" ? "border-2 rounded bg-primaryBlue" : ""
           }`}
         >
           <GoCommandPalette className="text-6xl md:text-9xl" />
-          <p>Back End</p>
+          <p className="md:text-3xl lg:text-6xl">Back End</p>
         </div>
         <div
           onClick={() => setSelectedSkill("tools")}
-          className={`flex flex-col justify-center items-center cursor-pointer ${
-            selectedSkill === "tools" ? "border-2 rounded p-2" : ""
+          className={`flex flex-col md:flex-row justify-center md:justify-around items-center cursor-pointer w-full p-2 ${
+            selectedSkill === "tools" ? "border-2 rounded bg-primaryBlue" : ""
           }`}
         >
           <FaTools className="text-6xl md:text-9xl" />
-          <p>Tools</p>
+          <p className="md:text-3xl lg:text-6xl">Tools</p>
         </div>
       </div>
       {/* Border */}

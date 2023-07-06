@@ -24,9 +24,9 @@ export default function Footer() {
       <div>
         <h1 className="font-bold text-lg mb-2">Follow Us On Social Media</h1>
         <div className="flex justify-between text-4xl">
-          <FaLinkedin className="hover:text-blue-300" onClick={() => window.open("https://www.linkedin.com", "_blank")} />
-          <FaFacebookF className="hover:text-blue-300" onClick={() => window.open("https://www.facebook.com", "_blank")} />
-          <FaInstagram className="hover:text-blue-300" onClick={() => window.open("https://www.instagram.com", "_blank")} />
+          <FaLinkedin className="hover:text-blue-300 cursor-pointer" onClick={() => window.open("https://www.linkedin.com", "_blank")} />
+          <FaFacebookF className="hover:text-blue-300 cursor-pointer" onClick={() => window.open("https://www.facebook.com", "_blank")} />
+          <FaInstagram className="hover:text-blue-300 cursor-pointer" onClick={() => window.open("https://www.instagram.com", "_blank")} />
         </div>
       </div>
     </div>

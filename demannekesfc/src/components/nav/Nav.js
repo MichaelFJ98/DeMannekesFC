@@ -85,12 +85,12 @@ export default function Nav() {
             </li>
             <li>
               <Link
-                to="pricing"
+                to="skills"
                 smooth={true}
                 duration={500}
                 className=" cursor-pointer text-white hover:border-b-2 hover:border-white"
               >
-                Pricing
+                Skills
               </Link>
             </li>
             <li>

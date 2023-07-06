@@ -12,28 +12,67 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      class="h-screen bg-blue-50"
+      class="h-screen bg-blue-50 flex flex-row items-center justify-around "
     >
-        <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
-          <h2 class="text-2xl font-bold tracking-tight text-blue-500 sm:text-6xl  text-center">
+      <div className="w-1/3 flex flex-col items-center">
+        <div>
+          <h2 class="font-bold tracking-tight text-black sm:text-6xl  text-center">
             Contact Us
           </h2>
-          <p class="mb-8 lg:mb-16 font-light text-center text-blue-300 sm:text-xl">
+          <p class="mb-6 font-light text-center text-blue-400 sm:text-xl">
             Let's build something great together.
           </p>
-          <div className="bg-blue-950 rounded-lg p-8 drop-shadow-lg ">
+        </div>
+          <p className="text-center text-gray-500">
+            was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+          </p>
+        <div className="pt-6">
+          
+          <button class="bg-blue-500 text-white font-semibold transition-colors shadow-lg duration-300 ease-in-out hover:text-blue-500 px-4 border-2 border-blue-500 hover:bg-transparent rounded h-10">
+          Schedule Meeting
+          </button>
+        </div>
+      </div>
+      <div className="border-l-2  w-0.5 h-5/6 opacity-50  border-blue-950">
+
+      </div>
+
+      <div>
+        <h2 h2 class="text-5xl font-bold tracking-tight text-black text-center">
+          Leave A Message
+        </h2>
+        <p class="mb-6 font-light text-center text-blue-400 sm:text-xl">
+          Ask us questions to help you realise your future website.
+        </p>
+        <div class="p-4">
+          <div className="  p-8 bg-gray-50 drop-shadow-lg w-[32rem] ">
             <form action="#" class="space-y-8">
               <div>
                 <label
+                  for="FullName"
+                  class="block mb-2 text-sm font-medium text-blue-400 dark:text-gray-300"
+                >
+                  Full Name
+                </label>
+                <input
+                  type="text"
+                  id="FullName"
+                  class="shadow-sm bg-gray-50 border border-gray-300 text-blue-400 text-sm  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  placeholder="Full Name"
+                  required
+                />
+              </div>
+              <div>
+                <label
                   for="email"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  class="block mb-2 text-sm font-medium text-blue-400 dark:text-gray-300"
                 >
                   Your email
                 </label>
                 <input
                   type="email"
                   id="email"
-                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  class="shadow-sm bg-gray-50 border border-gray-300 text-blue-400 text-sm  focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                   placeholder="name@email.com"
                   required
                 />
@@ -41,14 +80,14 @@ export default function Contact() {
               <div>
                 <label
                   for="subject"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                  class="block mb-2 text-sm font-medium text-blue-400 dark:text-gray-300"
                 >
                   Subject
                 </label>
                 <input
                   type="text"
                   id="subject"
-                  class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
+                  class="block p-3 w-full text-sm text-gray-900 bg-gray-50 border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
                   placeholder="Let us know how we can help you"
                   required
                 />
@@ -56,26 +95,27 @@ export default function Contact() {
               <div class="sm:col-span-2">
                 <label
                   for="message"
-                  class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+                  class="block mb-2 text-sm font-medium text-blue-400 dark:text-gray-400"
                 >
                   Your message
                 </label>
                 <textarea
                   id="message"
                   rows="6"
-                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
                   placeholder="Leave a comment..."
                 ></textarea>
               </div>
               <button
                 type="submit"
-                class="py-3 px-5 text-sm font-medium text-center text-blue-500 rounded-lg bg-blue-50 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                class="bg-blue-500 text-white font-semibold transition-colors shadow-lg duration-300 ease-in-out hover:text-blue-500 px-4 border-2 border-blue-500 hover:bg-transparent rounded h-10"
               >
                 Send message
               </button>
             </form>
           </div>
         </div>
+      </div>
     </div>
   );
 }

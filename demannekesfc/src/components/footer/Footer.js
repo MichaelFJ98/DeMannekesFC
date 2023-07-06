@@ -14,19 +14,27 @@ export default function Footer() {
           © {currentYear} Mannekes. All rights reserved.
         </p>
       </div>
-      <div className="">
+      <div className="py-4 text-center">
         <h1 className="font-bold text-lg">Contact</h1>
         <p className="font-thin text-xs ">Zaventemsestraat 23</p>
         <p className="font-thin text-xs ">Vlaams-Brabant, 1930 Zaventem</p>
-        <p className="font-thin text-xs ">+32472839432</p>
         <p className="font-thin text-xs ">DuoDev@gmail.com</p>
       </div>
       <div>
         <h1 className="font-bold text-lg mb-2">Follow Us On Social Media</h1>
         <div className="flex justify-between text-4xl">
-          <FaLinkedin className="hover:text-blue-300 cursor-pointer" onClick={() => window.open("https://www.linkedin.com", "_blank")} />
-          <FaFacebookF className="hover:text-blue-300 cursor-pointer" onClick={() => window.open("https://www.facebook.com", "_blank")} />
-          <FaInstagram className="hover:text-blue-300 cursor-pointer" onClick={() => window.open("https://www.instagram.com", "_blank")} />
+          <FaLinkedin
+            className="hover:text-blue-300 cursor-pointer"
+            onClick={() => window.open("https://www.linkedin.com", "_blank")}
+          />
+          <FaFacebookF
+            className="hover:text-blue-300 cursor-pointer"
+            onClick={() => window.open("https://www.facebook.com", "_blank")}
+          />
+          <FaInstagram
+            className="hover:text-blue-300 cursor-pointer"
+            onClick={() => window.open("https://www.instagram.com", "_blank")}
+          />
         </div>
       </div>
     </div>

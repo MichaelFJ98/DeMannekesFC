@@ -12,11 +12,9 @@ import { SiTailwindcss } from "react-icons/si";
 import { SiDotnet, SiExpress, SiMongodb, SiFirebase } from "react-icons/si";
 import { FaNodeJs, FaJava, FaPython } from "react-icons/fa";
 
-
 // Tools Icons
 import { FaGit } from "react-icons/fa";
 import { TbApi } from "react-icons/tb";
-
 
 import { useState } from "react";
 
@@ -44,12 +42,12 @@ const toolIcons = {
   RESTAPI: TbApi,
 };
 
-export default function Services() {
+export default function Skills() {
   const [selectedSkill, setSelectedSkill] = useState("front");
 
   return (
-    // Main container
-    <div id="skills" className="bg-blue-950 flex flex-col items-center">
+    // Main flex container
+    <div id="skills" className="bg-blue-950 flex flex-col items-center"> 
       {/* Title */}
       <div className="text-white text-3xl md:text-6xl w-full text-center py-4">
         <h1>SKILLS</h1>
@@ -58,7 +56,7 @@ export default function Services() {
       <div className="flex flex-col md:flex-row text-white justify-around w-full pb-4 ">
         <div
           onClick={() => setSelectedSkill("front")}
-          className={`flex flex-col md:flex-row justify-center md:justify-around items-center cursor-pointer w-full p-2 ${
+          className={`flex flex-col md:flex-row justify-center md:justify-around items-center cursor-pointer w-full m-2 p-2 transition ease-in-out hover:border-2 hover:rounded hover:-translate-y-1 hover:bg-indigo-500 duration-300 ${
             selectedSkill === "front" ? "border-2 rounded bg-primaryBlue" : ""
           }`}
         >
@@ -67,7 +65,7 @@ export default function Services() {
         </div>
         <div
           onClick={() => setSelectedSkill("back")}
-          className={`flex flex-col md:flex-row justify-center md:justify-around items-center cursor-pointer w-full p-2 ${
+          className={`flex flex-col md:flex-row justify-center md:justify-around items-center cursor-pointer w-full m-2 p-2 transition ease-in-out hover:border-2 hover:rounded hover:-translate-y-1 hover:bg-indigo-500 duration-300 ${
             selectedSkill === "back" ? "border-2 rounded bg-primaryBlue" : ""
           }`}
         >
@@ -76,7 +74,7 @@ export default function Services() {
         </div>
         <div
           onClick={() => setSelectedSkill("tools")}
-          className={`flex flex-col md:flex-row justify-center md:justify-around items-center cursor-pointer w-full p-2 ${
+          className={`flex flex-col md:flex-row justify-center md:justify-around items-center cursor-pointer w-full m-2 p-2 transition ease-in-out hover:border-2 hover:rounded hover:-translate-y-1 hover:bg-indigo-500 duration-300 ${
             selectedSkill === "tools" ? "border-2 rounded bg-primaryBlue" : ""
           }`}
         >
@@ -95,7 +93,6 @@ export default function Services() {
 function ShowSkills(props) {
   const { selectedSkill } = props;
 
-  // Access the icon dictionary based on the selected skill
   const icons = {
     front: frontIcons,
     back: backIcons,
@@ -107,13 +104,13 @@ function ShowSkills(props) {
   }
 
   return (
-    <div className="flex flex-row flex-wrap justify-around items-center text-white w-full py-4">
+    <div className="flex flex-row gap-6 md:justify-around text-white w-full py-4 overflow-x-auto px-4">
       {Object.keys(icons).map((name) => {
         const Icon = icons[name];
         return (
           <div key={name} className="flex flex-col items-center">
             {Icon && <Icon className="text-5xl mb-2" />}
-            <p className="hidden sm:block">{name}</p>
+            <p>{name}</p>
           </div>
         );
       })}

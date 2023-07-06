@@ -2,7 +2,7 @@ import "./Main.css";
 import Nav from './components/nav/Nav.js';
 import About from './components/about/About.js';
 import Portfolio from './components/portfolio/Portfolio.js';
-import Services from "./components/services/Services";
+import Skills from "./components/skills/Skills";
 import Contact from './components/contact/Contact.js';
 import Footer from "./components/footer/Footer";
 import AboutUs from "./components/aboutUs/AboutUs.js"
@@ -14,7 +14,7 @@ export default function Main() {
     <About/>
     <AboutUs/>
     <Portfolio/>
-    <Services/>
+    <Skills/>
     <Contact/>
     <Footer/>
   </div>

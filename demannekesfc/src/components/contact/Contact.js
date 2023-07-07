@@ -12,41 +12,41 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      class="h-screen bg-blue-50 flex flex-row items-center justify-around "
+      class="min-h-screen min-w-screen bg-blue-50 flex lg:flex-row flex-col items-center justify-around "
     >
-      <div className="w-1/3 flex flex-col items-center">
+
+      <div className="w-1/3 flex flex-col items-center ">
         <div>
-          <h2 class="font-bold tracking-tight text-black sm:text-6xl  text-center">
+          <h2 class="font-bold tracking-tight text-black lg:text-6xl text-2xl text-center">
             Contact Us
           </h2>
-          <p class="mb-6 font-light text-center text-blue-400 sm:text-xl">
+          <p class="lg:mb-4 font-light text-center text-blue-400 lg:text-xl mb-2 text-xs w-screen">
             Let's build something great together.
           </p>
         </div>
-          <p className="text-center text-gray-500">
-            was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-          </p>
+        <p className="text-center text-gray-500 text-xs lg:text-lg w-screen lg:w-full px-2 ">
+          was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+        </p>
         <div className="pt-6">
-          
-          <button class="bg-blue-500 text-white font-semibold transition-colors shadow-lg duration-300 ease-in-out hover:text-blue-500 px-4 border-2 border-blue-500 hover:bg-transparent rounded h-10">
+          <button class="bg-blue-500 text-white text-xs lg:text-lg mb-4 font-semibold transition-colors shadow-lg duration-300 ease-in-out hover:text-blue-500 px-4 border-2 border-blue-500 hover:bg-transparent rounded h-10">
           Schedule Meeting
           </button>
         </div>
       </div>
-      <div className="border-l-2  w-0.5 h-5/6 opacity-50  border-blue-950">
 
+      <div className="border-l-2  w-0.5 h-5/6 opacity-50  border-blue-950 ">
       </div>
 
-      <div>
-        <h2 h2 class="text-5xl font-bold tracking-tight text-black text-center">
+      <div className="">
+        <h2 h2 class="text-2xl lg:text-5xl font-bold tracking-tight text-black text-center">
           Leave A Message
         </h2>
-        <p class="mb-6 font-light text-center text-blue-400 sm:text-xl">
-          Ask us questions to help you realise your future website.
+        <p class="mb-6 font-light text-center text-blue-400 text-xs lg:text-xl">
+          Ask us questions to help you realise your future.
         </p>
         <div class="p-4">
-          <div className="  p-8 bg-gray-50 drop-shadow-lg w-[32rem] ">
-            <form action="#" class="space-y-8">
+          <div className="  p-8 bg-gray-50 drop-shadow-lg lg:w-[32rem] min-w-screen">
+            <form action="#" class="space-y-8 text-center lg:text-start">
               <div>
                 <label
                   for="FullName"
@@ -108,7 +108,7 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                class="bg-blue-500 text-white font-semibold transition-colors shadow-lg duration-300 ease-in-out hover:text-blue-500 px-4 border-2 border-blue-500 hover:bg-transparent rounded h-10"
+                class="bg-blue-500 text-white font-semibold transition-colors shadow-lg duration-300 ease-in-out hover:text-blue-500 px-4 border-2 border-blue-500 hover:bg-transparent rounded h-10 text-xs lg:text-lg" 
               >
                 Send message
               </button>

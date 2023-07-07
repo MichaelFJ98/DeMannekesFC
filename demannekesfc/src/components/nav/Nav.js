@@ -1,107 +1,100 @@
-import React, { useState, useEffect } from "react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import React, { useState, useEffect, useRef, useCallback } from "react";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 export default function Nav() {
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [showLinks, setShowLinks] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const menuRef = useRef(null);
+
+  const toggleLinks = () => {
+    if (isMobile) {
+      setShowLinks(!showLinks);
+    }
+  };
+
+  const closeLinks = (e) => {
+    if (isMobile && showLinks && !menuRef.current.contains(e.target)) {
+      setShowLinks(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
+  const checkIsMobile = useCallback(() => {
+    const isMobileDevice = window.innerWidth <= 768;
+    setIsMobile(isMobileDevice);
+  }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos === 0);
-      setPrevScrollPos(currentScrollPos);
-    };
+    checkIsMobile();
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIsMobile);
+    };
+  }, [checkIsMobile]);
+
+  const createLinkAttributes = (to) => ({
+    to,
+    smooth: true,
+    duration: 500,
+    className:
+      "cursor-pointer text-white hover:border-b-2 hover:border-white transition duration-300",
+    onClick: isMobile ? closeLinks : undefined,
+  });
 
   return (
-    <nav
-      className={`navbar bg-primaryBlue fixed top-0 w-full transition-opacity z-50 ${
-        visible ? "opacity-100" : "opacity-0"
-      }`}
-    >
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link
-          onClick={() => scroll.scrollToTop()}
-          className="flex items-center cursor-pointer"
-        >
-          <img src="assets/images/Dev.png" alt="Logo" />
-        </Link>
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          className="inline-flex items-center p-2 ml-3 text-sm text-white rounded-lg md:hidden hover:bg-white hover:text-primaryBlue focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-6 h-6"
-            aria-hidden="true"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
+    <nav className="bg-primaryBlue fixed top-0 w-full z-50">
+      <div className="md:flex items-center justify-around mx-auto p-4">
+        <div className="flex justify-between items-center">
+          <div
+            className="cursor-pointer"
+            onClick={scrollToTop}
+            role="button"
+            tabIndex="0"
           >
-            <path
-              fillRule="evenodd"
-              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-              clipRule="evenodd"
-            ></path>
-          </svg>
-        </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-0 m-0 md:flex-row md:space-x-8">
+            <img src="assets/images/Dev.png" alt="Logo" />
+          </div>
+
+          <div
+            className="md:hidden cursor-pointer hover:text-blue pr-4 text-white text-2xl"
+            onClick={toggleLinks}
+          >
+            <GiHamburgerMenu />
+          </div>
+        </div>
+
+        <div
+          className={`${
+            showLinks && isMobile ? "block" : "hidden"
+          } md:flex md:items-center md:justify-between md:p-0 transition-all duration-300`}
+          ref={menuRef}
+        >
+          <ul className="font-medium flex flex-col gap-4 pt-4 md:p-4 text-center md:flex-row md:space-x-8">
             <li>
-              <Link
-                to="home"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer text-white hover:border-b-2 hover:border-white"
-              >
-                Home
-              </Link>
+              <ScrollLink {...createLinkAttributes("home")}>Home</ScrollLink>
             </li>
             <li>
-              <Link
-                to="about"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer text-white hover:border-b-2 hover:border-white"
-              >
-                About
-              </Link>
+              <ScrollLink {...createLinkAttributes("about")}>About</ScrollLink>
             </li>
             <li>
-              <Link
-                to="portfolio"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer text-white hover:border-b-2 hover:border-white"
-              >
+              <ScrollLink {...createLinkAttributes("portfolio")}>
                 Portfolio
-              </Link>
+              </ScrollLink>
             </li>
             <li>
-              <Link
-                to="skills"
-                smooth={true}
-                duration={500}
-                className=" cursor-pointer text-white hover:border-b-2 hover:border-white"
-              >
+              <ScrollLink {...createLinkAttributes("skills")}>
                 Skills
-              </Link>
+              </ScrollLink>
             </li>
             <li>
-              <Link
-                to="contact"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer text-white hover:border-b-2 hover:border-white"
-              >
+              <ScrollLink {...createLinkAttributes("contact")}>
                 Contact
-              </Link>
+              </ScrollLink>
             </li>
           </ul>
         </div>

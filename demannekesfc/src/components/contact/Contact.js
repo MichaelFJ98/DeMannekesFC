@@ -1,4 +1,9 @@
+import React, { useState } from "react";
+import Calendly from "../Calendly";
+
 export default function Contact() {
+  const [isPopupOpen, setPopupOpen] = useState(false);
+
   const handleEmailClick = () => {
     const emailAddress = "info@mannekes.be";
     navigator.clipboard.writeText(emailAddress);
@@ -14,7 +19,6 @@ export default function Contact() {
       id="contact"
       class="min-h-screen min-w-screen bg-blue-50 flex lg:flex-row flex-col items-center justify-around "
     >
-
       <div className="w-1/3 flex flex-col items-center ">
         <div>
           <h2 class="font-bold tracking-tight text-black lg:text-6xl text-2xl text-center">
@@ -25,20 +29,29 @@ export default function Contact() {
           </p>
         </div>
         <p className="text-center text-gray-500 text-xs lg:text-lg w-screen lg:w-full px-2 ">
-          was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+          was popularised in the 1960s with the release of Letraset sheets
+          containing Lorem Ipsum passages, and more recently with desktop
+          publishing software like Aldus PageMaker including versions of Lorem
+          Ipsum
         </p>
         <div className="pt-6">
-          <button class="bg-blue-500 text-white text-xs lg:text-lg mb-4 font-semibold transition-colors shadow-lg duration-300 ease-in-out hover:text-blue-500 px-4 border-2 border-blue-500 hover:bg-transparent rounded h-10">
-          Schedule Meeting
+          <Calendly setPopupOpen={setPopupOpen} isPopupOpen={isPopupOpen} />
+          <button
+            className="bg-blue-500 text-white text-xs lg:text-lg mb-4 font-semibold transition-colors shadow-lg duration-300 ease-in-out hover:text-blue-500 px-4 border-2 border-blue-500 hover:bg-transparent rounded h-10"
+            onClick={() => setPopupOpen(true)}
+          >
+            Schedule Meeting
           </button>
         </div>
       </div>
 
-      <div className="border-l-2  w-0.5 h-5/6 opacity-50  border-blue-950 ">
-      </div>
+      <div className="border-l-2  w-0.5 h-5/6 opacity-50  border-blue-950 "></div>
 
       <div className="">
-        <h2 h2 class="text-2xl lg:text-5xl font-bold tracking-tight text-black text-center">
+        <h2
+          h2
+          class="text-2xl lg:text-5xl font-bold tracking-tight text-black text-center"
+        >
           Leave A Message
         </h2>
         <p class="mb-6 font-light text-center text-blue-400 text-xs lg:text-xl">
@@ -108,7 +121,7 @@ export default function Contact() {
               </div>
               <button
                 type="submit"
-                class="bg-blue-500 text-white font-semibold transition-colors shadow-lg duration-300 ease-in-out hover:text-blue-500 px-4 border-2 border-blue-500 hover:bg-transparent rounded h-10 text-xs lg:text-lg" 
+                class="bg-blue-500 text-white font-semibold transition-colors shadow-lg duration-300 ease-in-out hover:text-blue-500 px-4 border-2 border-blue-500 hover:bg-transparent rounded h-10 text-xs lg:text-lg"
               >
                 Send message
               </button>

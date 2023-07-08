@@ -45,7 +45,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="border-l-2  w-0.5 h-5/6 opacity-50  border-blue-950 "></div>
+      <div className="sm:border-t-2 sm:w-screen lg:border-l-2 lg:w-0.5 lg:h-screen opacity-50 border-blue-950 "></div>
 
       <div className="">
         <h2

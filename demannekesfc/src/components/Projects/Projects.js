@@ -1,6 +1,6 @@
-export default function Portfolio() {
+export default function Projects() {
     return (
-      <div id="portfolio" className="  bg-blue-50 space-y-6 p-12">
+      <div id="projects" className="  bg-blue-50 space-y-6 p-12">
         
         <h1 className="text-2xl font-bold tracking-tight text-stone-950 sm:text-6xl pb-6 text-center">Our Projects</h1>
 

@@ -1,41 +1,39 @@
-import { FaLinkedin, FaInstagram, FaFacebookF } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div
-      id="footer"
-      className="flex flex-row justify-between items-center bg-blue-950 text-white px-4"
-    >
-      <div>
-        <h1 className="font-bold text-lg">DuoDev</h1>
-        <p className="font-thin text-xs">
-          © {currentYear} Mannekes. All rights reserved.
-        </p>
-      </div>
-      <div className="py-4 text-center">
-        <h1 className="font-bold text-lg">Contact</h1>
-        <p className="font-thin text-xs ">Zaventemsestraat 23</p>
-        <p className="font-thin text-xs ">Vlaams-Brabant, 1930 Zaventem</p>
-        <p className="font-thin text-xs ">DuoDev@gmail.com</p>
-      </div>
-      <div>
-        <h1 className="font-bold text-lg mb-2">Follow Us On Social Media</h1>
-        <div className="flex justify-between text-4xl">
-          <FaLinkedin
-            className="hover:text-blue-300 cursor-pointer"
-            onClick={() => window.open("https://www.linkedin.com", "_blank")}
-          />
-          <FaFacebookF
-            className="hover:text-blue-300 cursor-pointer"
-            onClick={() => window.open("https://www.facebook.com", "_blank")}
-          />
-          <FaInstagram
-            className="hover:text-blue-300 cursor-pointer"
-            onClick={() => window.open("https://www.instagram.com", "_blank")}
-          />
+    <div id="footer" className="bg-black text-white px-7 leading-5">
+      <div className="py-7 flex flex-col md:flex-row md:justify-between gap-8">
+        <div className="">
+          <h1 className="font-bold text-2xl pb-4">SOCIAL</h1>
+          <div className="flex gap-2 text-xl">
+            <FaLinkedinIn
+              className="hover:text-blue-300 cursor-pointer"
+              onClick={() => window.open("https://www.linkedin.com", "_blank")}
+            />
+            <FaFacebookF
+              className="hover:text-blue-300 cursor-pointer"
+              onClick={() => window.open("https://www.facebook.com", "_blank")}
+            />
+            <FaInstagram
+              className="hover:text-blue-300 cursor-pointer"
+              onClick={() => window.open("https://www.instagram.com", "_blank")}
+            />
+          </div>
         </div>
+        <div className="">
+          <h1 className="font-bold text-2xl pb-4">CONTACT</h1>
+          <p className="font-thin text-s ">Zaventemsestraat 23</p>
+          <p className="font-thin text-s ">Vlaams-Brabant, 1930 Zaventem</p>
+          <p className="font-thin text-s ">DuoDev@gmail.com</p>
+        </div>
+      </div>
+      <div className="border-t border-primaryBlue text-center">
+        <p className="font-thin text-xs py-7">
+          © Copyright {currentYear} Insiter. All rights reserved.
+        </p>
       </div>
     </div>
   );

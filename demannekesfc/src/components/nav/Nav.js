@@ -49,7 +49,7 @@ export default function Nav() {
   });
 
   return (
-    <nav className="bg-primaryBlue fixed top-0 w-full z-50">
+    <nav className="bg-primaryBlue fixed top-0 w-full z-50 shadow-lg">
       <div className="md:flex items-center justify-around mx-auto p-4">
         <div className="flex justify-between items-center">
           <div

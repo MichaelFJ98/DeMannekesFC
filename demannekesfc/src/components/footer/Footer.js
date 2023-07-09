@@ -4,9 +4,9 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div id="footer" className="bg-black text-white px-7 leading-5">
-      <div className="py-7 flex flex-col md:flex-row md:justify-between gap-8">
-        <div className="">
+    <div id="footer" className="bg-black text-white px-7 leading-5 flex flex-col">
+      <div className="py-7 flex flex-col md:flex-row md:justify-between md:self-center md:w-full gap-8 max-w-6xl">
+        <div className="md:self-center md:justify-self-start">
           <h1 className="font-bold text-2xl pb-4">SOCIAL</h1>
           <div className="flex gap-2 text-xl">
             <FaLinkedinIn
@@ -23,7 +23,7 @@ export default function Footer() {
             />
           </div>
         </div>
-        <div className="">
+        <div className="md:self-center md:justify-self-end">
           <h1 className="font-bold text-2xl pb-4">CONTACT</h1>
           <p className="font-thin text-s ">Zaventemsestraat 23</p>
           <p className="font-thin text-s ">Vlaams-Brabant, 1930 Zaventem</p>

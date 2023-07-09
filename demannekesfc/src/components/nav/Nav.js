@@ -42,6 +42,7 @@ export default function Nav() {
     to,
     smooth: true,
     duration: 500,
+    offset: -88,
     className:
       "cursor-pointer text-white hover:border-b-2 hover:border-white transition duration-300",
     onClick: isMobile ? closeLinks : undefined,

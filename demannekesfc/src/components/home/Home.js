@@ -1,3 +1,5 @@
+import Button from "../Button.js";
+
 export default function Home() {
 
   return (
@@ -10,9 +12,7 @@ export default function Home() {
         <h1 className='text-2xl font-bold tracking-tight  text-stone-950 sm:text-6xl'>Based in Belgium.</h1>
       </div> 
       <div className='flex flex-row gap-4 items-center'>
-        <button class="bg-blue-500 text-white font-semibold transition-colors shadow-lg duration-300 ease-in-out hover:text-blue-500 px-4 border-2 border-blue-500 hover:bg-transparent rounded h-10">
-        Hire us
-        </button>
+        <Button text={"Hire us"} fontSize={"font-semibold"}/>
         <a href="#" class="text-base font-semibold text-gray-900">Learn more <span aria-hidden="true">→</span></a>
       </div>
     </div>

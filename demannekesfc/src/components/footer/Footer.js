@@ -30,7 +30,7 @@ export default function Footer() {
           <p className="font-thin text-s ">DuoDev@gmail.com</p>
         </div>
       </div>
-      <div className="border-t border-primaryBlue text-center">
+      <div className="border-t border-grey text-center">
         <p className="font-thin text-xs py-7">
           © Copyright {currentYear} Insiter. All rights reserved.
         </p>

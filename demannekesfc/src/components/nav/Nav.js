@@ -1,105 +1,58 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
+import React from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { FaHome } from "react-icons/fa";
+import { AiOutlineInfoCircle } from "react-icons/ai";
+import { BsBriefcaseFill } from "react-icons/bs";
+import { GiSkills } from "react-icons/gi";
+import { FiMail } from "react-icons/fi";
+
+import { Navbar } from "flowbite-react";
 
 export default function Nav() {
-  const [showLinks, setShowLinks] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-  const menuRef = useRef(null);
-
-  const toggleLinks = () => {
-    if (isMobile) {
-      setShowLinks(!showLinks);
-    }
-  };
-
-  const closeLinks = (e) => {
-    if (isMobile && showLinks && !menuRef.current.contains(e.target)) {
-      setShowLinks(false);
-    }
-  };
-
-  const scrollToTop = () => {
-    scroll.scrollToTop();
-  };
-
-  const checkIsMobile = useCallback(() => {
-    const isMobileDevice = window.innerWidth <= 768;
-    setIsMobile(isMobileDevice);
-  }, []);
-
-  useEffect(() => {
-    checkIsMobile();
-
-    window.addEventListener("resize", checkIsMobile);
-
-    return () => {
-      window.removeEventListener("resize", checkIsMobile);
-    };
-  }, [checkIsMobile]);
-
   const createLinkAttributes = (to) => ({
     to,
     smooth: true,
     duration: 500,
-    offset: -87,
+    offset: -58,
     className:
-      "cursor-pointer text-white hover:border-b-2 hover:border-white transition duration-300",
-    onClick: isMobile ? closeLinks : undefined,
+      "cursor-pointer hover:border-b-2 hover:border-blue-500 transition duration-300",
   });
 
   return (
-    <nav className="bg-primaryBlue fixed top-0 w-full z-50 shadow-lg">
-      <div className="md:flex items-center justify-around mx-auto p-4">
-        <div className="flex justify-between items-center">
-          <div
-            className="cursor-pointer"
-            onClick={scrollToTop}
-            role="button"
-            tabIndex="0"
-          >
-            <img src="assets/images/Dev.png" alt="Logo" />
-          </div>
-
-          <div
-            className="md:hidden cursor-pointer hover:text-blue pr-4 text-white text-2xl"
-            onClick={toggleLinks}
-          >
-            <GiHamburgerMenu />
-          </div>
-        </div>
-
-        <div
-          className={`${
-            showLinks && isMobile ? "block" : "hidden"
-          } md:flex md:items-center md:justify-between md:p-0 transition-all duration-300`}
-          ref={menuRef}
-        >
-          <ul className="font-medium flex flex-col gap-4 pt-4 md:p-4 text-center md:flex-row md:space-x-8">
-            <li>
-              <ScrollLink {...createLinkAttributes("home")}>Home</ScrollLink>
-            </li>
-            <li>
-              <ScrollLink {...createLinkAttributes("about")}>About</ScrollLink>
-            </li>
-            <li>
-              <ScrollLink {...createLinkAttributes("projects")}>
-                Portfolio
-              </ScrollLink>
-            </li>
-            <li>
-              <ScrollLink {...createLinkAttributes("skills")}>
-                Skills
-              </ScrollLink>
-            </li>
-            <li>
-              <ScrollLink {...createLinkAttributes("contact")}>
-                Contact
-              </ScrollLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <Navbar
+      fluid
+      rounded
+      className="fixed top-0 w-full bg-white border-gray-200 dark:bg-gray-900 z-50 md:py-4"
+    >
+      <Navbar.Brand as="button" onClick={scroll.scrollToTop}>
+        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+          DuoDev
+        </span>
+      </Navbar.Brand>
+      <Navbar.Toggle />
+      <Navbar.Collapse>
+        <ul className="flex items-center space-x-4">
+          <li>
+            <ScrollLink {...createLinkAttributes("home")}>Home</ScrollLink>
+          </li>
+          <li>
+            <ScrollLink {...createLinkAttributes("about")}>About</ScrollLink>
+          </li>
+          <li>
+            <ScrollLink {...createLinkAttributes("projects")}>
+              Projects
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink {...createLinkAttributes("skills")}>Skills</ScrollLink>
+          </li>
+          <li>
+            <ScrollLink {...createLinkAttributes("contact")}>
+              Contact
+            </ScrollLink>
+          </li>
+        </ul>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }

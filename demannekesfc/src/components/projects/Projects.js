@@ -1,8 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
-import "./slick.css";
-import "./slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import ProjectCard from "./ProjectCard";
+
+import "./Projects.css";
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
@@ -19,6 +21,18 @@ export default function Projects() {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 3,
+    nextArrow: (
+      <div>
+        <div className="next-slick-arrow">
+          <FiChevronRight />
+        </div>
+      </div>
+    ),
+    prevArrow: (
+      <div>
+        <div className="prev-slick-arrow"> <FiChevronLeft /> </div>
+      </div>
+    ),
     responsive: [
       {
         breakpoint: 1024,

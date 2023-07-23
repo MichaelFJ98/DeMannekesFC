@@ -1,8 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import "./slick.css";
+import "./slick-theme.css";
 import ProjectCard from "./ProjectCard";
+
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 import { FiGithub, FiExternalLink, FiStar } from "react-icons/fi";
 import { AiOutlineMail, AiFillHeart } from "react-icons/ai";

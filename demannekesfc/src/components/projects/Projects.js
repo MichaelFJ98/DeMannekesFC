@@ -4,7 +4,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import ProjectCard from "./ProjectCard";
 
+import { FiGithub, FiExternalLink, FiStar } from "react-icons/fi";
+import { AiOutlineMail, AiFillHeart } from "react-icons/ai";
+
 export default function Projects() {
+  const project1Icons = [FiGithub, FiExternalLink, FiStar];
+  const project2Icons = [FiGithub, FiStar, AiOutlineMail, AiFillHeart];
+
   const settings = {
     dots: true,
     infinite: true,
@@ -37,7 +43,7 @@ export default function Projects() {
   };
 
   return (
-    <div id="projects" className="bg-blue-50 space-y-6 p-12">
+    <div id="projects" className="bg-blue-200 space-y-6 p-12">
       <h1 className="text-2xl font-bold tracking-tight text-stone-950 sm:text-6xl pb-6 text-center">
         Our Projects
       </h1>
@@ -49,6 +55,7 @@ export default function Projects() {
           alt=""
           href="#"
           about="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas maecenas pharetra convallis posuere morbi leo urna."
+          icons={project1Icons}
         />
         <ProjectCard
           title="Template 2"
@@ -56,6 +63,7 @@ export default function Projects() {
           alt=""
           href="#"
           about="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas maecenas pharetra convallis posuere morbi leo urna."
+          icons={project2Icons}
         />
         <ProjectCard
           title="Template 3"
@@ -63,6 +71,7 @@ export default function Projects() {
           alt=""
           href="#"
           about="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas maecenas pharetra convallis posuere morbi leo urna."
+          icons={project1Icons}
         />
       </Slider>
     </div>

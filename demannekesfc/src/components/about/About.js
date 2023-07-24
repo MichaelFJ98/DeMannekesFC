@@ -5,11 +5,11 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 export default function About() {
 
     return (
-      <div id="about" className="flex flex-col p-6 h-full bg-blue-950  items-center ">
+      <div id="about" className="bg-accent flex flex-col p-6 h-full items-center ">
 
-        <h1 className='text-2xl font-bold tracking-tight text-blue-50 sm:text-6xl pb-6'>Our Team</h1>
+        <h1 className='text-2xl font-bold tracking-tight text-black sm:text-6xl pb-6'>Our Team</h1>
 
-        <div id="teamBox" className='flex flex-row justify-around'>
+        <div id="teamBox" className='flex flex-row flex-wrap justify-around'>
 
           <div id="sectionMichael" className='flex flex-col justify-between bg-blue-50 rounded-lg m-4 pl-8 pr-8 h-full w-5/12 py-4 space-y-4 drop-shadow-lg '>
             <img src="assets/images/Dev.png" className='w-16 h-8'></img>

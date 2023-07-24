@@ -1,11 +1,12 @@
+import React from "react";
 import Service from "./Service.js";
 
 import { FaNodeJs, FaJava, FaPython } from "react-icons/fa";
 
 export default function Services() {
   return (
-    <div id="services" className="bg-accent p-6">
-      <h1 className="text-center text-2xl font-bold tracking-tight text-black sm:text-6xl pb-6">
+    <div id="services" className="bg-gray-900 p-6 text-white">
+      <h1 className="text-4xl font-bold tracking-tight md:text-6xl pb-6 text-center">
         SERVICES
       </h1>
 

@@ -7,7 +7,6 @@ import ProjectCard from "./ProjectCard";
 import "./Projects.css";
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-
 import { FiGithub, FiExternalLink, FiStar } from "react-icons/fi";
 import { AiOutlineMail, AiFillHeart } from "react-icons/ai";
 
@@ -30,7 +29,9 @@ export default function Projects() {
     ),
     prevArrow: (
       <div>
-        <div className="prev-slick-arrow"> <FiChevronLeft /> </div>
+        <div className="prev-slick-arrow">
+          <FiChevronLeft />
+        </div>
       </div>
     ),
     responsive: [
@@ -59,8 +60,8 @@ export default function Projects() {
   };
 
   return (
-    <div id="projects" className="space-y-6 p-12">
-      <h1 className="text-2xl font-bold tracking-tight text-stone-950 sm:text-6xl pb-6 text-center">
+    <div id="projects" className="bg-gray-900 text-white space-y-6 p-12">
+      <h1 className="text-4xl font-bold tracking-tight md:text-6xl pb-6 text-center">
         Projects
       </h1>
 

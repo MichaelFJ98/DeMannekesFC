@@ -7,7 +7,7 @@ export default function ProjectCard({
   icons = [],
 }) {
   return (
-    <div className="text-black m-2">
+    <div className="text-white m-2">
       <div>
         <img
           src={image}
@@ -16,19 +16,19 @@ export default function ProjectCard({
         />
       </div>
       <div className="pt-4">
-        <h3 className="text-xl font-bold">{title}</h3>
+        <h3 className="text-xl font-bold pb-4">{title}</h3>
         <div className="flex items-center space-x-4">
           {icons.map((Icon, index) => (
             <div
               key={index}
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-white"
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500"
             >
-              <Icon className="w-7 h-7 p-1 text-black bg-white rounded-xl" />
+              <Icon className="w-7 h-7 p-1 text-white rounded-xl" />
             </div>
           ))}
         </div>
         <p className="pb-4 pt-2">{about}</p>
-        <a href={href} className="text-blue-600 hover:underline">
+        <a href={href} className="text-blue-500 hover:underline">
           See more <span aria-hidden="true">→</span>
         </a>
       </div>

@@ -4,7 +4,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <div id="footer" className="bg-black text-white px-7 leading-5 flex flex-col">
+    <div id="footer" className="text-black bg-accent px-7 leading-5 flex flex-col">
       <div className="py-7 flex flex-col md:flex-row md:justify-between md:self-center md:w-full gap-8 max-w-6xl">
         <div className="md:self-center md:justify-self-start">
           <h1 className="font-bold text-2xl pb-4">SOCIAL</h1>
@@ -30,8 +30,8 @@ export default function Footer() {
           <p className="font-thin text-s ">DuoDev@gmail.com</p>
         </div>
       </div>
-      <div className="border-t border-grey text-center">
-        <p className="font-thin text-xs py-7">
+      <div className="border-t border-black text-center">
+        <p className="font-thin text-xs py-7 text-black">
           © Copyright {currentYear} Insiter. All rights reserved.
         </p>
       </div>

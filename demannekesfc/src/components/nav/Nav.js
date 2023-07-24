@@ -44,7 +44,7 @@ export default function Nav() {
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink {...createLinkAttributes("skills")}>Skills</ScrollLink>
+            <ScrollLink {...createLinkAttributes("services")}>Services</ScrollLink>
           </li>
           <li>
             <ScrollLink {...createLinkAttributes("contact")}>

@@ -17,7 +17,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      class="min-h-screen min-w-screen bg-blue-50 flex lg:flex-row flex-col items-center justify-around "
+      class="min-h-screen min-w-screen flex lg:flex-row flex-col items-center justify-around "
     >
       <div className="w-1/3 flex flex-col items-center ">
         <div>

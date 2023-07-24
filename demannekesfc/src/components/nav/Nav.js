@@ -15,17 +15,17 @@ export default function Nav() {
     duration: 500,
     offset: -58,
     className:
-      "cursor-pointer hover:border-b-2 hover:border-blue-500 transition duration-300",
+      "cursor-pointer flex items-center space-x-2 hover:border-b-2 hover:border-blue-500 transition duration-300",
   });
 
   return (
     <Navbar
       fluid
       rounded
-      className="fixed top-0 w-full bg-white border-gray-200 dark:bg-gray-900 z-50 md:py-4"
+      className="fixed top-0 w-full bg-gray-900 text-white border-b border-gray-700 dark:bg-black dark:border-gray-900 z-50 md:py-4"
     >
       <Navbar.Brand as="button" onClick={scroll.scrollToTop}>
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+        <span className="self-center whitespace-nowrap text-xl font-semibold">
           DuoDev
         </span>
       </Navbar.Brand>
@@ -33,22 +33,33 @@ export default function Nav() {
       <Navbar.Collapse>
         <ul className="flex items-center space-x-4">
           <li>
-            <ScrollLink {...createLinkAttributes("home")}>Home</ScrollLink>
-          </li>
-          <li>
-            <ScrollLink {...createLinkAttributes("about")}>About</ScrollLink>
-          </li>
-          <li>
-            <ScrollLink {...createLinkAttributes("projects")}>
-              Projects
+            <ScrollLink {...createLinkAttributes("home")}>
+              <FaHome className="text-xl" />
+              <span>Home</span>
             </ScrollLink>
           </li>
           <li>
-            <ScrollLink {...createLinkAttributes("services")}>Services</ScrollLink>
+            <ScrollLink {...createLinkAttributes("about")}>
+              <AiOutlineInfoCircle className="text-xl" />
+              <span>About</span>
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink {...createLinkAttributes("projects")}>
+              <BsBriefcaseFill className="text-xl" />
+              <span>Projects</span>
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink {...createLinkAttributes("services")}>
+              <GiSkills className="text-xl" />
+              <span>Services</span>
+            </ScrollLink>
           </li>
           <li>
             <ScrollLink {...createLinkAttributes("contact")}>
-              Contact
+              <FiMail className="text-xl" />
+              <span>Contact</span>
             </ScrollLink>
           </li>
         </ul>

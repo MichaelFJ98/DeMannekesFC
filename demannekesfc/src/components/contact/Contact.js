@@ -17,11 +17,11 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      class="min-h-screen min-w-screen flex lg:flex-row flex-col items-center justify-around "
+      class="bg-gray-900 text-white min-h-screen min-w-screen flex lg:flex-row flex-col items-center justify-around "
     >
       <div className="w-1/3 flex flex-col items-center ">
         <div>
-          <h2 class="font-bold tracking-tight text-black lg:text-6xl text-2xl text-center">
+          <h2 class="font-bold tracking-tight text-white lg:text-6xl text-2xl text-center">
             Contact Us
           </h2>
           <p class="lg:mb-4 font-light text-center text-blue-400 lg:text-xl mb-2 text-xs w-screen">
@@ -50,7 +50,7 @@ export default function Contact() {
       <div className="">
         <h2
           h2
-          class="text-2xl lg:text-5xl font-bold tracking-tight text-black text-center"
+          class="text-2xl lg:text-5xl font-bold tracking-tight text-white text-center"
         >
           Leave A Message
         </h2>

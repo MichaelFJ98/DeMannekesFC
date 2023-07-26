@@ -13,9 +13,9 @@ export default function Main() {
   <div className="main" id="main">
     <Nav/>
     <Home/>
-    <About/>
     <Projects/>
     <Services/>
+    <About/>
     <Contact/>
     <Footer/>
   </div>

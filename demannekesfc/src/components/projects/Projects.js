@@ -60,10 +60,8 @@ export default function Projects() {
   };
 
   return (
-    <div id="projects" className="bg-gray-900 text-white space-y-6 p-12">
-      <h1 className="text-4xl font-bold tracking-tight md:text-6xl pb-6 text-center">
-        Projects
-      </h1>
+    <div id="projects" className="bg-blue-50 px-10">
+
 
       <Slider {...settings}>
         <ProjectCard

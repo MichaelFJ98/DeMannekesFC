@@ -7,16 +7,16 @@ export default function ProjectCard({
   icons = [],
 }) {
   return (
-    <div className="text-white m-2">
-      <div>
+    <div className="text-grey-500 m-2">
+      <div className="drop-shadow-2xl">
         <img
           src={image}
           alt={alt}
-          className="object-contain aspect-square rounded-lg"
+          className="object-contain aspect-square rounded-lg "
         />
       </div>
       <div className="pt-4">
-        <h3 className="text-xl font-bold pb-4">{title}</h3>
+        <h1 className="text-2xl pb-4 font-black text-blue-950">{title}</h1>
         <div className="flex items-center space-x-4">
           {icons.map((Icon, index) => (
             <div
@@ -27,8 +27,8 @@ export default function ProjectCard({
             </div>
           ))}
         </div>
-        <p className="pb-4 pt-2">{about}</p>
-        <a href={href} className="text-blue-500 hover:underline">
+        <p className=" py-2 text-lg sm:text-xl md:text-xl text-gray-500">{about}</p>
+        <a href={href} className="text-base font-semibold text-blue-500 hover:underline hover:scale-110">
           See more <span aria-hidden="true">→</span>
         </a>
       </div>

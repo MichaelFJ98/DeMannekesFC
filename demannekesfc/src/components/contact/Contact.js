@@ -18,7 +18,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      class="bg-blue-50 flex items-center justify-around border-t-2 p-8"
+      class="bg-blue-50 flex items-center justify-around border-t-2 py-28"
     >
       <div className="flex flex-col text-center w-7/12 items-center">
         <div>

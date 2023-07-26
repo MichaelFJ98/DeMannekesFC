@@ -2,7 +2,7 @@
 
 .main {
   /* font-family: "Mulish", sans-serif; */
-  
+  overflow-x: hidden;
 }
 
 @font-face {

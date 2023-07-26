@@ -8,9 +8,8 @@ export default function Home() {
     >
       <div className="flex row justify-start items-center gap-4 sm:gap-6 w-7/12 h-full ">
         <div className="text-left lg:w-7/12">
-
           <p className="text-lg sm:text-xl md:text-2xl text-gray-500 py-3">
-            Hi, We are Insiter 
+            Hi, We are Insiter
           </p>
 
           <h1 className="leading-tight text-3xl md:text-4xl text-blue-950 font-black">
@@ -22,7 +21,7 @@ export default function Home() {
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-gray-500 py-3">
-            We help people and brands by designing and building digital products 
+            We help people and brands by designing and building digital products
             that are optimized for your clients experience.
           </p>
 
@@ -31,16 +30,17 @@ export default function Home() {
 
             <a
               href="#"
-              className="text-base font-semibold text-blue-500 hover:underline hover:scale-110"
+              className="text-base font-semibold text-blue-500 hover:underline"
             >
               More about us <span aria-hidden="true">→</span>
             </a>
-
           </div>
-
         </div>
 
-        <img src="assets/images/Michel.png" className="w-5/12 overflow-hidden "></img>
+        <img
+          src="assets/images/Michel.png"
+          className="hidden lg:block w-5/12 overflow-hidden"
+        ></img>
       </div>
     </div>
   );

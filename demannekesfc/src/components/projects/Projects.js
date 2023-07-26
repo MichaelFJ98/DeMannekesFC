@@ -7,19 +7,16 @@ import ProjectCard from "./ProjectCard";
 import "./Projects.css";
 
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
-import { FiGithub, FiExternalLink, FiStar } from "react-icons/fi";
-import { AiOutlineMail, AiFillHeart } from "react-icons/ai";
 
 export default function Projects() {
-  const project1Icons = [FiGithub, FiExternalLink, FiStar];
-  const project2Icons = [FiGithub, FiStar, AiOutlineMail, AiFillHeart];
 
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 1,
+    centerMode: true,
+    variableWidth: true,
     nextArrow: (
       <div>
         <div className="next-slick-arrow">
@@ -38,6 +35,8 @@ export default function Projects() {
       {
         breakpoint: 1024,
         settings: {
+          centerMode: false,
+          variableWidth: false,
           slidesToShow: 2,
           slidesToScroll: 2,
         },
@@ -45,6 +44,8 @@ export default function Projects() {
       {
         breakpoint: 600,
         settings: {
+          centerMode: false,
+          variableWidth: false,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -52,6 +53,8 @@ export default function Projects() {
       {
         breakpoint: 480,
         settings: {
+          centerMode: false,
+          variableWidth: false,
           slidesToShow: 1,
           slidesToScroll: 1,
         },
@@ -61,32 +64,21 @@ export default function Projects() {
 
   return (
     <div id="projects" className="bg-blue-50 px-10">
-
-
       <Slider {...settings}>
         <ProjectCard
-          title="Template 1"
           image="./assets/images/template1.jpg"
           alt=""
-          href="#"
-          about="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas maecenas pharetra convallis posuere morbi leo urna."
-          icons={project1Icons}
+          link={"https://google.com"}
         />
         <ProjectCard
-          title="Template 2"
           image="./assets/images/template1.jpg"
           alt=""
-          href="#"
-          about="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas maecenas pharetra convallis posuere morbi leo urna."
-          icons={project2Icons}
+          link={"https://google.com"}
         />
         <ProjectCard
-          title="Template 3"
           image="./assets/images/template1.jpg"
           alt=""
-          href="#"
-          about="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis egestas maecenas pharetra convallis posuere morbi leo urna."
-          icons={project1Icons}
+          link={"https://google.com"}
         />
       </Slider>
     </div>

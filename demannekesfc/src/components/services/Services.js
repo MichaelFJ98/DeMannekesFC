@@ -12,7 +12,7 @@ export default function Services() {
 
       <div className="flex flex-wrap w-7/12">
         {/* First Row */}
-        <div className="flex justify-around w-full flex-wrap">
+        <div className="flex justify-around w-full flex-wrap md:gap-x-32">
           <Service
             icon={FaPython}
             title="Social Conversations"
@@ -31,7 +31,7 @@ export default function Services() {
         </div>
 
         {/* Second Row */}
-        <div className="flex justify-around w-full flex-wrap">
+        <div className="flex justify-around w-full flex-wrap md:gap-x-32">
           <Service
             icon={FaPython}
             title="Fully Integrated"

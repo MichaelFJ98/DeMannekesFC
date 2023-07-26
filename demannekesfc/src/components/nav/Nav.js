@@ -27,7 +27,7 @@ export default function Nav() {
     >
       <Navbar.Brand as="button" onClick={scroll.scrollToTop}>
         <span className="self-center whitespace-nowrap text-xl font-semibold">
-          DuoDev
+          Insiter
         </span>
       </Navbar.Brand>
       <Navbar.Toggle />

@@ -1,19 +1,11 @@
 import React, { useState } from "react";
 import Calendly from "../Calendly";
 import Button from "../Button.js";
+import ContactForm from "../ContactForm";
 
 export default function Contact() {
-  const [isPopupOpen, setPopupOpen] = useState(false);
-
-  const handleEmailClick = () => {
-    const emailAddress = "info@mannekes.be";
-    navigator.clipboard.writeText(emailAddress);
-    window.location.href = `mailto:${emailAddress}`;
-  };
-
-  const handleInstagramClick = () => {
-    window.open("https://www.instagram.com/bryan_langhendries");
-  };
+  const [isMeetingPopupOpen, setMeetingPopupOpen] = useState(false);
+  const [isContactPopupOpen, setContactPopupOpen] = useState(false);
 
   return (
     <div
@@ -35,17 +27,29 @@ export default function Contact() {
           publishing software like Aldus PageMaker including versions of Lorem
           Ipsum
         </p>
-        <div className="flex flex-row gap-x-10 pt-4">
+        <div className="flex flex-col md:flex-row gap-x-10 gap-y-4 pt-4">
           <div className="">
-            <Calendly setPopupOpen={setPopupOpen} isPopupOpen={isPopupOpen} />
-            <button
-              className=" bg-blue-500 text-white font-semibold transition-all shadow-lg duration-300 ease-in-out hover:scale-110 hover:text-blue-500 px-4 border-2 border-blue-500 hover:bg-transparent rounded h-10"
-              onClick={() => setPopupOpen(true)}
-            >
-              Schedule a meeting
-            </button>
+            <Calendly
+              setPopupOpen={setMeetingPopupOpen}
+              isPopupOpen={isMeetingPopupOpen}
+            />
+            <Button
+              text={"Schedule a meeting"}
+              fontSize={"font-semibold"}
+              onClick={() => setMeetingPopupOpen(true)}
+            />
           </div>
-          <Button text={"Send a message"} fontSize={"font-semibold"} />
+          <div className="self-center">
+          <Button
+            text={"Send a message"}
+            fontSize={"font-semibold"}
+            onClick={() => setContactPopupOpen(true)}
+          />
+          <ContactForm
+            isOpen={isContactPopupOpen}
+            onClose={() => setContactPopupOpen(false)}
+          />
+          </div>
         </div>
       </div>
     </div>

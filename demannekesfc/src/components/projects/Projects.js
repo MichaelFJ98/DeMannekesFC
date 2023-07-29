@@ -9,7 +9,6 @@ import "./Projects.css";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
 export default function Projects() {
-
   const settings = {
     dots: true,
     infinite: true,
@@ -64,6 +63,9 @@ export default function Projects() {
 
   return (
     <div id="projects" className="bg-blue-50 px-10">
+      <h1 className="text-4xl font-black tracking-tight md:text-5xl pb-6 text-center text-blue-950">
+        PROJECTS
+      </h1>
       <Slider {...settings}>
         <ProjectCard
           image="./assets/images/template1.jpg"

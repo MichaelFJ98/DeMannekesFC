@@ -1,6 +1,16 @@
 import Button from "../Button.js";
 
 export default function Home() {
+  const handleScrollTo = (to) => {
+    const element = document.getElementById(to);
+    if (element) {
+      const yOffset = -58;
+      const y =
+        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: "smooth", duration: 500 });
+    }
+  };
+
   return (
     <div
       id="home"
@@ -26,11 +36,15 @@ export default function Home() {
           </p>
 
           <div className="flex flex-row gap-4 items-center py-2">
-            <Button text={"View our work"} fontSize={"font-semibold"} />
+            <Button
+              text={"View our work"}
+              fontSize={"font-semibold"}
+              onClick={() => handleScrollTo("projects")}
+            />
 
             <a
-              href="#"
-              className="text-base font-semibold text-blue-500 hover:underline"
+              onClick={() => handleScrollTo("about")}
+              className="text-base font-semibold text-blue-500 hover:underline cursor-pointer"
             >
               More about us <span aria-hidden="true">→</span>
             </a>

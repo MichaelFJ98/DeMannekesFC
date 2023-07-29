@@ -5,7 +5,7 @@ const teamMembers = [
     name: "Michael Fernandez-Juarez",
     role: "Founder @ Insiter",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
     image: "./assets/images/Michel.png",
     github: "https://github.com/",
     linkedin: "https://www.linkedin.com/in/",
@@ -14,7 +14,7 @@ const teamMembers = [
     name: "Bryan Langhendries",
     role: "Founder @ Insiter",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
     image: "./assets/images/Bryan.png",
     github: "https://github.com/",
     linkedin: "https://www.linkedin.com/in/",
@@ -35,7 +35,7 @@ export default function About() {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-blue-50 hover:scale-110 transition-all rounded-lg m-4 p-6 w-80 flex flex-col space-y-4 shadow-md shadow-blue-200 cursor-pointer"
+            className="bg-blue-50 hover:scale-110 transition-all rounded-lg m-4 p-6 w-80 flex flex-col space-y-4 shadow-md shadow-blue-200"
           >
             <img
               src={member.image}
@@ -45,6 +45,7 @@ export default function About() {
             <div className="text-center">
               <h1 className="text-xl font-bold">{member.name}</h1>
               <p className="text-gray-700 text-sm">{member.role}</p>
+              <p className="p-4 hidden md:block">{member.about}</p>
             </div>
             <div className="mt-auto flex justify-center space-x-4">
               <a href={member.github} target="_blank" rel="noopener noreferrer">

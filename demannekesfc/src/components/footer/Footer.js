@@ -28,15 +28,15 @@ export default function Footer() {
           </div>
         </div>
         <div className="md:self-center md:justify-self-end">
-          <h1 className="font-bold text-2xl pb-4">CONTACT</h1>
+          <h1 className="font-bold text-2xl py-4 md:pt-0">CONTACT</h1>
           <p className="font-thin text-sm">Zaventemsestraat 23</p>
           <p className="font-thin text-sm">Vlaams-Brabant, 1930 Zaventem</p>
-          <p className="font-thin text-sm">DuoDev@gmail.com</p>
+          <p className="font-thin text-sm pt-4">Insiter@gmail.com</p>
         </div>
       </div>
       <div className="border-t border-white text-center">
         <p className="font-thin text-xs py-7">
-          © {currentYear} DuoDev. All rights reserved.
+          © {currentYear} Insiter. All rights reserved.
         </p>
       </div>
     </div>

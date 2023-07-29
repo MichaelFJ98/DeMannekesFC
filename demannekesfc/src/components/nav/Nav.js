@@ -2,9 +2,11 @@ import React from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { FaHome } from "react-icons/fa";
 import { AiOutlineInfoCircle } from "react-icons/ai";
-import { BsBriefcaseFill } from "react-icons/bs";
+import { BsBriefcase } from "react-icons/bs";
 import { GiSkills } from "react-icons/gi";
 import { FiMail } from "react-icons/fi";
+import { MdOutlineBuild } from "react-icons/md";
+import { AiOutlineHome } from "react-icons/ai";
 
 import { Navbar } from "flowbite-react";
 
@@ -23,7 +25,7 @@ export default function Nav() {
     <Navbar
       fluid
       rounded
-      className="fixed top-0 text-grey-500 drop-shadow-xl bg-blue-50 z-50 md:py-4 w-7/12"
+      className="fixed top-0 text-grey-500 drop-shadow-xl bg-blue-50 z-2 md:py-4 w-7/12"
     >
       <Navbar.Brand as="button" onClick={scroll.scrollToTop}>
         <span className="self-center whitespace-nowrap text-xl font-semibold">
@@ -35,7 +37,7 @@ export default function Nav() {
         <ul className="flex items-center space-x-4">
           <li>
             <ScrollLink {...createLinkAttributes("home")}>
-              <FaHome className="text-xl" />
+              <AiOutlineHome className="text-xl" />
               <span>Home</span>
             </ScrollLink>
           </li>
@@ -47,13 +49,13 @@ export default function Nav() {
           </li>
           <li>
             <ScrollLink {...createLinkAttributes("projects")}>
-              <BsBriefcaseFill className="text-xl" />
+              <BsBriefcase className="text-xl" />
               <span>Projects</span>
             </ScrollLink>
           </li>
           <li>
             <ScrollLink {...createLinkAttributes("services")}>
-              <GiSkills className="text-xl" />
+              <MdOutlineBuild className="text-xl" />
               <span>Services</span>
             </ScrollLink>
           </li>

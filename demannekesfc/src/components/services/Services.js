@@ -10,7 +10,7 @@ export default function Services() {
       className="bg-blue-50 p-6 text-white flex flex-col items-center py-10"
     >
       <h1 className="text-4xl font-black tracking-tight md:text-5xl pb-6 text-center text-blue-950">
-        OUR SERVICES
+        WHY US ?
       </h1>
 
       <div className="flex flex-wrap w-7/12">

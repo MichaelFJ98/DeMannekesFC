@@ -13,26 +13,17 @@ export default function Footer() {
         <div className="md:self-center md:justify-self-start">
           <h1 className="font-bold text-2xl pb-4">SOCIAL</h1>
           <div className="flex gap-2 text-xl">
-            {/* LinkedIn */}
             <FaLinkedinIn
               className="hover:text-blue-500 cursor-pointer"
-              onClick={() =>
-                window.open(process.env.REACT_APP_LINKEDIN_URL, "_blank")
-              }
+              onClick={() => window.open("https://www.linkedin.com", "_blank")}
             />
-            {/* Facebook */}
             <FaFacebookF
               className="hover:text-blue-500 cursor-pointer"
-              onClick={() =>
-                window.open(process.env.REACT_APP_FACEBOOK_URL, "_blank")
-              }
+              onClick={() => window.open("https://www.facebook.com", "_blank")}
             />
-            {/* Instagram */}
             <FaInstagram
               className="hover:text-blue-500 cursor-pointer"
-              onClick={() =>
-                window.open(process.env.REACT_APP_INSTAGRAM_URL, "_blank")
-              }
+              onClick={() => window.open("https://www.instagram.com", "_blank")}
             />
           </div>
         </div>

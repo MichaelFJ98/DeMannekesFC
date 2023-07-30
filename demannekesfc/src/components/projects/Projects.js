@@ -70,17 +70,17 @@ export default function Projects() {
         <ProjectCard
           image="./assets/images/template1.jpg"
           alt=""
-          link={process.env.REACT_APP_PROJECT_LINK_1}
+          link={"https://google.com"}
         />
         <ProjectCard
           image="./assets/images/template1.jpg"
           alt=""
-          link={process.env.REACT_APP_PROJECT_LINK_2}
+          link={"https://google.com"}
         />
         <ProjectCard
           image="./assets/images/template1.jpg"
           alt=""
-          link={process.env.REACT_APP_PROJECT_LINK_3}
+          link={"https://google.com"}
         />
       </Slider>
     </div>

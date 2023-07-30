@@ -4,7 +4,7 @@ const Calendly = ({ setPopupOpen, isPopupOpen }) => {
   return (
     <div>
       <PopupModal
-        url="https://calendly.com/devlaamseboeren/30min"
+        url={process.env.REACT_APP_CALENDLY_URL}
         onModalClose={() => setPopupOpen(false)}
         open={isPopupOpen}
         rootElement={document.getElementById("root")}

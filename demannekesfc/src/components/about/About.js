@@ -5,7 +5,7 @@ const teamMembers = [
     name: "Michael Fernandez-Juarez",
     role: "Founder @ Insiter",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "Hey there! I'm Michael, a passionate developer and entrepreneur. I love envisioning innovative solutions that take businesses to new heights in the digital realm. With a keen eye for detail and a deep understanding of your needs, I'll craft a tailored website that leaves a lasting impact.",
     image: "./assets/images/Michel.png",
     github: "https://github.com/",
     linkedin: "https://www.linkedin.com/in/",
@@ -14,7 +14,7 @@ const teamMembers = [
     name: "Bryan Langhendries",
     role: "Founder @ Insiter",
     about:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.",
+      "Hello, I'm Bryan! As a developer with a passion for problem-solving and creativity, I'm committed to crafting exceptional digital experiences. I strongly believe in the power of collaboration, turning your ideas into reality.",
     image: "./assets/images/Bryan.png",
     github: "https://github.com/",
     linkedin: "https://www.linkedin.com/in/",
@@ -31,33 +31,38 @@ export default function About() {
         Our Team
       </h1>
 
-      <div className="flex flex-wrap justify-around w-7/12 py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-7/12 py-10">
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-blue-50 hover:scale-110 transition-all rounded-lg m-4 p-6 w-80 flex flex-col space-y-4 shadow-md shadow-blue-200"
+            className="bg-blue-50 hover:scale-110 transition-all rounded-lg p-6 flex flex-col shadow-md shadow-blue-200"
           >
             <img
               src={member.image}
               alt={member.name}
               className="w-28 h-28 rounded-full object-cover mb-4 self-center p-1 bg-blue-300"
             />
-            <div className="text-center">
+            <div className="text-center flex flex-col flex-grow">
               <h1 className="text-xl font-bold">{member.name}</h1>
               <p className="text-gray-700 text-sm">{member.role}</p>
               <p className="p-4 hidden md:block">{member.about}</p>
-            </div>
-            <div className="mt-auto flex justify-center space-x-4">
-              <a href={member.github} target="_blank" rel="noopener noreferrer">
-                <FaGithub className="text-blue-500 hover:text-blue-300 text-3xl transition-colors" />
-              </a>
-              <a
-                href={member.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedinIn className="text-blue-500 hover:text-blue-300 text-3xl transition-colors" />
-              </a>
+
+              <div className="mt-auto flex justify-center space-x-4">
+                <a
+                  href={member.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub className="text-blue-500 hover:text-blue-300 text-3xl transition-colors" />
+                </a>
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedinIn className="text-blue-500 hover:text-blue-300 text-3xl transition-colors" />
+                </a>
+              </div>
             </div>
           </div>
         ))}

@@ -1,37 +1,16 @@
-export default function ProjectCard({
-  title,
-  about,
-  image,
-  alt,
-  href,
-  icons = [],
-}) {
+export default function ProjectCard({ image, alt, link }) {
+  const handleClick = () => {
+    window.open(link, "_blank");
+  };
+
   return (
-    <div className="text-white m-2">
-      <div>
-        <img
-          src={image}
-          alt={alt}
-          className="object-contain aspect-square rounded-lg"
-        />
-      </div>
-      <div className="pt-4">
-        <h3 className="text-xl font-bold pb-4">{title}</h3>
-        <div className="flex items-center space-x-4">
-          {icons.map((Icon, index) => (
-            <div
-              key={index}
-              className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500"
-            >
-              <Icon className="w-7 h-7 p-1 text-white rounded-xl" />
-            </div>
-          ))}
-        </div>
-        <p className="pb-4 pt-2">{about}</p>
-        <a href={href} className="text-blue-500 hover:underline">
-          See more <span aria-hidden="true">→</span>
-        </a>
-      </div>
+    <div className="m-2">
+      <img
+        src={image}
+        alt={alt}
+        onClick={handleClick}
+        className="object-contain rounded-lg hover:cursor-pointer shadow-xl hover:-translate-y-4 transition-all"
+      />
     </div>
   );
 }

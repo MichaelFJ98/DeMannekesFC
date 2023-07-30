@@ -7,9 +7,9 @@ export default function Footer() {
   return (
     <div
       id="footer"
-      className="bg-gray-900 text-white px-7 leading-5 flex flex-col"
+      className="bg-gray-900 text-white px-7 leading-5 flex flex-col justify-center"
     >
-      <div className="py-7 flex flex-col md:flex-row md:justify-between md:self-center md:w-full gap-8 max-w-6xl">
+      <div className="py-7 flex flex-col md:flex-row md:justify-between md:self-center w-7/12">
         <div className="md:self-center md:justify-self-start">
           <h1 className="font-bold text-2xl pb-4">SOCIAL</h1>
           <div className="flex gap-2 text-xl">
@@ -28,15 +28,15 @@ export default function Footer() {
           </div>
         </div>
         <div className="md:self-center md:justify-self-end">
-          <h1 className="font-bold text-2xl pb-4">CONTACT</h1>
+          <h1 className="font-bold text-2xl py-4 md:pt-0">CONTACT</h1>
           <p className="font-thin text-sm">Zaventemsestraat 23</p>
           <p className="font-thin text-sm">Vlaams-Brabant, 1930 Zaventem</p>
-          <p className="font-thin text-sm">DuoDev@gmail.com</p>
+          <p className="font-thin text-sm pt-4">Insiter@gmail.com</p>
         </div>
       </div>
       <div className="border-t border-white text-center">
         <p className="font-thin text-xs py-7">
-          © {currentYear} DuoDev. All rights reserved.
+          © {currentYear} Insiter. All rights reserved.
         </p>
       </div>
     </div>

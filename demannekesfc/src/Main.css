@@ -2,5 +2,19 @@
 
 .main {
   /* font-family: "Mulish", sans-serif; */
-  font-family: 'Exo', sans-serif;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('SofiaProBlack.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('SofiaProRegular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
 }

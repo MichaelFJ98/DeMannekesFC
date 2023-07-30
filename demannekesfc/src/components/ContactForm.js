@@ -56,7 +56,7 @@ export default function ContactForm({ isOpen, onClose }) {
   }
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+    <div className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50">
       <div className="bg-white rounded-md p-8 w-96">
         <h2 className="text-2xl font-bold text-blue-950 mb-4">Contact Us</h2>
         <form onSubmit={handleSubmit}>

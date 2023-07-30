@@ -1,51 +1,35 @@
 import React from "react";
 import Service from "./Service.js";
 
-import { FaNodeJs, FaJava, FaPython } from "react-icons/fa";
+import { FaLaptopCode, FaClipboardCheck, FaVideo } from "react-icons/fa";
 
 export default function Services() {
   return (
-    <div id="services" className="bg-blue-50 p-6 text-white flex flex-col items-center py-10">
+    <div
+      id="services"
+      className="bg-blue-50 p-6 text-white flex flex-col items-center py-10"
+    >
       <h1 className="text-4xl font-black tracking-tight md:text-5xl pb-6 text-center text-blue-950">
-        SERVICES
+        OUR SERVICES
       </h1>
 
       <div className="flex flex-wrap w-7/12">
         {/* First Row */}
         <div className="flex justify-around w-full flex-wrap md:gap-x-32">
           <Service
-            icon={FaPython}
-            title="Social Conversations"
-            info="We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand."
+            icon={FaLaptopCode}
+            title="Tailored Web Solutions"
+            info="Our experts conduct thorough research about your business to create a bespoke website that maximizes your online presence. Whether you need online appointment booking, e-commerce functionality, or a stunning portfolio, we've got you covered."
           />
           <Service
-            icon={FaJava}
-            title="Analyze Performance"
-            info="Don't get your heart broken by people we love, even that we give them all we have. Then we lose family over time. As we live, our hearts turn colder."
+            icon={FaClipboardCheck}
+            title="Premium Communication"
+            info="We understand the value of effective communication. Throughout the entire process, we keep you informed, listen to your feedback, and ensure that your vision is translated into a premium product that truly represents your brand."
           />
           <Service
-            icon={FaNodeJs}
-            title="Measure Conversions"
-            info="What else could rust the heart more over time? Blackgold. The time is now for it to be okay to be great. or being a bright color. For standing out."
-          />
-        </div>
-
-        {/* Second Row */}
-        <div className="flex justify-around w-full flex-wrap md:gap-x-32">
-          <Service
-            icon={FaPython}
-            title="Fully Integrated"
-            info="We get insulted by others, lose trust for those others. We get back stabbed by friends. It becomes harder for us to give others a hand."
-          />
-          <Service
-            icon={FaJava}
-            title="Payments Functionality"
-            info="Don't get your heart broken by people we love, even that we give them all we have. Then we lose family over time. As we live, our hearts turn colder."
-          />
-          <Service
-            icon={FaNodeJs}
-            title="Improved Platform"
-            info="What else could rust the heart more over time? Blackgold. The time is now for it to be okay to be great. or being a bright color. For standing out."
+            icon={FaVideo}
+            title="Personalized Video Guides"
+            info="As part of our premium package, we provide personalized video guides to walk you through website maintenance and content updates. You'll have the confidence to manage your website effortlessly and maintain a polished online presence."
           />
         </div>
       </div>

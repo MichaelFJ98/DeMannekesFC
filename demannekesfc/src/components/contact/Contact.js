@@ -22,10 +22,9 @@ export default function Contact() {
           </p>
         </div>
         <p className="text-center text-gray-500 text-xs lg:text-lg w-screen lg:w-full px-2 ">
-          was popularised in the 1960s with the release of Letraset sheets
-          containing Lorem Ipsum passages, and more recently with desktop
-          publishing software like Aldus PageMaker including versions of Lorem
-          Ipsum
+          Are you ready to take your business to the next level? Let us create a
+          remarkable website that drives growth and success for your brand.
+          Together, we'll build something extraordinary.
         </p>
         <div className="flex flex-col md:flex-row gap-x-10 gap-y-4 pt-4">
           <div className="">
@@ -40,15 +39,15 @@ export default function Contact() {
             />
           </div>
           <div className="self-center">
-          <Button
-            text={"Send a message"}
-            fontSize={"font-semibold"}
-            onClick={() => setContactPopupOpen(true)}
-          />
-          <ContactForm
-            isOpen={isContactPopupOpen}
-            onClose={() => setContactPopupOpen(false)}
-          />
+            <Button
+              text={"Send a message"}
+              fontSize={"font-semibold"}
+              onClick={() => setContactPopupOpen(true)}
+            />
+            <ContactForm
+              isOpen={isContactPopupOpen}
+              onClose={() => setContactPopupOpen(false)}
+            />
           </div>
         </div>
       </div>

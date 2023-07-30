@@ -25,9 +25,10 @@ export default function Nav() {
     <Navbar
       fluid
       rounded
-      className="fixed top-0 text-grey-500 drop-shadow-xl bg-blue-50 z-20 md:py-4 w-7/12"
+      className="fixed top-0 text-grey-500 drop-shadow-sm bg-blue-50 z-20 md:py-4 w-7/12"
     >
       <Navbar.Brand as="button" onClick={scroll.scrollToTop}>
+        <img src="assets/images/logo.png" className="w-7 mr-4"></img>
         <span className="self-center whitespace-nowrap text-xl font-semibold">
           Insiter
         </span>

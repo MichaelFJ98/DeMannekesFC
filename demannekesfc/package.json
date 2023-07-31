@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@fontsource/mulish": "^5.0.5",
+    "@formspree/react": "^2.4.4",
     "@headlessui/react": "^1.7.15",
     "@heroicons/react": "^2.0.18",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -27,6 +28,7 @@
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "validator": "^13.9.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

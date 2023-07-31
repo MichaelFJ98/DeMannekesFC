@@ -70,17 +70,14 @@ export default function Projects() {
         <ProjectCard
           image="./assets/images/template1.jpg"
           alt=""
-          link={"https://google.com"}
         />
         <ProjectCard
           image="./assets/images/template1.jpg"
           alt=""
-          link={"https://google.com"}
         />
         <ProjectCard
           image="./assets/images/template1.jpg"
           alt=""
-          link={"https://google.com"}
         />
       </Slider>
     </div>

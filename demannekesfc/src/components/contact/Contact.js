@@ -3,15 +3,38 @@ import Calendly from "../Calendly";
 import Button from "../Button.js";
 import ContactForm from "../ContactForm";
 
+import SuccessPopup from "./SuccessPopup";
+import FailurePopup from "./FailurePopup";
+
 export default function Contact() {
   const [isMeetingPopupOpen, setMeetingPopupOpen] = useState(false);
   const [isContactPopupOpen, setContactPopupOpen] = useState(false);
+  const [isSuccessPopupOpen, setSuccessPopupOpen] = useState(false);
+  const [isFailurePopupOpen, setFailurePopupOpen] = useState(false);
+
+  const showSuccessPopup = () => {
+    setSuccessPopupOpen(true);
+  };
+
+  const showFailurePopup = () => {
+    setFailurePopupOpen(true);
+  };
+
+  const closeAllPopups = () => {
+    setMeetingPopupOpen(false);
+    setContactPopupOpen(false);
+    setSuccessPopupOpen(false);
+    setFailurePopupOpen(false);
+  };
 
   return (
     <div
       id="contact"
       class="bg-blue-50 flex items-center justify-around border-t-2 py-28"
     >
+      {/* Render the popups conditionally */}
+      {isSuccessPopupOpen && <SuccessPopup onClose={closeAllPopups} />}
+      {isFailurePopupOpen && <FailurePopup onClose={closeAllPopups} />}
       <div className="flex flex-col text-center w-7/12 items-center">
         <div>
           <h1 class="font-black tracking-tight text-blue-950 text-2xl md:text-3xl ">
@@ -47,6 +70,14 @@ export default function Contact() {
             <ContactForm
               isOpen={isContactPopupOpen}
               onClose={() => setContactPopupOpen(false)}
+              onSubmissionSuccess={() => {
+                showSuccessPopup();
+                setContactPopupOpen(false); // Close the form after success
+              }}
+              onSubmissionFailure={() => {
+                showFailurePopup();
+                setContactPopupOpen(false); // Close the form after failure
+              }}
             />
           </div>
         </div>

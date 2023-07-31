@@ -9,5 +9,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express-rate-limit": "^6.8.1",
+    "nodemailer": "^6.9.4"
+  }
 }

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FiSend } from "react-icons/fi";
 
+const API_URL = "http://localhost:3001/send-email";
+
 export default function ContactForm({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
     name: "",
@@ -9,22 +11,45 @@ export default function ContactForm({ isOpen, onClose }) {
     message: "",
   });
 
+  const [isMailSuccess, setMailSuccess] = useState(false);
+  const [isMailFailure, setMailFailure] = useState(false);
+  const [isLoading, setLoading] = useState(false);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add logic
-    console.log("Form data:", formData);
+    setLoading(true);
+
+    try {
+      const response = await fetch(API_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Error sending email");
+      }
+
+      console.log("Email sent successfully!");
+    } catch (error) {
+      console.error("Error sending email:", error);
+    }
+
+    setLoading(false);
+    onClose();
     setFormData({
       name: "",
       email: "",
       subject: "",
       message: "",
     });
-    onClose();
   };
 
   const handleOutsideClick = (e) => {
@@ -139,9 +164,19 @@ export default function ContactForm({ isOpen, onClose }) {
             <button
               type="submit"
               className="flex items-center space-x-1 bg-blue-500 text-white transition-all shadow-lg duration-300 ease-in-out hover:text-blue-500 px-3 border-2 border-blue-500 hover:bg-transparent rounded min-h-[40px]"
+              disabled={isLoading} // Disable the button while sending the email
             >
-              <FiSend className="text-lg mr-1" />
-              <span>Send Message</span>
+              {isLoading ? (
+                <div className="flex items-center">
+                  <div className="w-4 h-4 border-t-2 border-blue-200 border-solid rounded-full animate-spin" />
+                  <span className="ml-2">Sending...</span>
+                </div>
+              ) : (
+                <>
+                  <FiSend className="text-lg mr-1" />
+                  <span>Send Message</span>
+                </>
+              )}
             </button>
           </div>
         </form>

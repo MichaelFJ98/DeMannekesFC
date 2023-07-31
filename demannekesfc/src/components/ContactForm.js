@@ -1,91 +1,38 @@
 import React, { useState, useEffect } from "react";
 import { FiSend } from "react-icons/fi";
 
-const validator = require("validator");
+import { useForm, ValidationError } from "@formspree/react";
 
-const API_URL = "http://localhost:3001/send-email";
+export default function ContactForm({
+  isOpen,
+  onClose,
+  onSubmissionSuccess,
+  onSubmissionFailure,
+}) {
+  const [state, handleSubmit] = useForm("mwkdvonr");
 
-export default function ContactForm({ isOpen, onClose, onSubmissionSuccess, onSubmissionFailure }) {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const [isLoading, setLoading] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (isLoading) {
-      return;
+  useEffect(() => {
+    if (state.succeeded) {
+      onSubmissionSuccess();
+    } else if (state.errors && state.errors.length > 0) {
+      onSubmissionFailure();
     }
-
-    // Sanitize user input
-    const sanitizedFormData = {
-      name: formData.name.trim(),
-      email: formData.email.trim(),
-      subject: formData.subject.trim(),
-      message: formData.message.trim(),
-    };
-
-    // Validate email
-    if (!validator.isEmail(sanitizedFormData.email)) {
-      console.error("Invalid email address");
-      return;
-    }
-
-    setLoading(true);
-
-    try {
-      const response = await fetch(API_URL, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(sanitizedFormData),
-      });
-
-      if (!response.ok) {
-        throw new Error("Error sending email");
-      }
-
-      console.log("Email sent successfully!");
-      onSubmissionSuccess(); // Show success popup
-    } catch (error) {
-      console.error("Error sending email:", error);
-      onSubmissionFailure(); // Show failure popup
-    }
-
-    setLoading(false);
-    onClose();
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-  };
+  }, [state.succeeded, state.errors]);
 
   const handleOutsideClick = (e) => {
-    if (!isLoading && e.target.classList.contains("bg-black")) {
+    if (!state.submitting && e.target.classList.contains("bg-black")) {
       onClose();
     }
   };
 
   const handleKeyPress = (e) => {
-    if (!isLoading && e.key === "Escape") {
+    if (!state.submitting && e.key === "Escape") {
       onClose();
     }
   };
 
   const handleClose = () => {
-    if (!isLoading) {
+    if (!state.submitting) {
       onClose();
     }
   };
@@ -100,7 +47,7 @@ export default function ContactForm({ isOpen, onClose, onSubmissionSuccess, onSu
       document.removeEventListener("mousedown", handleOutsideClick);
       document.removeEventListener("keydown", handleKeyPress);
     }
-  }, [isOpen, isLoading]);
+  }, [isOpen]);
 
   if (!isOpen) {
     return null;
@@ -122,11 +69,9 @@ export default function ContactForm({ isOpen, onClose, onSubmissionSuccess, onSu
               type="text"
               id="name"
               name="name"
-              value={formData.name}
-              onChange={handleChange}
               className="border border-blue-500 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500"
-              required
             />
+            <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
           <div className="flex flex-col mb-4">
             <label
@@ -139,10 +84,12 @@ export default function ContactForm({ isOpen, onClose, onSubmissionSuccess, onSu
               type="email"
               id="email"
               name="email"
-              value={formData.email}
-              onChange={handleChange}
               className="border border-blue-500 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500"
-              required
+            />
+            <ValidationError
+              prefix="Email"
+              field="email"
+              errors={state.errors}
             />
           </div>
           <div className="flex flex-col mb-4">
@@ -156,10 +103,12 @@ export default function ContactForm({ isOpen, onClose, onSubmissionSuccess, onSu
               type="text"
               id="subject"
               name="subject"
-              value={formData.subject}
-              onChange={handleChange}
               className="border border-blue-500 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500"
-              required
+            />
+            <ValidationError
+              prefix="Subject"
+              field="subject"
+              errors={state.errors}
             />
           </div>
           <div className="flex flex-col mb-4">
@@ -172,10 +121,12 @@ export default function ContactForm({ isOpen, onClose, onSubmissionSuccess, onSu
             <textarea
               id="message"
               name="message"
-              value={formData.message}
-              onChange={handleChange}
               className="border border-blue-500 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500 h-32 resize-none"
-              required
+            />
+            <ValidationError
+              prefix="Message"
+              field="message"
+              errors={state.errors}
             />
           </div>
 
@@ -183,7 +134,7 @@ export default function ContactForm({ isOpen, onClose, onSubmissionSuccess, onSu
             <button
               type="button"
               className={`text-gray-500 ${
-                isLoading ? "cursor-default" : "hover:text-red-500"
+                state.submitting ? "cursor-default" : "hover:text-red-500"
               }`}
               onClick={handleClose}
             >
@@ -192,11 +143,13 @@ export default function ContactForm({ isOpen, onClose, onSubmissionSuccess, onSu
             <button
               type="submit"
               className={`flex items-center space-x-1 bg-blue-500 text-white ${
-                isLoading ? "" : "hover:text-blue-500 hover:bg-transparent"
+                state.submitting
+                  ? ""
+                  : "hover:text-blue-500 hover:bg-transparent"
               } transition-all shadow-lg duration-300 ease-in-out px-3 border-2 border-blue-500 rounded min-h-[40px]`}
-              disabled={isLoading}
+              disabled={state.submitting}
             >
-              {isLoading ? (
+              {state.submitting ? (
                 <div className="flex items-center">
                   <div className="w-4 h-4 border-t-2 border-blue-200 border-solid rounded-full animate-spin" />
                   <span className="ml-2">Sending...</span>

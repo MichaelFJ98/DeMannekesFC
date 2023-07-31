@@ -182,7 +182,9 @@ export default function ContactForm({ isOpen, onClose, onSubmissionSuccess, onSu
           <div className="flex justify-between">
             <button
               type="button"
-              className="text-gray-500 hover:text-red-500"
+              className={`text-gray-500 ${
+                isLoading ? "cursor-default" : "hover:text-red-500"
+              }`}
               onClick={handleClose}
             >
               Cancel

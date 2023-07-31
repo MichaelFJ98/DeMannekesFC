@@ -35,7 +35,7 @@ export default function About() {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-blue-50 hover:scale-110 transition-all rounded-lg p-6 flex flex-col shadow-md shadow-blue-200"
+            className="bg-blue-50 md:hover:scale-110 transition-all rounded-lg p-6 flex flex-col shadow-md shadow-blue-200"
           >
             <img
               src={member.image}

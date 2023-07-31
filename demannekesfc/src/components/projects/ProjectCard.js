@@ -9,7 +9,7 @@ export default function ProjectCard({ image, alt, link }) {
         src={image}
         alt={alt}
         onClick={handleClick}
-        className="object-contain rounded-lg hover:cursor-pointer shadow-md hover:-translate-y-4 transition-all"
+        className="object-contain rounded-lg hover:cursor-pointer shadow-md md:hover:-translate-y-4 transition-all"
       />
     </div>
   );

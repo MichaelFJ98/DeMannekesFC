@@ -7,8 +7,8 @@ const teamMembers = [
     about:
       "Hey there! I'm Michael, a passionate developer and entrepreneur. I love envisioning innovative solutions that take businesses to new heights in the digital realm. With a keen eye for detail and a deep understanding of your needs, I'll craft a tailored website that leaves a lasting impact.",
     image: "./assets/images/Michel.png",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/in/",
+    github: "https://github.com/MichaelFJ98",
+    linkedin: "https://www.linkedin.com/in/michael-fernandez-juarez/",
   },
   {
     name: "Bryan Langhendries",
@@ -16,8 +16,8 @@ const teamMembers = [
     about:
       "Hello, I'm Bryan! As a developer with a passion for problem-solving and creativity, I'm committed to crafting exceptional digital experiences. I strongly believe in the power of collaboration, turning your ideas into reality.",
     image: "./assets/images/Bryan.png",
-    github: "https://github.com/",
-    linkedin: "https://www.linkedin.com/in/",
+    github: "https://github.com/bryanlanghendries",
+    linkedin: "https://www.linkedin.com/in/bryan-langhendries/",
   },
 ];
 
@@ -47,7 +47,7 @@ export default function About() {
               <p className="text-gray-700 text-sm">{member.role}</p>
               <p className="p-4 hidden md:block">{member.about}</p>
 
-              <div className="mt-auto flex justify-center space-x-4">
+              <div className="mt-auto flex justify-center space-x-4 pt-4">
                 <a
                   href={member.github}
                   target="_blank"

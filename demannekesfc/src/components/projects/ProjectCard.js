@@ -1,6 +1,6 @@
 export default function ProjectCard({ image, alt, link }) {
   const handleClick = () => {
-    window.open(link, "_blank");
+    if (link) window.open(link, "_blank");
   };
 
   return (

@@ -1,32 +1,27 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
-const rateLimit = require("express-rate-limit");
 const cors = require("cors");
-require("dotenv").config();
+const dotenv = require("dotenv");
+
+// Load environment variables from the .env file
+const dotenvResult = dotenv.config();
+if (dotenvResult.error) {
+  throw dotenvResult.error;
+}
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Set up your email transporter with SMTP settings for insiter.be
 const transporter = nodemailer.createTransport({
-  host: "smtp-auth.mailprotect.be",
-  port: 587,
+  host: process.env.SMTP_HOST,
+  port: process.env.SMTP_PORT,
   secure: false,
   auth: {
-    user: "contact@insiter.be",
-    pass: "]5DJdh_vjY9#s,8",
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
   },
 });
-
-// Define rate limiting options (5 requests per 5 minutes from the same IP)
-const limiter = rateLimit({
-  windowMs: 5 * 60 * 1000, // 5 minutes
-  max: 5, // 5 requests allowed per IP within the defined windowMs
-  message: "Too many requests from this IP, please try again later.",
-});
-
-// Apply rate limiter to all requests
-app.use(limiter);
 
 // Enable CORS for specific origins
 const allowedOrigins = ["https://insiter.be", "http://localhost:5001"];

@@ -10,6 +10,11 @@ cors@^2.8.5:
     object-assign "^4"
     vary "^1"
 
+dotenv@^16.3.1:
+  version "16.3.1"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-16.3.1.tgz#369034de7d7e5b120972693352a3bf112172cc3e"
+  integrity sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==
+
 express-rate-limit@^6.8.1:
   version "6.8.1"
   resolved "https://registry.yarnpkg.com/express-rate-limit/-/express-rate-limit-6.8.1.tgz#f614bc3a7040fe6f75dc3198536f4cc13526f989"

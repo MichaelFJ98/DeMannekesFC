@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { FiSend } from "react-icons/fi";
 
+const validator = require("validator");
+
 const API_URL = "http://localhost:3001/send-email";
 
 export default function ContactForm({ isOpen, onClose }) {
@@ -22,6 +24,24 @@ export default function ContactForm({ isOpen, onClose }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (isLoading) {
+      return;
+    }
+
+    // Sanitize user input
+    const sanitizedFormData = {
+      name: formData.name.trim(),
+      email: formData.email.trim(),
+      subject: formData.subject.trim(),
+      message: formData.message.trim(),
+    };
+
+    // Validate email
+    if (!validator.isEmail(sanitizedFormData.email)) {
+      console.error("Invalid email address");
+      return;
+    }
+
     setLoading(true);
 
     try {
@@ -30,7 +50,7 @@ export default function ContactForm({ isOpen, onClose }) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(sanitizedFormData),
       });
 
       if (!response.ok) {
@@ -53,13 +73,19 @@ export default function ContactForm({ isOpen, onClose }) {
   };
 
   const handleOutsideClick = (e) => {
-    if (e.target.classList.contains("bg-black")) {
+    if (!isLoading && e.target.classList.contains("bg-black")) {
       onClose();
     }
   };
 
   const handleKeyPress = (e) => {
-    if (e.key === "Escape") {
+    if (!isLoading && e.key === "Escape") {
+      onClose();
+    }
+  };
+
+  const handleClose = () => {
+    if (!isLoading) {
       onClose();
     }
   };
@@ -74,7 +100,7 @@ export default function ContactForm({ isOpen, onClose }) {
       document.removeEventListener("mousedown", handleOutsideClick);
       document.removeEventListener("keydown", handleKeyPress);
     }
-  }, [isOpen]);
+  }, [isOpen, isLoading]);
 
   if (!isOpen) {
     return null;
@@ -157,14 +183,16 @@ export default function ContactForm({ isOpen, onClose }) {
             <button
               type="button"
               className="text-gray-500 hover:text-red-500"
-              onClick={onClose}
+              onClick={handleClose}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="flex items-center space-x-1 bg-blue-500 text-white transition-all shadow-lg duration-300 ease-in-out hover:text-blue-500 px-3 border-2 border-blue-500 hover:bg-transparent rounded min-h-[40px]"
-              disabled={isLoading} // Disable the button while sending the email
+              className={`flex items-center space-x-1 bg-blue-500 text-white ${
+                isLoading ? "" : "hover:text-blue-500 hover:bg-transparent"
+              } transition-all shadow-lg duration-300 ease-in-out px-3 border-2 border-blue-500 rounded min-h-[40px]`}
+              disabled={isLoading}
             >
               {isLoading ? (
                 <div className="flex items-center">

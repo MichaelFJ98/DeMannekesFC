@@ -5,7 +5,7 @@ const validator = require("validator");
 
 const API_URL = "http://localhost:3001/send-email";
 
-export default function ContactForm({ isOpen, onClose }) {
+export default function ContactForm({ isOpen, onClose, onSubmissionSuccess, onSubmissionFailure }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,8 +13,6 @@ export default function ContactForm({ isOpen, onClose }) {
     message: "",
   });
 
-  const [isMailSuccess, setMailSuccess] = useState(false);
-  const [isMailFailure, setMailFailure] = useState(false);
   const [isLoading, setLoading] = useState(false);
 
   const handleChange = (e) => {
@@ -58,8 +56,10 @@ export default function ContactForm({ isOpen, onClose }) {
       }
 
       console.log("Email sent successfully!");
+      onSubmissionSuccess(); // Show success popup
     } catch (error) {
       console.error("Error sending email:", error);
+      onSubmissionFailure(); // Show failure popup
     }
 
     setLoading(false);

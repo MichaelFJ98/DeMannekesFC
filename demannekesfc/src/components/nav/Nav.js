@@ -21,11 +21,9 @@ export default function Nav() {
   });
 
   return (
-    <div className="flex justify-center items-center w-full bg-blue-950">
+    <div className=" w-screen bg-blue-950">
     <Navbar
-      fluid
-      rounded
-      className="fixed top-0 text-grey-500 drop-shadow-sm bg-blue-50 z-20 md:py-4 w-7/12"
+      className="fixed top-0 text-black drop-shadow-md bg-blue-50 z-20 md:py-4 w-screen"
     >
       <Navbar.Brand as="button" onClick={scroll.scrollToTop}>
         <img src="assets/images/logo.png" className="w-7 mr-4"></img>
@@ -38,32 +36,27 @@ export default function Nav() {
         <ul className="flex items-center space-x-4">
           <li>
             <ScrollLink {...createLinkAttributes("home")}>
-              <AiOutlineHome className="text-xl" />
-              <span>Home</span>
+              <h1 className="text-xl">Home</h1>
             </ScrollLink>
           </li>
           <li>
             <ScrollLink {...createLinkAttributes("about")}>
-              <AiOutlineInfoCircle className="text-xl" />
-              <span>About</span>
+              <h1 className="text-xl ">About</h1>
             </ScrollLink>
           </li>
           <li>
             <ScrollLink {...createLinkAttributes("projects")}>
-              <BsBriefcase className="text-xl" />
-              <span>Projects</span>
+              <h1 className="text-xl ">Projects</h1>
             </ScrollLink>
           </li>
           <li>
             <ScrollLink {...createLinkAttributes("services")}>
-              <MdOutlineBuild className="text-xl" />
-              <span>Services</span>
+              <h1 className="text-xl ">Services</h1>
             </ScrollLink>
           </li>
           <li>
             <ScrollLink {...createLinkAttributes("contact")}>
-              <FiMail className="text-xl" />
-              <span>Contact</span>
+              <h1 className="text-2xl text-blue-500 ">Contact</h1>
             </ScrollLink>
           </li>
         </ul>

@@ -1,13 +1,5 @@
 import React from "react";
 import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { FaHome } from "react-icons/fa";
-import { AiOutlineInfoCircle } from "react-icons/ai";
-import { BsBriefcase } from "react-icons/bs";
-import { GiSkills } from "react-icons/gi";
-import { FiMail } from "react-icons/fi";
-import { MdOutlineBuild } from "react-icons/md";
-import { AiOutlineHome } from "react-icons/ai";
-
 import { Navbar } from "flowbite-react";
 
 export default function Nav() {
@@ -33,30 +25,30 @@ export default function Nav() {
       </Navbar.Brand>
       <Navbar.Toggle />
       <Navbar.Collapse>
-        <ul className="flex items-center space-x-4">
+        <ul className="flex items-center space-x-6">
           <li>
             <ScrollLink {...createLinkAttributes("home")}>
-              <h1 className="text-xl">Home</h1>
+              <h1 className="text-xl font-semibold">Home</h1>
             </ScrollLink>
           </li>
           <li>
             <ScrollLink {...createLinkAttributes("about")}>
-              <h1 className="text-xl ">About</h1>
+              <h1 className="text-xl font-semibold">About</h1>
             </ScrollLink>
           </li>
           <li>
             <ScrollLink {...createLinkAttributes("projects")}>
-              <h1 className="text-xl ">Projects</h1>
+              <h1 className="text-xl font-semibold">Projects</h1>
             </ScrollLink>
           </li>
           <li>
             <ScrollLink {...createLinkAttributes("services")}>
-              <h1 className="text-xl ">Services</h1>
+              <h1 className="text-xl font-semibold">Services</h1>
             </ScrollLink>
           </li>
           <li>
             <ScrollLink {...createLinkAttributes("contact")}>
-              <h1 className="text-2xl text-blue-500 ">Contact</h1>
+              <h1 className="text-2xl text-blue-500 font-semibold">Contact</h1>
             </ScrollLink>
           </li>
         </ul>

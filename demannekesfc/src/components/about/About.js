@@ -25,9 +25,9 @@ export default function About() {
   return (
     <div
       id="about"
-      className="bg-secondary text-primary dark:bg-dark-secondary dark:text-dark-text flex flex-col p-6 h-full items-center pb-20"
+      className="bg-background text-text dark:bg-dark-background dark:text-dark-text flex flex-col p-6 h-full items-center pb-20"
     >
-      <h1 className="text-4xl font-black tracking-tight md:text-6xl pb-12 text-center">
+      <h1 className="text-4xl font-black tracking-tight md:text-6xl pb-12 text-center text-primary dark:text-dark-primary">
         Our Team
       </h1>
 
@@ -35,7 +35,7 @@ export default function About() {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-secondary dark:hover:scale-110 transition-all rounded-lg p-6 flex flex-col shadow-md shadow-primary dark:shadow-dark-primary"
+            className="bg-secondary dark:bg-dark-secondary hover:scale-110 transition-all rounded-lg p-6 flex flex-col shadow-md shadow-primary dark:shadow-dark-primary"
           >
             <img
               src={member.image}
@@ -43,13 +43,13 @@ export default function About() {
               className="w-28 h-28 rounded-full object-cover mb-4 self-center p-1 bg-primary dark:bg-dark-primary"
             />
             <div className="text-center flex flex-col flex-grow">
-              <h1 className="text-xl font-bold text-text dark:text-dark-text">
+              <h1 className="text-xl font-bold">
                 {member.name}
               </h1>
-              <p className="text-gray-700 text-sm text-text dark:text-dark-text">
+              <p className="text-sm">
                 {member.role}
               </p>
-              <p className="p-4 hidden md:block text-text dark:text-dark-text">
+              <p className="p-4 hidden md:block">
                 {member.about}
               </p>
 

@@ -30,7 +30,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="bg-secondary dark:bg-dark-secondary flex items-center justify-around border-t-2 py-28"
+      className="bg-background dark:bg-dark-background flex items-center justify-around border-t-2 py-28"
     >
       {/* Render the popups conditionally */}
       {isSuccessPopupOpen && <SuccessPopup onClose={closeAllPopups} />}
@@ -40,11 +40,11 @@ export default function Contact() {
           <h1 className="font-black tracking-tight text-primary dark:text-dark-primary text-2xl md:text-3xl ">
             In need of a website to improve your business?
           </h1>
-          <p className="lg:mb-4 font-semibold text-primary dark:text-dark-primary lg:text-xl mb-2 text-xs ">
+          <p className="lg:mb-4 font-semibold text-primary lg:text-xl mb-2 text-xs ">
             Let's build something great together.
           </p>
         </div>
-        <p className="text-center text-gray-500 dark:text-gray-400 text-xs lg:text-lg w-screen lg:w-full px-2 ">
+        <p className="text-center text-text dark:text-dark-text text-xs lg:text-lg w-screen lg:w-full px-2 ">
           Are you ready to take your business to the next level? Let us create a
           remarkable website that drives growth and success for your brand.
           Together, we'll build something extraordinary.

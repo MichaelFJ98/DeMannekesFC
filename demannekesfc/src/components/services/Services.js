@@ -7,7 +7,7 @@ export default function Services() {
   return (
     <div
       id="services"
-      className="bg-secondary p-6 text-primary dark:bg-dark-secondary dark:text-white flex flex-col items-center py-10"
+      className="bg-background p-6 text-text dark:bg-dark-background dark:text-dark-text flex flex-col items-center py-10"
     >
       <h1 className="text-4xl font-black tracking-tight md:text-5xl pb-6 text-center text-primary dark:text-dark-primary">
         WHY US ?

@@ -3,16 +3,25 @@ import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import { Navbar } from "flowbite-react";
 
 import DarkModeToggle from "../DarkModeToggle.js";
+import Button from "../Button.js";
 
 export default function Nav() {
-  const createLinkAttributes = (to) => ({
-    to,
-    smooth: true,
-    duration: 500,
-    offset: -58,
-    className:
-      "cursor-pointer flex items-center space-x-2 hover:border-b-2 hover:border-primary dark:text-white dark:hover:border-white",
-  });
+  const createLinkAttributes = (to) => {
+    let className =
+      "cursor-pointer flex items-center space-x-2 hover:border-b-2 hover:border-primary dark:text-white dark:hover:border-white";
+
+    if (to === "contact") {
+      className = "";
+    }
+
+    return {
+      to,
+      smooth: true,
+      duration: 500,
+      offset: -58,
+      className,
+    };
+  };
 
   return (
     <div className="w-screen bg-primary">
@@ -48,7 +57,11 @@ export default function Nav() {
             </li>
             <li>
               <ScrollLink {...createLinkAttributes("contact")}>
-                <h1 className="text-2xl text-primary font-semibold">Contact</h1>
+                <Button
+                  className="text-2xl text-primary font-semibold"
+                  fontSize={"font-bold"}
+                  text={"Contact"}
+                />
               </ScrollLink>
             </li>
             <li>

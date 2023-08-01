@@ -5,7 +5,7 @@ export default function Service({ icon: Icon, title, info }) {
         <Icon className="w-7 h-7 text-white dark:text-dark-text m-3" />
       </div>
       <div className="text-center mb-2 mt-4 text-xl">
-        <h1 className="font-black text-primary dark:text-dark-primary">
+        <h1 className="font-black text-primary dark:text-primary">
           {title}
         </h1>
       </div>

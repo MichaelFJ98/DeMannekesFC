@@ -71,7 +71,7 @@ export default function ContactForm({
               type="text"
               id="name"
               name="name"
-              className="border border-primary dark:border-dark-primary rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-primary dark:focus:border-dark-primary"
+              className="border border-primary dark:bg-dark-secondary dark:text-dark-text dark:border-dark-primary rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-primary dark:focus:border-dark-primary"
             />
             <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
@@ -86,7 +86,7 @@ export default function ContactForm({
               type="email"
               id="email"
               name="email"
-              className="border border-primary dark:border-dark-primary rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-primary dark:focus:border-dark-primary"
+              className="border dark:bg-dark-secondary dark:text-dark-text border-primary dark:border-dark-primary rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-primary dark:focus:border-dark-primary"
             />
             <ValidationError
               prefix="Email"
@@ -105,7 +105,7 @@ export default function ContactForm({
               type="text"
               id="subject"
               name="subject"
-              className="border border-primary dark:border-dark-primary rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-primary dark:focus:border-dark-primary"
+              className="border border-primary dark:border-dark-primary dark:bg-dark-secondary dark:text-dark-text rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-primary dark:focus:border-dark-primary"
             />
             <ValidationError
               prefix="Subject"
@@ -123,7 +123,7 @@ export default function ContactForm({
             <textarea
               id="message"
               name="message"
-              className="border border-primary dark:border-dark-primary rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-primary dark:focus:border-dark-primary h-32 resize-none"
+              className="border border-primary dark:border-dark-primary dark:bg-dark-secondary dark:text-dark-text rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-primary dark:focus:border-dark-primary h-32 resize-none"
             />
             <ValidationError
               prefix="Message"
@@ -138,7 +138,7 @@ export default function ContactForm({
               className={`text-text dark:text-dark-text ${
                 state.submitting
                   ? "cursor-default"
-                  : "hover:text-red-500 dark:hover:text-red-500"
+                  : "hover:text-error dark:hover:text-dark-error"
               }`}
               onClick={handleClose}
             >

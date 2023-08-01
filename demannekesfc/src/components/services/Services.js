@@ -7,9 +7,9 @@ export default function Services() {
   return (
     <div
       id="services"
-      className="bg-blue-50 p-6 text-white flex flex-col items-center py-10"
+      className="bg-secondary p-6 text-primary dark:bg-dark-secondary dark:text-white flex flex-col items-center py-10"
     >
-      <h1 className="text-4xl font-black tracking-tight md:text-5xl pb-6 text-center text-blue-950">
+      <h1 className="text-4xl font-black tracking-tight md:text-5xl pb-6 text-center text-primary dark:text-dark-primary">
         WHY US ?
       </h1>
 

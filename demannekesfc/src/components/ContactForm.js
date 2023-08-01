@@ -55,13 +55,15 @@ export default function ContactForm({
 
   return (
     <div className="fixed inset-0 z-30 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white rounded-md p-8 w-96">
-        <h2 className="text-2xl font-bold text-blue-950 mb-4">Contact Us</h2>
+      <div className="bg-secondary dark:bg-dark-background rounded-md p-8 w-96">
+        <h2 className="text-2xl font-bold text-primary dark:text-dark-primary mb-4">
+          Contact Us
+        </h2>
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col mb-4">
             <label
               htmlFor="name"
-              className="text-gray-700 font-semibold mb-1 self-start"
+              className="text-text dark:text-dark-text font-semibold mb-1 self-start"
             >
               Name
             </label>
@@ -69,14 +71,14 @@ export default function ContactForm({
               type="text"
               id="name"
               name="name"
-              className="border border-blue-500 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500"
+              className="border border-primary dark:border-dark-primary rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-primary dark:focus:border-dark-primary"
             />
             <ValidationError prefix="Name" field="name" errors={state.errors} />
           </div>
           <div className="flex flex-col mb-4">
             <label
               htmlFor="email"
-              className="text-gray-700 font-semibold mb-1 self-start"
+              className="text-text dark:text-dark-text font-semibold mb-1 self-start"
             >
               Email
             </label>
@@ -84,7 +86,7 @@ export default function ContactForm({
               type="email"
               id="email"
               name="email"
-              className="border border-blue-500 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500"
+              className="border border-primary dark:border-dark-primary rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-primary dark:focus:border-dark-primary"
             />
             <ValidationError
               prefix="Email"
@@ -95,7 +97,7 @@ export default function ContactForm({
           <div className="flex flex-col mb-4">
             <label
               htmlFor="subject"
-              className="text-gray-700 font-semibold mb-1 self-start"
+              className="text-text dark:text-dark-text font-semibold mb-1 self-start"
             >
               Subject
             </label>
@@ -103,7 +105,7 @@ export default function ContactForm({
               type="text"
               id="subject"
               name="subject"
-              className="border border-blue-500 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500"
+              className="border border-primary dark:border-dark-primary rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-primary dark:focus:border-dark-primary"
             />
             <ValidationError
               prefix="Subject"
@@ -114,14 +116,14 @@ export default function ContactForm({
           <div className="flex flex-col mb-4">
             <label
               htmlFor="message"
-              className="text-gray-700 font-semibold mb-1 self-start"
+              className="text-text dark:text-dark-text font-semibold mb-1 self-start"
             >
               Message
             </label>
             <textarea
               id="message"
               name="message"
-              className="border border-blue-500 rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-blue-500 h-32 resize-none"
+              className="border border-primary dark:border-dark-primary rounded-md py-2 px-3 focus:outline-none focus:ring focus:border-primary dark:focus:border-dark-primary h-32 resize-none"
             />
             <ValidationError
               prefix="Message"
@@ -133,8 +135,10 @@ export default function ContactForm({
           <div className="flex justify-between">
             <button
               type="button"
-              className={`text-gray-500 ${
-                state.submitting ? "cursor-default" : "hover:text-red-500"
+              className={`text-text dark:text-dark-text ${
+                state.submitting
+                  ? "cursor-default"
+                  : "hover:text-red-500 dark:hover:text-red-500"
               }`}
               onClick={handleClose}
             >
@@ -142,16 +146,16 @@ export default function ContactForm({
             </button>
             <button
               type="submit"
-              className={`flex items-center space-x-1 bg-blue-500 text-white ${
+              className={`flex items-center space-x-1 bg-primary text-white dark:bg-dark-primary ${
                 state.submitting
                   ? ""
-                  : "hover:text-blue-500 hover:bg-transparent"
-              } transition-all shadow-lg duration-300 ease-in-out px-3 border-2 border-blue-500 rounded min-h-[40px]`}
+                  : "hover:text-primary dark:hover:text-primary hover:bg-transparent"
+              } transition-all shadow-lg duration-300 ease-in-out px-3 border-2 border-primary dark:border-dark-primary rounded min-h-[40px]`}
               disabled={state.submitting}
             >
               {state.submitting ? (
                 <div className="flex items-center">
-                  <div className="w-4 h-4 border-t-2 border-blue-200 border-solid rounded-full animate-spin" />
+                  <div className="w-4 h-4 border-t-2 border-primary dark:border-dark-primary border-solid rounded-full animate-spin" />
                   <span className="ml-2">Sending...</span>
                 </div>
               ) : (

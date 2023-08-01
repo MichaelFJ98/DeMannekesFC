@@ -25,7 +25,7 @@ export default function About() {
   return (
     <div
       id="about"
-      className="bg-blue-50 text-blue-950 flex flex-col p-6 h-full items-center pb-20"
+      className="bg-secondary text-primary dark:bg-dark-secondary dark:text-dark-text flex flex-col p-6 h-full items-center pb-20"
     >
       <h1 className="text-4xl font-black tracking-tight md:text-6xl pb-12 text-center">
         Our Team
@@ -35,17 +35,23 @@ export default function About() {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-blue-50 md:hover:scale-110 transition-all rounded-lg p-6 flex flex-col shadow-md shadow-blue-200"
+            className="bg-secondary dark:hover:scale-110 transition-all rounded-lg p-6 flex flex-col shadow-md shadow-primary dark:shadow-dark-primary"
           >
             <img
               src={member.image}
               alt={member.name}
-              className="w-28 h-28 rounded-full object-cover mb-4 self-center p-1 bg-blue-300"
+              className="w-28 h-28 rounded-full object-cover mb-4 self-center p-1 bg-primary dark:bg-dark-primary"
             />
             <div className="text-center flex flex-col flex-grow">
-              <h1 className="text-xl font-bold">{member.name}</h1>
-              <p className="text-gray-700 text-sm">{member.role}</p>
-              <p className="p-4 hidden md:block">{member.about}</p>
+              <h1 className="text-xl font-bold text-text dark:text-dark-text">
+                {member.name}
+              </h1>
+              <p className="text-gray-700 text-sm text-text dark:text-dark-text">
+                {member.role}
+              </p>
+              <p className="p-4 hidden md:block text-text dark:text-dark-text">
+                {member.about}
+              </p>
 
               <div className="mt-auto flex justify-center space-x-4 pt-4">
                 <a
@@ -53,14 +59,14 @@ export default function About() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaGithub className="text-blue-500 hover:text-blue-300 text-3xl transition-colors" />
+                  <FaGithub className="text-primary dark:text-dark-primary hover:text-primary dark:hover:text-primary text-3xl transition-colors" />
                 </a>
                 <a
                   href={member.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaLinkedinIn className="text-blue-500 hover:text-blue-300 text-3xl transition-colors" />
+                  <FaLinkedinIn className="text-primary dark:text-dark-primary hover:text-primary dark:hover:text-primary text-3xl transition-colors" />
                 </a>
               </div>
             </div>

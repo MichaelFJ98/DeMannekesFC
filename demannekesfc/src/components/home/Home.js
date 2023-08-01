@@ -14,25 +14,25 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="bg-blue-50 text-white h-screen flex flex-row justify-center"
+      className="bg-primary dark:bg-dark-background text-text h-screen flex flex-row justify-center"
     >
       <div className="flex row justify-start items-center gap-4 sm:gap-6 w-7/12 h-full ">
         <div className="text-left lg:w-7/12">
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-500 py-3">
+          <p className="text-lg sm:text-xl md:text-2xl text-secondary py-3">
             Hi, We are Insiter
           </p>
 
-          <h1 className="leading-tight text-3xl md:text-4xl text-blue-950 font-black">
+          <h1 className="leading-tight text-3xl md:text-4xl text-text dark:text-dark-text font-black">
             Full-Stack Developers
           </h1>
 
-          <h1 className="leading-tight text-3xl md:text-4xl text-blue-950  font-black ">
+          <h1 className="leading-tight text-3xl md:text-4xl text-text dark:text-dark-text font-black ">
             From Belgium.
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-500 py-3">
+          <p className="text-lg sm:text-xl md:text-2xl text-secondary py-3">
             We help people and brands by designing and building digital products
-            that are optimized for your clients experience.
+            that are optimized for your clients' experience.
           </p>
 
           <div className="flex flex-row gap-4 items-center py-2">
@@ -40,11 +40,12 @@ export default function Home() {
               text={"View our work"}
               fontSize={"font-semibold"}
               onClick={() => handleScrollTo("projects")}
+              dark={true}
             />
 
             <a
               onClick={() => handleScrollTo("about")}
-              className="text-base font-semibold text-blue-500 hover:underline cursor-pointer"
+              className="text-base font-semibold text-primary dark:text-dark-primary hover:underline cursor-pointer"
             >
               More about us <span aria-hidden="true">→</span>
             </a>

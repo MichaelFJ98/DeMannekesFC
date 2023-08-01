@@ -12,7 +12,7 @@ const SuccessPopup = ({ onClose }) => {
   }, [onClose]);
 
   return (
-    <div className="fixed top-1/3 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-4 py-2 rounded-lg text-xl font-semibold">
+    <div className="fixed top-1/3 left-1/2 transform -translate-x-1/2 bg-success dark:bg-dark-success text-white px-4 py-2 rounded-lg text-xl font-semibold">
       <p>Email sent successfully!</p>
     </div>
   );

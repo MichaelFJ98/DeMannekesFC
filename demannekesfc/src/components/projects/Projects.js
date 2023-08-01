@@ -60,25 +60,15 @@ export default function Projects() {
       },
     ],
   };
-
   return (
-    <div id="projects" className="bg-blue-50 px-10">
-      <h1 className="text-4xl font-black tracking-tight md:text-5xl pb-6 text-center text-blue-950">
+    <div id="projects" className="bg-secondary dark:bg-dark-background px-10">
+      <h1 className="text-4xl font-black tracking-tight md:text-5xl pb-6 text-center text-primary dark:text-dark-primary">
         PROJECTS
       </h1>
       <Slider {...settings}>
-        <ProjectCard
-          image="./assets/images/template1.jpg"
-          alt=""
-        />
-        <ProjectCard
-          image="./assets/images/template1.jpg"
-          alt=""
-        />
-        <ProjectCard
-          image="./assets/images/template1.jpg"
-          alt=""
-        />
+        <ProjectCard image="./assets/images/template1.jpg" alt="" />
+        <ProjectCard image="./assets/images/template1.jpg" alt="" />
+        <ProjectCard image="./assets/images/template1.jpg" alt="" />
       </Slider>
     </div>
   );

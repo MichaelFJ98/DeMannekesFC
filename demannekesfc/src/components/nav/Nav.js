@@ -8,7 +8,7 @@ import Button from "../Button.js";
 export default function Nav() {
   const createLinkAttributes = (to) => {
     let className =
-      "cursor-pointer flex items-center space-x-2 hover:border-b-2 hover:border-primary dark:text-white dark:hover:border-white";
+      "cursor-pointer flex items-center space-x-2 hover:border-b-2 md:hover:border-primary dark:text-white md:dark:hover:border-white";
 
     if (to === "contact") {
       className = "";

@@ -149,7 +149,7 @@ export default function ContactForm({
               className={`flex items-center space-x-1 bg-primary text-white dark:bg-dark-primary ${
                 state.submitting
                   ? ""
-                  : "hover:text-primary dark:hover:text-primary hover:bg-transparent"
+                  : "hover:text-primary dark:hover:text-dark-text hover:bg-transparent dark:hover:bg-transparent"
               } transition-all shadow-lg duration-300 ease-in-out px-3 border-2 border-primary dark:border-dark-primary rounded min-h-[40px]`}
               disabled={state.submitting}
             >

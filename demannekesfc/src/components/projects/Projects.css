@@ -10,3 +10,7 @@
   color: rgb(59 130 246);
   font-size: 45px;
 }
+
+.slick-dots li button::before {
+  color: rgb(59 130 246) !important;
+}

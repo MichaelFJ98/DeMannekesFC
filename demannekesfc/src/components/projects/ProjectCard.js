@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function ProjectCard({ image, alt, link }) {
   const handleClick = () => {
     if (link) window.open(link, "_blank");
@@ -9,7 +11,7 @@ export default function ProjectCard({ image, alt, link }) {
         src={image}
         alt={alt}
         onClick={handleClick}
-        className="object-contain rounded-lg cursor-pointer shadow-md md:hover:-translate-y-4 transition-all"
+        className="object-contain rounded-lg cursor-pointer shadow-md transition-transform duration-300 hover:scale-95"
       />
     </div>
   );

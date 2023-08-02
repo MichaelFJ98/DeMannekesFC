@@ -34,7 +34,7 @@ export default function Nav() {
         </Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse>
-          <ul className="flex items-center space-x-6">
+          <ul className="flex items-center flex-col md:flex-row  space-y-20 py-16 md:py-0 md:space-y-0 h-screen md:h-fit  md:space-x-6">
             <li>
               <ScrollLink {...createLinkAttributes("home")}>
                 <h1 className="text-xl font-semibold">Home</h1>

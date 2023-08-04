@@ -36,40 +36,42 @@ export default function About() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-7/12 py-10">
           {teamMembers.map((member, index) => (
-            <Fade top distance="20px" duration={1500}>
-              <div
-                key={index}
-                className="bg-secondary dark:bg-dark-secondary hover:scale-110 transition-all rounded-lg p-6 flex flex-col shadow-md shadow-primary dark:shadow-dark-primary"
-              >
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-28 h-28 rounded-full object-cover mb-4 self-center p-1 bg-primary dark:bg-dark-primary"
-                />
-                <div className="text-center flex flex-col flex-grow">
-                  <h1 className="text-xl font-bold">{member.name}</h1>
-                  <p className="text-sm">{member.role}</p>
-                  <p className="p-4 hidden md:block">{member.about}</p>
+            <div className="hover:scale-95 transition-all">
+              <Fade top distance="20px" duration={1500}>
+                <div
+                  key={index}
+                  className="bg-secondary dark:bg-dark-secondary rounded-lg p-6 flex flex-col shadow-md shadow-primary dark:shadow-dark-primary"
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-28 h-28 rounded-full object-cover mb-4 self-center p-1 bg-primary dark:bg-dark-primary"
+                  />
+                  <div className="text-center flex flex-col flex-grow">
+                    <h1 className="text-xl font-bold">{member.name}</h1>
+                    <p className="text-sm">{member.role}</p>
+                    <p className="p-4 hidden md:block">{member.about}</p>
 
-                  <div className="mt-auto flex justify-center space-x-4 pt-4">
-                    <a
-                      href={member.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaGithub className="text-primary dark:text-dark-primary hover:text-primary dark:hover:text-primary text-3xl transition-colors" />
-                    </a>
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <FaLinkedinIn className="text-primary dark:text-dark-primary hover:text-primary dark:hover:text-primary text-3xl transition-colors" />
-                    </a>
+                    <div className="mt-auto flex justify-center space-x-4 pt-4">
+                      <a
+                        href={member.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaGithub className="text-primary dark:text-dark-primary hover:text-primary dark:hover:text-primary text-3xl transition-colors" />
+                      </a>
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <FaLinkedinIn className="text-primary dark:text-dark-primary hover:text-primary dark:hover:text-primary text-3xl transition-colors" />
+                      </a>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </Fade>
+              </Fade>
+            </div>
           ))}
         </div>
       </Fade>

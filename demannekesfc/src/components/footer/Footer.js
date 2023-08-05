@@ -13,7 +13,7 @@ export default function Footer() {
       <Fade duration={1500}>
         <div className="py-7 flex flex-col md:flex-row md:justify-between md:self-center w-7/12">
           <div className="md:self-center md:justify-self-start">
-            <h1 className="font-bold text-2xl pb-4">SOCIAL</h1>
+            <h1 className="font-bold text-2xl pb-4">SOCIALS</h1>
             <div className="flex gap-2 text-xl">
               <FaLinkedinIn className="hover:text-primary dark:hover:text-dark-primary cursor-pointer" />
               <FaFacebookF className="hover:text-primary dark:hover:text-dark-primary cursor-pointer" />
@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="md:self-center md:justify-self-end">
-            <h1 className="font-bold text-2xl py-4 md:pt-0">CONTACT</h1>
+            <h1 className="font-bold text-2xl py-4 md:pt-0">CONTACT US</h1>
             <p className="font-thin text-sm">Vlaams-Brabant, 1930 Zaventem</p>
             <p className="font-thin text-sm pt-4">contact@insiter.be</p>
           </div>

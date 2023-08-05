@@ -69,7 +69,7 @@ export default function Projects() {
           PROJECTS
         </h1>
         <Slider {...settings}>
-          <ProjectCard image="./assets/images/template1.jpg" alt="" />
+          <ProjectCard image="./assets/images/hairdresser.png" alt="" link="/hairdresser"/>
           <ProjectCard image="./assets/images/template1.jpg" alt="" />
           <ProjectCard image="./assets/images/template1.jpg" alt="" />
         </Slider>

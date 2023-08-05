@@ -2,7 +2,7 @@ import React from "react";
 
 export default function ProjectCard({ image, alt, link }) {
   const handleClick = () => {
-    if (link) window.open(link, "_blank");
+    if (link) window.location.href = link;
   };
 
   return (

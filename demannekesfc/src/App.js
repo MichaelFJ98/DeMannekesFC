@@ -1,16 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./Main";
-import Hairdresser from "./hairdresser/Main.js";
-import "./App.css";
+import HairdresserMain from "./hairdresser/Main.js"; // Rename to avoid conflict
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Main />} />
-          <Route exact path="/hairdresser" element={<Hairdresser />} />
-          <Route path="*" element={<Main />} />
+          <Route path="/" element={<Main />} />
+          <Route path="/hairdresser/*" element={<HairdresserMain />} />
         </Routes>
       </BrowserRouter>
     </div>

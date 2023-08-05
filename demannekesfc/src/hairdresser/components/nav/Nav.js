@@ -4,7 +4,7 @@ import { Link as ScrollLink } from "react-scroll";
 function Nav() {
   const createLinkAttributes = (to) => {
     let className =
-      "cursor-pointer font-medium text-base hover:text-temp-secondary";
+      "cursor-pointer font-medium text-base hover:text-temp-secondary transition-colors";
 
     return {
       to,

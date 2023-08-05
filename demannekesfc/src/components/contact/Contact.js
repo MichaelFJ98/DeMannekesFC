@@ -32,7 +32,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="bg-background dark:bg-dark-background flex items-center justify-around border-t-2 py-28"
+      className="bg-background dark:bg-dark-background flex items-center justify-around border-b-2 py-28"
     >
       {/* Render the popups conditionally */}
       {isSuccessPopupOpen && <SuccessPopup onClose={closeAllPopups} />}

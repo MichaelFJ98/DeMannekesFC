@@ -4,12 +4,12 @@ const teamMembers = [
   {
     name: "John Doe",
     role: "Hair Stylist",
-    image: "/images/john.jpg",
+    image: "assets/images/Bryan.png",
   },
   {
     name: "Jane Smith",
     role: "Barber",
-    image: "/images/jane.jpg",
+    image: "assets/images/Michel.png",
   },
 ];
 

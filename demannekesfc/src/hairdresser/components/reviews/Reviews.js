@@ -25,7 +25,10 @@ function Reviews() {
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {reviewsData.map((review, index) => (
-            <div key={index} className="bg-white p-6 rounded-lg shadow-md">
+            <div
+              key={index}
+              className="bg-white p-6 rounded-lg shadow-md transition transform duration-300 hover:scale-105 hover:shadow-lg"
+            >
               <div className="flex items-start mb-4">
                 <div className="flex items-center mr-2">
                   {Array.from({ length: 5 }).map((_, i) => (

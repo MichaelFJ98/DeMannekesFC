@@ -24,7 +24,7 @@ function Team() {
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-lg shadow-md text-center"
+              className="bg-white p-6 rounded-lg shadow-md text-center transition transform duration-300 hover:scale-105 hover:shadow-lg"
             >
               <img
                 src={member.image}

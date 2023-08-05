@@ -57,7 +57,7 @@ function Hero() {
         </div>
         <div className="mt-4">
           <button
-            className="w-full px-4 py-2 rounded-md bg-temp-secondary hover:bg-temp-accent text-white font-semibold"
+            className="w-full px-4 py-2 rounded-md bg-temp-secondary hover:bg-temp-accent text-white font-semibold transition-colors duration-300 ease-in-out"
             onClick={handleAppointmentSubmit}
           >
             Book Appointment

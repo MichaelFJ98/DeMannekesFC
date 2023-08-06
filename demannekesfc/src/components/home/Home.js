@@ -45,17 +45,17 @@ export default function Home() {
                 onClick={() => handleScrollTo("projects")}
               />
 
-              <a
+              <button
                 onClick={() => handleScrollTo("about")}
                 className="text-base font-semibold text-primary hover:underline cursor-pointer"
               >
                 More about us <span aria-hidden="true">→</span>
-              </a>
+              </button>
             </div>
           </div>
 
           <img
-            src="assets/images/Michel.png"
+            src="assets/images/Michel.webp"
             className="hidden lg:block w-5/12 overflow-hidden"
           ></img>
         </div>

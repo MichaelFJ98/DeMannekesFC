@@ -55,7 +55,7 @@ function Location() {
         {/* Location and Contact Info */}
         <div className="md:w-1/2 bg-gray-200">
           <img
-            src="/assets/images/hairdresser/location.jpg"
+            src="/assets/images/hairdresser/location.webp"
             alt="Location"
             className="max-w-full border-2"
           />

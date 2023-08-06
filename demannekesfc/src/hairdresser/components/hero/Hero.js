@@ -4,7 +4,7 @@ function Hero() {
       id="hero"
       className="bg-cover bg-center h-screen"
       style={{
-        backgroundImage: "url('/assets/images/hairdresser/herobg.jpg')",
+        backgroundImage: "url('/assets/images/hairdresser/herobg.webp')",
       }}
     >
       <div className="flex items-center justify-center h-full">

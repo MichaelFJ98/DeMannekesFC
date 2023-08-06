@@ -8,7 +8,7 @@ const teamMembers = [
     role: "Founder @ Insiter",
     about:
       "Hey there! I'm Michael, a passionate developer and entrepreneur. I love envisioning innovative solutions that take businesses to new heights in the digital realm. With a keen eye for detail and a deep understanding of your needs, I'll craft a tailored website that leaves a lasting impact.",
-    image: "./assets/images/Michel.png",
+    image: "./assets/images/Michel.webp",
     github: "https://github.com/MichaelFJ98",
     linkedin: "https://www.linkedin.com/in/michael-fernandez-juarez/",
   },
@@ -17,7 +17,7 @@ const teamMembers = [
     role: "Founder @ Insiter",
     about:
       "Hello, I'm Bryan! As a developer with a passion for problem-solving and creativity, I'm committed to crafting exceptional digital experiences. I strongly believe in the power of collaboration, turning your ideas into reality.",
-    image: "./assets/images/Bryan.png",
+    image: "./assets/images/Bryan.webp",
     github: "https://github.com/bryanlanghendries",
     linkedin: "https://www.linkedin.com/in/bryan-langhendries/",
   },

@@ -4,12 +4,12 @@ const teamMembers = [
   {
     name: "John Doe",
     role: "Hair Stylist",
-    image: "assets/images/hairdresser/p2.jpg",
+    image: "assets/images/hairdresser/p2.webp",
   },
   {
     name: "Jane Smith",
     role: "Barber",
-    image: "assets/images/hairdresser/p1.jpg",
+    image: "assets/images/hairdresser/p1.webp",
   },
 ];
 
@@ -29,6 +29,7 @@ function Team() {
               <img
                 src={member.image}
                 alt={member.name}
+                loading="lazy"
                 className="mx-auto rounded-full w-32 h-32 object-cover"
               />
               <h2 className="text-xl font-semibold mb-2">{member.name}</h2>

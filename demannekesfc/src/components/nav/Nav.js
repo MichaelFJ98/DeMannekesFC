@@ -1,75 +1,123 @@
-import React from "react";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
-import { Navbar } from "flowbite-react";
+import React, { useState } from "react";
+import { Link as ScrollLink } from "react-scroll";
+import { FiMenu, FiX } from "react-icons/fi";
 
 import DarkModeToggle from "../DarkModeToggle.js";
 import Button from "../Button.js";
 
-export default function Nav() {
+function Nav() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   const createLinkAttributes = (to) => {
     let className =
-      "cursor-pointer flex items-center space-x-2 hover:border-b-2 md:hover:border-primary dark:text-white md:dark:hover:border-white";
+      "block pb-4 md:pb-0 md:inline-block mt-2 md:mt-0 cursor-pointer font-medium text-base md:ml-4 md:mr-4 hover:text-temp-secondary transition-colors";
 
     if (to === "contact") {
-      className = "";
+      className =
+        "block pb-4 md:pb-0 md:inline-block mt-2 md:mt-0 cursor-pointer font-medium text-base md:ml-4 md:mr-4 transition-colors";
     }
-
     return {
       to,
       smooth: true,
       duration: 500,
-      offset: -58,
+      offset: -63,
       className,
     };
   };
 
   return (
-    <div className="w-screen bg-primary">
-      <Navbar className="fixed top-0 text-text drop-shadow-md bg-secondary z-20 md:py-4 w-screen dark:bg-dark-background">
-        <Navbar.Brand as="button" onClick={scroll.scrollToTop}>
-          <img src="assets/images/logo.png" className="w-7 mr-4"></img>
-          <span className="dark:text-white self-center whitespace-nowrap text-xl font-semibold">
-            Insiter
-          </span>
-        </Navbar.Brand>
-        <Navbar.Toggle />
-        <Navbar.Collapse>
-          <ul className="flex items-center space-x-6">
-            <li>
-              <ScrollLink {...createLinkAttributes("home")}>
-                <h1 className="text-xl font-semibold">Home</h1>
-              </ScrollLink>
-            </li>
-            <li>
-              <ScrollLink {...createLinkAttributes("about")}>
-                <h1 className="text-xl font-semibold">About</h1>
-              </ScrollLink>
-            </li>
-            <li>
+    <nav className="fixed top-0 z-10 w-full bg-primary dark:bg-dark-background text-white shadow-md">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <div className="flex items-center">
+            <span className="font-semibold text-lg">Insiter</span>
+          </div>
+          <div className="hidden md:flex md:items-center">
+            <div className="flex items-center">
+              <ScrollLink {...createLinkAttributes("home")}>Home</ScrollLink>
+
+              <ScrollLink {...createLinkAttributes("about")}>About</ScrollLink>
+
               <ScrollLink {...createLinkAttributes("projects")}>
-                <h1 className="text-xl font-semibold">Projects</h1>
+                Projects
               </ScrollLink>
-            </li>
-            <li>
+
               <ScrollLink {...createLinkAttributes("services")}>
-                <h1 className="text-xl font-semibold">Services</h1>
+                Services
               </ScrollLink>
-            </li>
-            <li>
+
               <ScrollLink {...createLinkAttributes("contact")}>
-                <Button
-                  className="text-2xl text-primary font-semibold"
-                  fontSize={"font-bold"}
-                  text={"Contact"}
-                />
+                <div className="bg-dark-primary hover:text-white dark:hover:text-dark-text dark:bg-dark-primary dark:text-dark-text hover:border-white dark:hover:bg-transparent hover:bg-transparent px-4 py-2 rounded-full cursor-pointer transition border-2 border-transparent">
+                  Contact
+                </div>
               </ScrollLink>
-            </li>
-            <li>
-              <DarkModeToggle />
-            </li>
-          </ul>
-        </Navbar.Collapse>
-      </Navbar>
-    </div>
+            </div>
+          </div>
+          <div>
+            <DarkModeToggle />
+          </div>
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="block text-white hover:text-temp-secondary focus:outline-none"
+            >
+              {menuOpen ? (
+                <FiX className="h-6 w-6" />
+              ) : (
+                <FiMenu className="h-6 w-6" />
+              )}
+            </button>
+          </div>
+        </div>
+        <div
+          className={`${
+            menuOpen ? "flex" : "hidden"
+          } md:hidden flex-col justify-center items-center pb-4 mt-2 md:mt-0 md:space-x-4 text-center`}
+        >
+          <ScrollLink
+            {...createLinkAttributes("home")}
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </ScrollLink>
+
+          <ScrollLink
+            {...createLinkAttributes("about")}
+            onClick={() => setMenuOpen(false)}
+          >
+            About
+          </ScrollLink>
+
+          <ScrollLink
+            {...createLinkAttributes("projects")}
+            onClick={() => setMenuOpen(false)}
+          >
+            Projects
+          </ScrollLink>
+
+          <ScrollLink
+            {...createLinkAttributes("services")}
+            onClick={() => setMenuOpen(false)}
+          >
+            Services
+          </ScrollLink>
+
+          <ScrollLink
+            {...createLinkAttributes("contact")}
+            onClick={() => setMenuOpen(false)}
+          >
+            <div className="bg-dark-primary hover:text-white dark:hover:text-dark-text dark:bg-dark-primary dark:text-dark-text hover:border-white dark:hover:bg-transparent hover:bg-transparent px-4 py-2 rounded-full cursor-pointer transition border-2 border-transparent">
+              Contact
+            </div>
+          </ScrollLink>
+        </div>
+      </div>
+    </nav>
   );
 }
+
+export default Nav;

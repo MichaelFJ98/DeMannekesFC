@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
-import { FiMenu, FiX } from "react-icons/fi"; // Import React Icons
+import { FiMenu, FiX } from "react-icons/fi";
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);

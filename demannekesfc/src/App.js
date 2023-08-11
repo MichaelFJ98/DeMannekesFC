@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Main from "./Main";
-import HairdresserMain from "./hairdresser/Main.js"; // Rename to avoid conflict
+import HairdresserMain from "./hairdresser/Main.js";
 
 function App() {
   return (
@@ -8,7 +8,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/hairdresser/*" element={<HairdresserMain />} />
+          <Route path="/barber/*" element={<HairdresserMain />} />
+          <Route path="*" element={<Main />} />
         </Routes>
       </BrowserRouter>
     </div>

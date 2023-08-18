@@ -9,7 +9,7 @@ import Divider from "../Divider";
 function Location() {
   return (
     <div id="contact" className="pt-24 flex">
-      <div className="w-1/2 pr-8">
+      <div className="md:w-1/2 md:pr-8">
         <h1 className="text-3xl font-extrabold mb-2">Where to Find Us</h1>
         <Divider />
         <div className="flex items-center mb-4">
@@ -29,7 +29,7 @@ function Location() {
           <p className="text-lg">barber@gmail.com</p>
         </div>
       </div>
-      <div className="w-1/2">
+      <div className="w-1/2 hidden md:block">
         <img
           src="/assets/images/hairdresser/location.webp"
           alt="Location"

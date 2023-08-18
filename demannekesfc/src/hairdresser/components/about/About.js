@@ -3,8 +3,8 @@ import Divider from "../Divider";
 
 function About() {
   return (
-    <div id="about" className="pt-24 flex space-x-16">
-      <div className="w-full">
+    <div id="about" className="pt-24 flex md:space-x-16">
+      <div className="w-full hidden md:block">
         <img
           src="/assets/images/hairdresser/herobg.webp"
           alt="Hairdresser"

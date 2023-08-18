@@ -17,14 +17,14 @@ function Nav() {
       to,
       smooth: true,
       duration: 500,
-      offset: -63,
+      offset: -64,
       className,
     };
   };
 
   return (
     <nav
-      className={`fixed top-0 left-0 z-10 w-full text-white shadow-md transition ${
+      className={`fixed top-0 left-0 z-10 w-full text-white shadow-md transition h-16 ${
         menuOpen ? "bg-black" : "bg-black"
       } md:duration-300`}
     >
@@ -63,7 +63,7 @@ function Nav() {
               >
                 Contact
               </ScrollLink>
-              <button className="py-1 px-8 border transition hover:bg-temp-accent">
+              <button className="py-1 px-8 ml-2 border transition hover:bg-temp-accent hover:text-black">
                 Call us
               </button>
             </div>
@@ -82,7 +82,7 @@ function Nav() {
         <div
           className={`${
             menuOpen ? "block" : "hidden"
-          } md:hidden mt-2 md:mt-0 md:space-x-4 text-center transition-opacity`}
+          } md:hidden mt-2 md:mt-0 md:space-x-4 text-center bg-black transition-opacity`}
         >
           <ScrollLink
             {...createLinkAttributes("about")}

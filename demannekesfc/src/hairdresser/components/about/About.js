@@ -12,7 +12,7 @@ function About() {
         />
       </div>
       <div>
-        <h1 className="text-3xl font-semibold mb-4">We care about you</h1>
+        <h1 className="text-3xl font-extrabold mb-2">We care about you</h1>
         <Divider />
         <p className="text-temp-gray">
           Our salon is not just a barber shop. It's a place where you can forget

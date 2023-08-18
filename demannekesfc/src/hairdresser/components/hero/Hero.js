@@ -5,16 +5,16 @@ import { BiSolidPhoneCall } from "react-icons/bi";
 
 function Hero() {
   return (
-    <div id="hero" className="flex pt-24 max-w-[50%]">
-      <div className="flex-1 pr-10">
+    <div id="hero" className="flex pt-40">
+      <div className="flex-1">
         <h1 className="font-bold text-4xl mb-2">
           Quality Haircuts
         </h1>
-        <h1 className="font-bold text-4xl mb-4">and Beard Trimming</h1>
-        <p className="text-temp-gray mb-4">
+        <h1 className="font-bold text-4xl mb-2">and Beard Trimming</h1>
+        <p className="text-temp-gray mb-6">
           Professional haircuts and beard trimming.
         </p>
-        <button className="bg-temp-accent transition-colors hover:bg-transparent border hover:text-temp-text border-temp-accent py-2 px-4 text-black font-semibold">
+        <button className="bg-temp-accent transition-colors hover:bg-transparent border hover:text-temp-text border-temp-accent py-2 px-4 text-black font-bold">
           Make reservation
         </button>
         <div className="flex items-center mt-6">
@@ -26,7 +26,7 @@ function Hero() {
         </div>
         <div className="flex items-center mt-4">
           <GiPositionMarker className="mr-2 text-2xl" />
-          <p className="text-temp-gray">123 Main St</p>
+          <p className="text-temp-gray">Oak Street 3, Prague</p>
         </div>
         <div className="flex items-center mt-4">
           <BiSolidPhoneCall className="mr-2 text-2xl" />

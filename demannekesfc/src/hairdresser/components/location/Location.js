@@ -10,9 +10,9 @@ function Location() {
   return (
     <div id="contact" className="pt-24 flex">
       <div className="w-1/2 pr-8">
-        <h1 className="text-3xl font-bold">Where to Find Us</h1>
-        <Divider className="mb-4" />
-        <div className="flex items-center my-4">
+        <h1 className="text-3xl font-extrabold mb-2">Where to Find Us</h1>
+        <Divider />
+        <div className="flex items-center mb-4">
           <GoClock className="text-xl mr-2" />
           <p className="text-lg">9:00 am - 7:00 pm</p>
         </div>
@@ -22,7 +22,7 @@ function Location() {
         </div>
         <div className="flex items-center my-4">
           <BiSolidPhoneCall className="text-xl mr-2" />
-          <p className="text-lg">+420 728 465 453</p>
+          <p className="text-lg">+322 445 55 07</p>
         </div>
         <div className="flex items-center my-4">
           <IoMail className="text-xl mr-2" />

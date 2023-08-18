@@ -2,10 +2,13 @@ import React from "react";
 import Divider from "../Divider";
 
 function Gallery() {
+  const handleInstagramClick = () => {
+    window.open("https://www.instagram.be", "_blank");
+  };
   return (
     <div id="gallery" className="pt-24 flex flex-col items-center">
-      <h1 className="text-3xl font-semibold mb-4">Gallery</h1>
-      <Divider className="mb-8" />
+      <h1 className="text-3xl font-extrabold mb-2">Gallery</h1>
+      <Divider/>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div>
@@ -38,9 +41,9 @@ function Gallery() {
         </div>
       </div>
       <p className="self-end mt-2">
-        <a href="#" className="text-temp-text hover:underline">
+        <p onClick={handleInstagramClick} className="text-temp-text hover:underline cursor-pointer">
           See more photos &rarr;
-        </a>
+        </p>
       </p>
     </div>
   );

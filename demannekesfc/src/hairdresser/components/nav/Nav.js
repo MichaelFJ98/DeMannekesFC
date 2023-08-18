@@ -23,53 +23,72 @@ function Nav() {
   };
 
   return (
-    <nav className="fixed top-0 z-10 w-full bg-temp-primary text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav
+      className={`fixed top-0 left-0 z-10 w-full text-white shadow-md transition ${
+        menuOpen ? "bg-black" : "bg-black"
+      } md:duration-300`}
+    >
+      <div className="px-16 max-w-screen-xl mx-auto">
         <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <span className="font-semibold text-lg">Hair Majesty</span>
-          </div>
-          <div className="hidden md:flex md:items-center">
-            <div className="flex">
-              <ScrollLink {...createLinkAttributes("hero")}>Home</ScrollLink>
-              <ScrollLink {...createLinkAttributes("pricing")}>
-                Pricing
+          <h2 className="font-semibold text-xl">Hair Majesty</h2>
+          <div className="hidden md:block">
+            <div className="flex items-center transition">
+              <ScrollLink
+                {...createLinkAttributes("about")}
+                onClick={() => setMenuOpen(false)}
+              >
+                About
               </ScrollLink>
-              <ScrollLink {...createLinkAttributes("team")}>Team</ScrollLink>
-              <ScrollLink {...createLinkAttributes("location")}>
-                Location
+              <ScrollLink
+                {...createLinkAttributes("team")}
+                onClick={() => setMenuOpen(false)}
+              >
+                Team
               </ScrollLink>
+              <ScrollLink
+                {...createLinkAttributes("services")}
+                onClick={() => setMenuOpen(false)}
+              >
+                Services
+              </ScrollLink>
+              <ScrollLink
+                {...createLinkAttributes("gallery")}
+                onClick={() => setMenuOpen(false)}
+              >
+                Gallery
+              </ScrollLink>
+              <ScrollLink
+                {...createLinkAttributes("contact")}
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
+              </ScrollLink>
+              <button className="py-1 px-8 border transition hover:bg-temp-accent">
+                Call us
+              </button>
             </div>
           </div>
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="block text-white hover:text-temp-secondary focus:outline-none"
+              className="block text-white hover:text-temp-secondary focus:outline-none transition"
+              style={{ transform: `rotate(${menuOpen ? "90deg" : "0"})` }}
             >
-              {menuOpen ? (
-                <FiX className="h-6 w-6" />
-              ) : (
-                <FiMenu className="h-6 w-6" />
-              )}
+              <FiMenu className={`h-6 w-6 ${menuOpen ? "hidden" : "block"}`} />
+              <FiX className={`h-6 w-6 ${menuOpen ? "block" : "hidden"}`} />
             </button>
           </div>
         </div>
         <div
           className={`${
             menuOpen ? "block" : "hidden"
-          } md:hidden mt-2 md:mt-0 md:space-x-4 text-center`}
+          } md:hidden mt-2 md:mt-0 md:space-x-4 text-center transition-opacity`}
         >
           <ScrollLink
-            {...createLinkAttributes("hero")}
+            {...createLinkAttributes("about")}
             onClick={() => setMenuOpen(false)}
           >
-            Home
-          </ScrollLink>
-          <ScrollLink
-            {...createLinkAttributes("pricing")}
-            onClick={() => setMenuOpen(false)}
-          >
-            Pricing
+            About
           </ScrollLink>
           <ScrollLink
             {...createLinkAttributes("team")}
@@ -78,11 +97,26 @@ function Nav() {
             Team
           </ScrollLink>
           <ScrollLink
-            {...createLinkAttributes("location")}
+            {...createLinkAttributes("services")}
             onClick={() => setMenuOpen(false)}
           >
-            Location
+            Services
           </ScrollLink>
+          <ScrollLink
+            {...createLinkAttributes("gallery")}
+            onClick={() => setMenuOpen(false)}
+          >
+            Gallery
+          </ScrollLink>
+          <ScrollLink
+            {...createLinkAttributes("contact")}
+            onClick={() => setMenuOpen(false)}
+          >
+            Contact
+          </ScrollLink>
+          <button className="py-1 mb-4 px-6 border transition">
+            Call us
+          </button>
         </div>
       </div>
     </nav>

@@ -1,90 +1,37 @@
-import React, { useState } from "react";
-import Modal from "react-modal";
-import { IoClose } from "react-icons/io5"; // Import the close icon from react-icons library
+import React from "react";
+import { GoClock } from "react-icons/go";
+import { GiPositionMarker } from "react-icons/gi";
+import { BiSolidPhoneCall } from "react-icons/bi";
 
 function Hero() {
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-
-  const openModal = () => {
-    document.body.classList.add("overflow-hidden");
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    document.body.classList.remove("overflow-hidden");
-    setModalIsOpen(false);
-  };
-
   return (
-    <div
-      id="hero"
-      className="bg-cover bg-center h-screen flex items-center justify-center"
-      style={{
-        backgroundImage: "url('/assets/images/hairdresser/herobg.webp')",
-      }}
-    >
-      <div className="text-center">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl text-white font-extrabold mb-4">
-          Welcome to Hair Majesty
+    <div id="hero" className="flex pt-24 max-w-[50%]">
+      <div className="flex-1 pr-10">
+        <h1 className="font-bold text-4xl mb-2">
+          Quality Haircuts
         </h1>
-        <p className="text-lg text-white mb-8">
-          Your hair deserves the best care and styling.
+        <h1 className="font-bold text-4xl mb-4">and Beard Trimming</h1>
+        <p className="text-temp-gray mb-4">
+          Professional haircuts and beard trimming.
         </p>
-        <button
-          onClick={openModal}
-          className="px-8 py-4 bg-temp-secondary text-white font-semibold text-lg rounded-full shadow-lg hover:bg-temp-accent transition-colors duration-300 ease-in-out"
-        >
-          Book Now
+        <button className="bg-temp-accent transition-colors hover:bg-transparent border hover:text-temp-text border-temp-accent py-2 px-4 text-black font-semibold">
+          Make reservation
         </button>
-        <Modal
-          isOpen={modalIsOpen}
-          onRequestClose={closeModal}
-          contentLabel="Setmore Booking Modal"
-          style={{
-            overlay: {
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              position: "fixed",
-              top: 0,
-              left: 0,
-              right: 0,
-              bottom: 0,
-              backgroundColor: "rgba(0, 0, 0, 0.7)",
-              zIndex: 1000,
-            },
-            content: {
-              width: "80%", // Adjust the width as needed
-              maxWidth: "800px",
-              height: "100%",
-              maxHeight: "80%", // Adjust the height as needed
-              overflow: "auto", // Allow content to be scrolled if needed
-              position: "relative",
-              margin: "auto",
-            },
-          }}
-        >
-          <button
-            onClick={closeModal}
-            style={{
-              position: "absolute",
-              top: "10px",
-              right: "10px",
-              background: "none",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            <IoClose size={32} color="black" />
-          </button>
-          <iframe
-            title="Setmore Booking"
-            src="https://booking.setmore.com/scheduleappointment/3f967fb4-e07f-4eaa-bb87-9553decfbdc2"
-            width="100%"
-            height="100%"
-            frameBorder="0"
-          ></iframe>
-        </Modal>
+        <div className="flex items-center mt-6">
+          <GoClock className="mr-2 text-2xl" />
+          <div className="flex flex-col justify-start text-temp-gray">
+            <p>Monday - Friday</p>
+            <p>9:00am - 7:00pm</p>
+          </div>
+        </div>
+        <div className="flex items-center mt-4">
+          <GiPositionMarker className="mr-2 text-2xl" />
+          <p className="text-temp-gray">123 Main St</p>
+        </div>
+        <div className="flex items-center mt-4">
+          <BiSolidPhoneCall className="mr-2 text-2xl" />
+          <p className="text-temp-gray">+322 445 55 07</p>
+        </div>
       </div>
     </div>
   );

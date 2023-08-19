@@ -44,9 +44,10 @@ module.exports = {
         temp: {
           primary: "#5E2CA5",
           secondary: "#F9A03F",
-          accent: "#00B5AD",
-          background: "#F3F4F6",
-          text: "#1D1D1F",
+          accent: "#EBC17E",
+          background: "#161616",
+          text: "#FFFFFF",
+          gray: "#7F7F7F",
           error: "#FF5353",
           success: "#7ED957",
         },

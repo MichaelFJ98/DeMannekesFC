@@ -19,7 +19,7 @@ function Main() {
         <About />
         <Team />
         <Pricing />
-        {/* <Reviews /> */}
+        <Reviews />
         <Gallery />
         <Location />
         <Footer />

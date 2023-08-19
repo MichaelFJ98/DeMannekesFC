@@ -3,7 +3,7 @@ import Divider from "../Divider";
 
 function Gallery() {
   const handleInstagramClick = () => {
-    window.open("https://www.instagram.be", "_blank");
+    window.open("https://instagram.com", "_blank");
   };
   return (
     <div id="gallery" className="pt-24 flex flex-col items-center">

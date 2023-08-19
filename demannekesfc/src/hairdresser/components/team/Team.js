@@ -1,25 +1,34 @@
 import React from "react";
 import Divider from "../Divider";
 
+import { BsInstagram } from "react-icons/bs";
+
 const teamMembers = [
   {
     name: "John Doe",
     image: "assets/images/hairdresser/p2.webp",
     experience: "5 years of experience",
+    instagram: "https://instagram.com",
   },
   {
     name: "Jane Smith",
     image: "assets/images/hairdresser/p1.webp",
     experience: "4 years of experience",
+    instagram: "https://instagram.com",
   },
   {
     name: "Potter Smith",
     image: "assets/images/hairdresser/p1.webp",
     experience: "14 years of experience",
+    instagram: "https://instagram.com",
   },
 ];
 
 function Team() {
+  const handleInstagram = (link) => {
+    window.open(link, "_blank");
+  };
+
   return (
     <div id="team" className="pt-24">
       <div className="">
@@ -32,7 +41,7 @@ function Team() {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg shadow-md transition transform duration-300 hover:scale-105 hover:shadow-lg relative"
+            className="bg-white p-6 rounded-lg hover:shadow-temp-accent hover:shadow-md transition-shadow relative"
             style={{
               backgroundImage: `url(${member.image})`,
               backgroundSize: "cover",
@@ -45,6 +54,10 @@ function Team() {
                 {member.name}
               </p>
               <p className="text-sm text-gray-300">{member.experience}</p>
+              <BsInstagram
+                onClick={() => handleInstagram(member.instagram)}
+                className="text-xl cursor-pointer hover:text-temp-accent"
+              />
             </div>
           </div>
         ))}

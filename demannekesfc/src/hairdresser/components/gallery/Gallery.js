@@ -40,11 +40,11 @@ function Gallery() {
           />
         </div>
       </div>
-      <p className="self-end mt-2">
+      <div className="self-end mt-2">
         <p onClick={handleInstagramClick} className="text-temp-text hover:underline cursor-pointer">
           See more photos &rarr;
         </p>
-      </p>
+      </div>
     </div>
   );
 }

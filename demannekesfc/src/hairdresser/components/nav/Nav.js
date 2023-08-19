@@ -9,6 +9,13 @@ function Nav() {
     setMenuOpen(!menuOpen);
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   const createLinkAttributes = (to) => {
     let className =
       "block pb-4 md:pb-0 md:inline-block pt-2 md:pt-0 cursor-pointer font-medium text-base md:ml-4 md:mr-4 hover:text-temp-accent transition-colors";
@@ -34,7 +41,12 @@ function Nav() {
     >
       <div className="px-16 max-w-screen-xl mx-auto">
         <div className="flex items-center justify-between h-16">
-          <h2 className="font-semibold text-xl">Hair Majesty</h2>
+          <h2
+            className="font-semibold text-xl cursor-pointer"
+            onClick={scrollToTop}
+          >
+            Hair Majesty
+          </h2>
           <div className="hidden md:block">
             <div className="flex items-center transition">
               <ScrollLink

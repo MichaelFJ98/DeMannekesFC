@@ -4,6 +4,7 @@ import { IoClose } from "react-icons/io5";
 import { GoClock } from "react-icons/go";
 import { GiPositionMarker } from "react-icons/gi";
 import { BiSolidPhoneCall } from "react-icons/bi";
+import ImageFade from "../ImageFade";
 
 function Hero() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -20,7 +21,7 @@ function Hero() {
 
   return (
     <div id="hero" className="flex pt-40">
-      <div className="flex-1">
+      <div className="w-full md:w-1/2">
         <h1 className="font-bold text-4xl mb-2">Quality Haircuts</h1>
         <h1 className="font-bold text-4xl mb-2">and Beard Trimming</h1>
         <p className="text-temp-gray mb-6">
@@ -97,6 +98,12 @@ function Hero() {
             ></iframe>
           </Modal>
         </div>
+      </div>
+      <div className="w-1/2 hidden md:block">
+        <ImageFade
+          imageSrc={"assets/images/hairdresser/herobg.webp"}
+          fadeLeft={true}
+        />
       </div>
     </div>
   );

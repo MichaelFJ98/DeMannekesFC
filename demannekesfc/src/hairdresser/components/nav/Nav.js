@@ -11,7 +11,11 @@ function Nav() {
 
   const createLinkAttributes = (to) => {
     let className =
-      "block pb-4 md:pb-0 md:inline-block mt-2 md:mt-0 cursor-pointer font-medium text-base md:ml-4 md:mr-4 hover:text-temp-secondary transition-colors";
+      "block pb-4 md:pb-0 md:inline-block pt-2 md:pt-0 cursor-pointer font-medium text-base md:ml-4 md:mr-4 hover:text-temp-accent transition-colors";
+
+    if (to == "contact")
+      className =
+        "py-1 px-6 ml-2 inline-block border transition hover:bg-temp-accent hover:text-black cursor-pointer";
 
     return {
       to,
@@ -24,8 +28,8 @@ function Nav() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 z-10 w-full text-white shadow-md transition h-16 ${
-        menuOpen ? "bg-black" : "bg-black"
+      className={`fixed top-0 left-0 z-10 w-full text-white md:shadow-md transition h-16 ${
+        menuOpen ? "bg-temp-background" : "bg-temp-background"
       } md:duration-300`}
     >
       <div className="px-16 max-w-screen-xl mx-auto">
@@ -61,11 +65,8 @@ function Nav() {
                 {...createLinkAttributes("contact")}
                 onClick={() => setMenuOpen(false)}
               >
-                Contact
-              </ScrollLink>
-              <button className="py-1 px-8 ml-2 border transition hover:bg-temp-accent hover:text-black">
                 Call us
-              </button>
+              </ScrollLink>
             </div>
           </div>
           <div className="md:hidden">
@@ -82,7 +83,7 @@ function Nav() {
         <div
           className={`${
             menuOpen ? "block" : "hidden"
-          } md:hidden mt-2 md:mt-0 md:space-x-4 text-center bg-black transition-opacity`}
+          } md:hidden md:space-x-4 pb-8 text-center bg-temp-background transition-opacity`}
         >
           <ScrollLink
             {...createLinkAttributes("about")}
@@ -112,11 +113,8 @@ function Nav() {
             {...createLinkAttributes("contact")}
             onClick={() => setMenuOpen(false)}
           >
-            Contact
-          </ScrollLink>
-          <button className="py-1 mb-4 px-6 border transition">
             Call us
-          </button>
+          </ScrollLink>
         </div>
       </div>
     </nav>

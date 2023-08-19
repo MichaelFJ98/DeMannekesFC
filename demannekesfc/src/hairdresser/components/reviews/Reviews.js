@@ -1,53 +1,52 @@
 import React from "react";
-import { FaStar } from "react-icons/fa";
+import Review from "../Review";
+import Divider from "../Divider";
 
 const reviewsData = [
   {
-    name: "Alice Johnson",
-    review:
+    displayName: "Michel Johnson",
+    comment:
       "Fantastic experience! The stylists are incredibly skilled and friendly. I got the best haircut of my life here.",
-    rating: 5,
+    starRating: 5,
+    createTime: "2023-10-02T15:01:23Z",
   },
   {
-    name: "Bob Smith",
-    review:
+    displayName: "Bryan Jhon",
+    comment:
       "The barbers are top-notch professionals. The atmosphere is welcoming and the service is outstanding.",
-    rating: 4,
+    starRating: 4,
+    createTime: "2022-10-02T09:01:23.045123456Z",
   },
+  {
+    displayName: "Bryan Jhon",
+    comment:
+      "The barbers are top-notch professionals. The atmosphere is welcoming and the service is outstanding.",
+    starRating: 4,
+    createTime: "2022-10-02T15:01:23.045123456Z",
+  },
+  
 ];
+
+// When fetching reviews check these conditionals:
+// isAnonymous must be false
+// Maybe sort on highest rating and take top 3, also maybe add link for more reviews
+// https://developers.google.com/my-business/reference/rest/v4/accounts.locations.reviews#StarRating
 
 function Reviews() {
   return (
-    <div id="reviews" className="bg-temp-background text-temp-text">
-      <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-        <h1 className="text-3xl font-extrabold text-center mb-8">
-          Customer Reviews
-        </h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {reviewsData.map((review, index) => (
-            <div
-              key={index}
-              className="bg-white p-6 rounded-lg shadow-md transition transform duration-300 hover:scale-105 hover:shadow-lg"
-            >
-              <div className="flex items-start mb-4">
-                <div className="flex items-center mr-2">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <FaStar
-                      key={i}
-                      className={`h-5 w-5 ${
-                        i < review.rating
-                          ? "text-temp-primary"
-                          : "text-gray-300"
-                      }`}
-                    />
-                  ))}
-                </div>
-                <p className="text-lg font-semibold">{review.name}</p>
-              </div>
-              <p className="text-sm mb-4">{review.review}</p>
-            </div>
-          ))}
-        </div>
+    <div id="services" className="pt-24 flex justify-center flex-col items-center">
+      <h1 className="text-3xl font-extrabold mb-2">Reviews</h1>
+      <Divider />
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {reviewsData.map((review, index) => (
+          <Review
+            key={index}
+            displayName={review.displayName}
+            comment={review.comment}
+            rating={review.starRating}
+            createTime={review.createTime}
+          />
+        ))}
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ function Gallery() {
     window.open("https://instagram.com/insiter.be/", "_blank");
   };
   return (
-    <div id="gallery" className="pt-24 flex flex-col items-center">
+    <div id="gallery" className="pt-24 mx-4 flex flex-col items-center">
       <h1 className="text-3xl font-extrabold mb-2">Gallery</h1>
       <Divider/>
 
@@ -15,33 +15,33 @@ function Gallery() {
           <img
             src="assets/images/hairdresser/herobg.webp"
             alt="Gallery Image"
-            className="w-full h-auto"
+            className="w-full h-auto rounded-xl"
           />
         </div>
         <div>
           <img
             src="assets/images/hairdresser/herobg.webp"
             alt="Gallery Image"
-            className="w-full h-auto"
+            className="w-full h-auto rounded-xl"
           />
         </div>
         <div>
           <img
             src="assets/images/hairdresser/herobg.webp"
             alt="Gallery Image"
-            className="w-full h-auto"
+            className="w-full h-auto rounded-xl"
           />
         </div>
         <div>
           <img
             src="assets/images/hairdresser/herobg.webp"
             alt="Gallery Image"
-            className="w-full h-auto"
+            className="w-full h-auto rounded-xl"
           />
         </div>
       </div>
       <div className="self-end mt-2">
-        <p onClick={handleInstagramClick} className="text-temp-text hover:underline cursor-pointer">
+        <p onClick={handleInstagramClick} className="text-temp-text transition-all hover:underline cursor-pointer">
           See more photos &rarr;
         </p>
       </div>

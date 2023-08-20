@@ -13,13 +13,13 @@ function Location() {
   return (
     <div
       id="contact"
-      className="pt-12 md:pt-24 flex flex-col lg:flex-row items-center"
+      className="pt-12 md:pt-24 mx-4 flex flex-col lg:flex-row items-center"
     >
-      <div className="lg:aspect-square lg:w-1/2 md:pr-8">
-        <h1 className="text-3xl font-extrabold mb-4">Where to Find Us</h1>
+      <div className="lg:aspect-square lg:w-1/2 md:pr-8 flex flex-col items-center md:items-start">
+        <h1 className="text-3xl font-extrabold mb-4 text-center">Where to Find Us</h1>
         <Divider />
 
-        <div className="mt-6 space-y-4">
+        <div className="mt-6 self-start space-y-4">
           <p className="flex items-center text-lg">
             <BiSolidPhoneCall className="text-xl mr-3" />
             +322 445 55 07
@@ -38,7 +38,7 @@ function Location() {
           </div>
         </div>
 
-        <div className="mt-8 space-y-4">
+        <div className="mt-8 self-start space-y-4">
           <h2 className="text-xl font-semibold mb-4">Business Hours</h2>
           <div className="flex items-center">
             <GoClock className="text-xl mr-3" />

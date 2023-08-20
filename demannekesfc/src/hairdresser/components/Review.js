@@ -9,17 +9,17 @@ function Review({ displayName, comment, rating, createTime }) {
     />
   ));
 
-  const formattedDate = new Date(createTime).toLocaleString("en-US", {
+  const formattedDate = new Date(createTime).toLocaleString("nl-BE", {
     day: "numeric",
     month: "numeric",
     year: "numeric",
     hour: "numeric",
     minute: "numeric",
-    hour12: true,
+    hour12: false,
   });
 
   return (
-    <div className="border p-4 rounded-md shadow-md">
+    <div className="border p-4 rounded-md shadow-md flex flex-col overflow-hidden">
       <div className="mb-4">
         <h2 className="text-lg mb-1 font-semibold">{displayName}</h2>
         <div className="flex space-x-4">
@@ -27,7 +27,7 @@ function Review({ displayName, comment, rating, createTime }) {
           <div className="text-temp-gray text-sm">{formattedDate}</div>
         </div>
       </div>
-      <p className="mb-4 text-temp-gray">{comment}</p>
+      <p className="mb-4 text-temp-gray overflow-hidden">{comment}</p>
     </div>
   );
 }

@@ -41,7 +41,7 @@ function Team() {
         {teamMembers.map((member, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-lg hover:shadow-temp-accent hover:shadow-md transition-shadow relative"
+            className="bg-white p-6 rounded-lg border-temp-accent border relative"
             style={{
               backgroundImage: `url(${member.image})`,
               backgroundSize: "cover",
@@ -56,7 +56,7 @@ function Team() {
               <p className="text-sm text-gray-300">{member.experience}</p>
               <BsInstagram
                 onClick={() => handleInstagram(member.instagram)}
-                className="text-xl cursor-pointer hover:text-temp-accent"
+                className="text-2xl cursor-pointer hover:text-temp-accent"
               />
             </div>
           </div>

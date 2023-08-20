@@ -22,7 +22,7 @@ function Nav() {
 
     if (to == "contact")
       className =
-        "py-1 px-6 md:mr-16 ml-2 inline-block border transition-colors md:hover:bg-temp-accent md:hover:text-black cursor-pointer";
+        "py-1 px-6 md:mr-16 lg:mr-4 ml-2 inline-block border transition-colors md:hover:bg-temp-accent md:hover:text-black cursor-pointer";
 
     return {
       to,
@@ -34,10 +34,10 @@ function Nav() {
   };
 
   return (
-    <nav className={"fixed top-0 left-0 z-10 w-full bg-temp-background text-white h-16"}>
-      <div className="flex items-center justify-between h-16">
+    <nav className={"fixed top-0 left-0 z-10 w-full bg-temp-background text-white"}>
+      <div className="flex max-w-screen-xl mx-auto items-center justify-between h-16">
         <h2
-          className="font-semibold text-xl cursor-pointer ml-16"
+          className="font-semibold text-xl cursor-pointer ml-4 md:ml-16 lg:ml-4"
           onClick={scrollToTop}
         >
           Hair Majesty
@@ -76,7 +76,7 @@ function Nav() {
             </ScrollLink>
           </div>
         </div>
-        <div className="md:hidden mr-16">
+        <div className="md:hidden mr-4">
           <button
             onClick={toggleMenu}
             className="block text-white transition"

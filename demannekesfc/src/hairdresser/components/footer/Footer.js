@@ -6,14 +6,14 @@ function Footer() {
   };
 
   return (
-    <footer className="border-t border-temp-gray mt-24">
+    <footer className="border-t mx-4 border-temp-gray mt-24">
       <div className="flex items-center justify-between py-6 font-semibold">
         <h1>Hair Majesty</h1>
         <p className="text-temp-gray font-normal">
           Made by{" "}
           <span
             onClick={handleInsiterClick}
-            className="text-temp-text hover:text-temp-accent cursor-pointer"
+            className="text-temp-text md:hover:text-temp-accent transition-colors cursor-pointer"
           >
             Insiter
           </span>

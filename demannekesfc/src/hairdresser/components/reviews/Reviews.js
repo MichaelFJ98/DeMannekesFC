@@ -34,7 +34,7 @@ const reviewsData = [
 
 function Reviews() {
   return (
-    <div className="pt-24 flex justify-center flex-col items-center">
+    <div className="pt-24 mx-4 flex justify-center flex-col items-center">
       <h1 className="text-3xl font-extrabold mb-2">Reviews</h1>
       <Divider />
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

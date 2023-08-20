@@ -50,7 +50,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
-      className="flex flex-col lg:flex-row lg:space-x-16 items-center lg:items-start pt-40 text-center lg:text-left"
+      className="flex flex-col mx-4 lg:flex-row lg:space-x-16 items-center lg:items-start pt-40 text-center lg:text-left"
     >
       <div className="w-full lg:w-1/2">
         <h1 className="font-bold text-4xl mb-2">Quality Haircuts</h1>
@@ -60,7 +60,7 @@ const Hero = () => {
         </p>
         <button
           onClick={openModal}
-          className="bg-temp-accent transition-colors hover:bg-transparent border hover:text-temp-text border-temp-accent py-2 px-4 text-black font-bold"
+          className="bg-temp-accent transition-colors md:hover:bg-transparent border md:hover:text-temp-text border-temp-accent py-2 px-4 text-black font-bold"
         >
           Book Now
         </button>

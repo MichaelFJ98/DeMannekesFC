@@ -30,9 +30,9 @@ function Team() {
   };
 
   return (
-    <div id="team" className="pt-24">
-      <div className="">
-        <h1 className="text-3xl font-extrabold mb-2">
+    <div id="team" className="pt-24 mx-4">
+      <div className="flex flex-col justify-center items-center">
+        <h1 className="text-3xl font-extrabold mb-2 text-center">
           Team of absolute experts
         </h1>
         <Divider />
@@ -56,7 +56,7 @@ function Team() {
               <p className="text-sm text-gray-300">{member.experience}</p>
               <BsInstagram
                 onClick={() => handleInstagram(member.instagram)}
-                className="text-2xl cursor-pointer hover:text-temp-accent"
+                className="text-2xl cursor-pointer md:hover:text-temp-accent transition-colors"
               />
             </div>
           </div>

@@ -13,7 +13,7 @@ import Footer from "./components/footer/Footer.js";
 function Main() {
   return (
     <div className="text-temp-text bg-temp-background">
-      <div className="text-temp-text bg-temp-background px-16 max-w-screen-xl mx-auto">
+      <div className="text-temp-text bg-temp-background max-w-screen-xl mx-auto">
         <Nav />
         <Hero />
         <About />

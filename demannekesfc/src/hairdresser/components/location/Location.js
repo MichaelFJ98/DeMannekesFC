@@ -5,15 +5,17 @@ import { BiSolidPhoneCall, BiEnvelope } from "react-icons/bi";
 import { IoLocation } from "react-icons/io5";
 import { BsInstagram } from "react-icons/bs";
 
-import Divider from "../Divider";
+import Divider from "../Divider.js";
+import Map from "./Map.js";
 
 function Location() {
+
   return (
     <div
       id="contact"
-      className="pt-12 md:pt-24 flex flex-col md:flex-row items-center"
+      className="pt-12 md:pt-24 flex flex-col lg:flex-row items-center"
     >
-      <div className="md:w-1/2 md:pr-8">
+      <div className="lg:aspect-square lg:w-1/2 md:pr-8">
         <h1 className="text-3xl font-extrabold mb-4">Where to Find Us</h1>
         <Divider />
 
@@ -28,7 +30,7 @@ function Location() {
           </p>
           <p className="flex items-center text-lg">
             <BsInstagram className="text-xl mr-3" />
-            /HairMajesty
+            @HairMajesty
           </p>
           <div className="flex items-center text-lg">
             <IoLocation className="text-xl mr-3" />
@@ -42,32 +44,28 @@ function Location() {
             <GoClock className="text-xl mr-3" />
             <div>
               <p className="text-lg">Monday - Thursday:</p>
-              <p className="text-lg">10:00 am - 7:00 pm</p>
+              <p className="text-lg">10:00h - 19:00h</p>
             </div>
           </div>
           <div className="flex items-center">
             <GoClock className="text-xl mr-3" />
             <div>
               <p className="text-lg">Friday:</p>
-              <p className="text-lg">10:00 am - 5:00 pm</p>
+              <p className="text-lg">10:00h - 17:00h</p>
             </div>
           </div>
           <div className="flex items-center">
             <GoClock className="text-xl mr-3" />
             <div>
               <p className="text-lg">Saturday:</p>
-              <p className="text-lg">10:00 am - 5:00 pm</p>
+              <p className="text-lg">10:00h - 17:00h</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 mt-8 md:mt-0">
-        <img
-          src="/assets/images/hairdresser/location.webp"
-          alt="Hair Majesty Salon Location"
-          className="w-full rounded-xl"
-        />
+      <div className="max-w-[50%] w-screen aspect-square hidden lg:block">
+        <Map  />
       </div>
     </div>
   );

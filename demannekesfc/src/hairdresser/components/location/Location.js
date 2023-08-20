@@ -5,7 +5,8 @@ import { BiSolidPhoneCall, BiEnvelope } from "react-icons/bi";
 import { IoLocation } from "react-icons/io5";
 import { BsInstagram } from "react-icons/bs";
 
-import Divider from "../Divider";
+import Divider from "../Divider.js";
+import Map from "./Map.js";
 
 function Location() {
   return (
@@ -62,13 +63,7 @@ function Location() {
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 mt-8 md:mt-0">
-        <img
-          src="/assets/images/hairdresser/location.webp"
-          alt="Hair Majesty Salon Location"
-          className="w-full rounded-xl"
-        />
-      </div>
+      <Map />
     </div>
   );
 }

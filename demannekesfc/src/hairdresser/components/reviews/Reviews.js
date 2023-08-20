@@ -4,24 +4,24 @@ import Divider from "../Divider";
 
 const reviewsData = [
   {
-    displayName: "Michel Johnson",
+    displayName: "Kyle LaPage",
     comment:
-      "Fantastic experience! The stylists are incredibly skilled and friendly. I got the best haircut of my life here.",
+      "Troy is the man! Been going to him for awhile and he never disappoints. He is knowledgeable about hair and different haircuts. Very skilled with his clipper work.",
     starRating: 5,
     createTime: "2023-10-02T15:01:23Z",
   },
   {
-    displayName: "Bryan Jhon",
+    displayName: "Ross Cook",
     comment:
-      "The barbers are top-notch professionals. The atmosphere is welcoming and the service is outstanding.",
+      "I was looking for the right barber for a long time, and I'm happy to say I've definitely found the right man in David! He pays great attention to detail and takes his time to get the right cut. Would recommend!",
     starRating: 4,
     createTime: "2022-10-02T09:01:23.045123456Z",
   },
   {
-    displayName: "Bryan Jhon",
+    displayName: "Eric Benson",
     comment:
-      "The barbers are top-notch professionals. The atmosphere is welcoming and the service is outstanding.",
-    starRating: 4,
+      "Great cuts, appts are easy online . Troy is my go to barber, perfect results every time.",
+    starRating: 5,
     createTime: "2022-10-02T15:01:23.045123456Z",
   },
   

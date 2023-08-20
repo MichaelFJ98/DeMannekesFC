@@ -12,7 +12,7 @@ function Pricing() {
           <div className="flex-1">
             <div className="flex justify-between items-center">
               <h2 className="text-xl font-semibold">Haircut</h2>
-              <p className="font-bold">€25</p>
+              <p className="font-bold pl-4">€25</p>
             </div>
             <p className="mb-2 text-temp-gray">Haircut + washing</p>
           </div>
@@ -22,7 +22,7 @@ function Pricing() {
           <div className="flex-1">
             <div className="flex justify-between items-center">
               <h2 className="text-xl font-semibold">Beard trim</h2>
-              <p className="font-bold">€15</p>
+              <p className="font-bold pl-4">€15</p>
             </div>
             <p className="mb-2 text-temp-gray">Beard trim + washing</p>
           </div>
@@ -32,9 +32,9 @@ function Pricing() {
           <div className="flex-1">
             <div className="flex justify-between items-center">
               <h2 className="text-xl font-semibold">Haircut + Beard trim</h2>
-              <p className="font-bold">€35</p>
+              <p className="font-bold pl-4">€35</p>
             </div>
-            <p className="mb-2 text-temp-gray">Haircut + eard trim + washing</p>
+            <p className="mb-2 text-temp-gray">Haircut + beard trim + washing</p>
           </div>
         </div>
 
@@ -42,7 +42,7 @@ function Pricing() {
           <div className="flex-1">
             <div className="flex justify-between items-center">
               <h2 className="text-xl font-semibold">Junior (under 12 years)</h2>
-              <p className="font-bold">€15</p>
+              <p className="font-bold pl-4">€15</p>
             </div>
             <p className="mb-2 text-temp-gray">Haircut + washing</p>
           </div>
@@ -52,7 +52,7 @@ function Pricing() {
           <div className="flex-1">
             <div className="flex justify-between items-center">
               <h2 className="text-xl font-semibold">Coloring</h2>
-              <p className="font-bold">€25</p>
+              <p className="font-bold pl-4">€25</p>
             </div>
             <p className="mb-2 text-temp-gray">Hair or beard coloring</p>
           </div>

@@ -77,7 +77,7 @@ function Nav() {
                 {...createLinkAttributes("contact")}
                 onClick={() => setMenuOpen(false)}
               >
-                Call us
+                Contact
               </ScrollLink>
             </div>
           </div>
@@ -125,7 +125,7 @@ function Nav() {
             {...createLinkAttributes("contact")}
             onClick={() => setMenuOpen(false)}
           >
-            Call us
+            Contact
           </ScrollLink>
         </div>
       </div>

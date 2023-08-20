@@ -14,6 +14,7 @@ function Nav() {
       top: 0,
       behavior: "smooth",
     });
+    setMenuOpen(false);
   };
 
   const createLinkAttributes = (to) => {

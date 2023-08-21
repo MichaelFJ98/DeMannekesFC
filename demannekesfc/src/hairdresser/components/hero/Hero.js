@@ -60,9 +60,9 @@ const Hero = () => {
         </p>
         <button
           onClick={openModal}
-          className="bg-temp-accent transition-colors md:hover:bg-transparent border md:hover:text-temp-text border-temp-accent py-2 px-4 text-black font-bold"
+          className="bg-temp-accent transition-colors duration-300 ease-in-out md:hover:bg-transparent border md:hover:text-temp-text border-temp-accent py-2 px-4 text-black font-bold"
         >
-          Book Now
+          Book appointment
         </button>
         <div className="flex flex-col lg:flex-row items-center mt-6">
           <GoClock className="mr-2 text-2xl mb-2 lg:mb-0" />

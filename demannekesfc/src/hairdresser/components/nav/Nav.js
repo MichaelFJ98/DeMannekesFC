@@ -23,7 +23,7 @@ function Nav() {
 
     if (to == "contact")
       className =
-        "py-1 px-6 md:mr-16 lg:mr-4 ml-2 inline-block border transition-colors md:hover:bg-temp-accent md:hover:text-black cursor-pointer";
+        "py-1 px-6 md:mr-16 lg:mr-4 ml-2 inline-block border transition-colors duration-300 ease-in-out font-semibold md:hover:bg-temp-accent md:hover:text-black cursor-pointer";
 
     return {
       to,

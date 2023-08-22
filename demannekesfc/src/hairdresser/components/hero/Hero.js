@@ -50,6 +50,7 @@ const Hero = () => {
   return (
     <div
       id="hero"
+      role="main"
       className="flex flex-col mx-4 lg:flex-row lg:space-x-16 items-center lg:items-start pt-40 text-center lg:text-left"
     >
       <div className="w-full lg:w-1/2">

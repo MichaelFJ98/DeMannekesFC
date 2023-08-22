@@ -3,12 +3,15 @@ import Divider from "../Divider";
 
 function About() {
   return (
-    <div id="about" className="pt-24 mx-4 flex flex-col lg:flex-row lg:space-x-16">
+    <div role="aboutsection" id="about" className="pt-24 mx-4 flex flex-col lg:flex-row lg:space-x-16">
       <div className="hidden lg:block w-full lg:w-1/2 mb-6 lg:mb-0">
         <img
           src="/assets/images/hairdresser/herobg.webp"
           alt="Hairdresser"
           className="max-w-full h-auto rounded-xl"
+          loading="lazy"
+          width="600px"
+          height="400px"
         />
       </div>
       <div className="w-full lg:w-1/2 flex flex-col justify-center items-center">

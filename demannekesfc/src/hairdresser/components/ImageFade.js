@@ -39,6 +39,8 @@ function ImageFade({
         className={`rounded-lg ${fadeLeft ? "ml-1/2" : ""}`}
         src={imageSrc}
         alt="Image"
+        height="400px"
+        width="600px"
       />
     </div>
   );

@@ -33,7 +33,7 @@ function Team() {
     <div id="team" className="pt-24 mx-4">
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-3xl font-extrabold mb-2 text-center">
-          Team of absolute experts
+          Trained professionals
         </h1>
         <Divider />
       </div>

@@ -69,8 +69,8 @@ export default function Projects() {
           PROJECTS
         </h1>
         <Slider {...settings}>
-          <ProjectCard image="./assets/images/hairdresser.webp" alt="barberimg" link="/barber"/>
-          <ProjectCard image="./assets/images/template1.webp" alt="" />
+          <ProjectCard image="./assets/images/barberProject.webp" alt="barberimg" link="/barber"/>
+          <ProjectCard image="./assets/images/hairdresser.webp" alt="barberimg" />
           <ProjectCard image="./assets/images/template1.webp" alt="" />
         </Slider>
       </Fade>

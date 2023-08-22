@@ -35,7 +35,7 @@ function Nav() {
   };
 
   return (
-    <nav className={"fixed top-0 left-0 z-10 w-full bg-temp-background text-white"}>
+    <nav role="navigation" className={"fixed top-0 left-0 z-10 w-full bg-temp-background text-white"}>
       <div className="flex max-w-screen-xl mx-auto items-center justify-between h-16">
         <h2
           className="font-semibold text-xl cursor-pointer ml-4 md:ml-16 lg:ml-4"
@@ -81,6 +81,7 @@ function Nav() {
           <button
             onClick={toggleMenu}
             className="block text-white transition"
+            aria-label="Toggle Navigation Menu"
             style={{ transform: `rotate(${menuOpen ? "90deg" : "0"})` }}
           >
             <FiMenu className={`h-6 w-6 ${menuOpen ? "hidden" : "block"}`} />

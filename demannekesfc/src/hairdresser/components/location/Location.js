@@ -36,6 +36,7 @@ function Location() {
   return (
     <div
       id="contact"
+      role="contactinformation"
       className="pt-12 md:pt-24 mx-4 flex flex-col lg:flex-row items-center"
     >
       <div className="lg:aspect-square lg:w-1/2 md:pr-8 flex flex-col items-center md:items-start">

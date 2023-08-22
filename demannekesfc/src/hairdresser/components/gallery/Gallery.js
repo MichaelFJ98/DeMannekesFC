@@ -6,7 +6,11 @@ function Gallery() {
     window.open("https://instagram.com/insiter.be/", "_blank");
   };
   return (
-    <div id="gallery" className="pt-24 mx-4 flex flex-col items-center">
+    <div
+      role="barbergallery"
+      id="gallery"
+      className="pt-24 mx-4 flex flex-col items-center"
+    >
       <h1 className="text-3xl font-extrabold mb-2">Gallery</h1>
       <Divider />
 
@@ -16,6 +20,9 @@ function Gallery() {
             src="assets/images/hairdresser/herobg.webp"
             alt="Gallery Image"
             className="w-full h-auto rounded-xl"
+            width="300"
+            height="200"
+            loading="lazy"
           />
         </div>
         <div>
@@ -23,6 +30,9 @@ function Gallery() {
             src="assets/images/hairdresser/herobg.webp"
             alt="Gallery Image"
             className="w-full h-auto rounded-xl"
+            width="300"
+            height="200"
+            loading="lazy"
           />
         </div>
         <div>
@@ -30,6 +40,9 @@ function Gallery() {
             src="assets/images/hairdresser/herobg.webp"
             alt="Gallery Image"
             className="w-full h-auto rounded-xl"
+            width="300"
+            height="200"
+            loading="lazy"
           />
         </div>
       </div>

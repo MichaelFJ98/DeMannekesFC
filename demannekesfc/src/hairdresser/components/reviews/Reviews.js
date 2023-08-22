@@ -24,7 +24,6 @@ const reviewsData = [
     starRating: 5,
     createTime: "2022-10-02T15:01:23.045123456Z",
   },
-  
 ];
 
 // When fetching reviews check these conditionals:
@@ -34,7 +33,11 @@ const reviewsData = [
 
 function Reviews() {
   return (
-    <div className="pt-24 mx-4 flex justify-center flex-col items-center" role="clientreviews">
+    <section
+      className="pt-24 mx-4 flex justify-center flex-col items-center"
+      role="region"
+      aria-label="Client Reviews"
+    >
       <h1 className="text-3xl font-extrabold mb-2">Reviews</h1>
       <Divider />
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
@@ -48,7 +51,7 @@ function Reviews() {
           />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 

@@ -34,9 +34,10 @@ function Location() {
   };
 
   return (
-    <div
+    <section
       id="contact"
-      role="contactinformation"
+      role="region"
+      aria-label="Contact Information"
       className="pt-12 md:pt-24 mx-4 flex flex-col lg:flex-row items-center"
     >
       <div className="lg:aspect-square lg:w-1/2 md:pr-8 flex flex-col items-center md:items-start">
@@ -105,7 +106,7 @@ function Location() {
       <div className="max-w-[40%] w-screen aspect-square hidden lg:block border-4 border-temp-accent">
         <Map />
       </div>
-    </div>
+    </section>
   );
 }
 

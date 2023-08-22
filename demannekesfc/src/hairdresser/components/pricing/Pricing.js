@@ -3,7 +3,12 @@ import Divider from "../Divider";
 
 function Pricing() {
   return (
-    <div id="services" className="pt-24 flex flex-col items-center">
+    <section
+      id="services"
+      role="region"
+      aria-label="Pricing Information"
+      className="pt-24 flex flex-col items-center"
+    >
       <h1 className="text-3xl font-extrabold mb-2">Pricing</h1>
       <Divider />
 
@@ -34,7 +39,9 @@ function Pricing() {
               <h2 className="text-xl font-semibold">Haircut + Beard trim</h2>
               <p className="font-bold pl-4">€35</p>
             </div>
-            <p className="mb-2 text-temp-gray">Haircut + beard trim + washing</p>
+            <p className="mb-2 text-temp-gray">
+              Haircut + beard trim + washing
+            </p>
           </div>
         </div>
 
@@ -58,7 +65,7 @@ function Pricing() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

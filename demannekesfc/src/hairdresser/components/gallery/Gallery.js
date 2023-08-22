@@ -7,7 +7,8 @@ function Gallery() {
   };
   return (
     <div
-      role="barbergallery"
+      role="region"
+      aria-label="Barber Gallery"
       id="gallery"
       className="pt-24 mx-4 flex flex-col items-center"
     >

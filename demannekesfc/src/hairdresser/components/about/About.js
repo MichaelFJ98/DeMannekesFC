@@ -3,7 +3,12 @@ import Divider from "../Divider";
 
 function About() {
   return (
-    <div role="aboutsection" id="about" className="pt-24 mx-4 flex flex-col lg:flex-row lg:space-x-16">
+    <article
+      role="article"
+      aria-label="About Us"
+      id="about"
+      className="pt-24 mx-4 flex flex-col lg:flex-row lg:space-x-16"
+    >
       <div className="hidden lg:block w-full lg:w-1/2 mb-6 lg:mb-0">
         <img
           src="/assets/images/hairdresser/herobg.webp"
@@ -15,7 +20,9 @@ function About() {
         />
       </div>
       <div className="w-full lg:w-1/2 flex flex-col justify-center items-center">
-        <h1 className="text-3xl font-extrabold mb-2 text-center">We care about you</h1>
+        <h1 className="text-3xl font-extrabold mb-2 text-center">
+          We care about you
+        </h1>
         <Divider />
         <p className="text-temp-gray text-center text-sm lg:text-base lg:mb-4">
           Our salon is not just a barber shop. It's a place where you can forget
@@ -32,7 +39,7 @@ function About() {
           and step out with a renewed sense of self-care and style.
         </p>
       </div>
-    </div>
+    </article>
   );
 }
 

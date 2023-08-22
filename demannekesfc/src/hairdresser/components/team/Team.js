@@ -30,7 +30,12 @@ function Team() {
   };
 
   return (
-    <div id="team" className="pt-24 mx-4" role="teaminfo">
+    <div
+      id="team"
+      className="pt-24 mx-4"
+      role="region"
+      aria-label="Team Members"
+    >
       <div className="flex flex-col justify-center items-center">
         <h1 className="text-3xl font-extrabold mb-2 text-center">
           Trained professionals

@@ -1,65 +1,36 @@
-import Button from "../Button.js";
-
-import Fade from "react-reveal/Fade";
-
 export default function Home() {
-  const handleScrollTo = (to) => {
-    const element = document.getElementById(to);
-    if (element) {
-      const yOffset = -58;
-      const y =
-        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth", duration: 500 });
-    }
-  };
-
   return (
-    <div
-      id="home"
-      className="bg-background dark:bg-dark-background text-text dark:text-dark-text h-screen flex flex-row justify-center"
-    >
-      <Fade duration={1500}>
-        <div className="flex row justify-start items-center gap-4 sm:gap-6 w-7/12 h-full ">
-          <div className="text-left lg:w-7/12">
-            <p className="text-lg sm:text-xl md:text-2xl py-3">
-              Hi, We are Insiter
-            </p>
-
-            <h1 className="leading-tight text-3xl md:text-4xl text-primary font-black">
-              Full-Stack Developers
-            </h1>
-
-            <h1 className="leading-tight text-3xl md:text-4xl text-primary font-black ">
-              From Belgium.
-            </h1>
-
-            <p className="text-lg sm:text-xl md:text-2xl py-3">
-              We help people and brands by designing and building digital
-              products that are optimized for your clients experience.
-            </p>
-
-            <div className="flex flex-row gap-4 items-center py-2">
-              <Button
-                text={"View our work"}
-                fontSize={"font-semibold"}
-                onClick={() => handleScrollTo("projects")}
-              />
-
-              <button
-                onClick={() => handleScrollTo("about")}
-                className="text-base font-semibold text-primary hover:underline cursor-pointer"
-              >
-                More about us <span aria-hidden="true">→</span>
-              </button>
-            </div>
-          </div>
-
-          <img
-            src="assets/images/Michel.webp"
-            className="hidden lg:block w-5/12 overflow-hidden"
-          ></img>
-        </div>
-      </Fade>
+    <div class="bg-gray-800 container xl:max-w-6xl mx-auto px-4 pt-16 lg:px-8 lg:pt-32">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-white">
+          Full-stack developers from Belgium
+        </h2>
+        <h3 class="text-lg md:text-xl md:leading-relaxed font-medium text-gray-400 lg:w-2/3 mx-auto">
+          We help people and brands by designing and building digital products
+          that are optimized for your experience.
+        </h3>
+      </div>
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-center space-y-2 sm:space-y-0 sm:space-x-4 pt-10 pb-16">
+        <button
+          type="button"
+          class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-6 py-4 leading-6 rounded-full border-blue-700 bg-blue-700 text-white hover:text-white hover:bg-blue-800 hover:border-blue-800 focus:ring focus:ring-blue-500 focus:ring-opacity-50 active:bg-blue-700 active:border-blue-700"
+        >
+          <span>Get Started</span>
+        </button>
+        <button
+          type="button"
+          class="inline-flex justify-center items-center space-x-2 border font-semibold focus:outline-none px-6 py-4 leading-6 rounded-full border-gray-700 bg-gray-700 text-white hover:text-white hover:bg-gray-800 hover:border-gray-800 focus:ring focus:ring-gray-500 focus:ring-opacity-25 active:bg-gray-700 active:border-gray-700"
+        >
+          <span>Live Demo</span>
+        </button>
+      </div>
+      <div class="relative mx-5 lg:mx-32 p-2 rounded-xl bg-white -mb-40 shadow-lg">
+        <img
+          src="https://source.unsplash.com/C6T6vr1sQI0/1280x800"
+          alt="Hero Image"
+          class="relative rounded-lg mx-auto"
+        ></img>
+      </div>
     </div>
   );
 }

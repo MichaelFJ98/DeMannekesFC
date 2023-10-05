@@ -10,14 +10,14 @@ import Footer from "./components/footer/Footer.js";
 
 export default function Main() {
   return(
-  <div className="main" id="main">
+  <div className="main bg-gray-800" id="main">
     <Nav/>
     <Home/>
-    <Projects/>
+    {/* <Projects/> */}
     <Services/>
-    <About/>
+    {/* <About/>
     <Contact/>
-    <Footer/>
+    <Footer/> */}
   </div>
   );
 }

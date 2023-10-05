@@ -3,42 +3,71 @@ import Service from "./Service.js";
 
 import { FaLaptopCode, FaClipboardCheck, FaVideo } from "react-icons/fa";
 
-import Fade from "react-reveal/Fade";
-
 export default function Services() {
   return (
-    <div
-      id="services"
-      className="bg-background p-6 text-text dark:bg-dark-background dark:text-dark-text flex flex-col items-center py-10"
-    >
-      <Fade top distance="20px" duration={1500}>
-        <h1 className="text-4xl font-black tracking-tight md:text-5xl pb-6 text-center text-primary dark:text-dark-primary">
-          WHY US ?
-        </h1>
-
-        <div className="flex flex-wrap w-7/12">
-          {/* First Row */}
-          <div className="flex justify-around w-full flex-wrap md:gap-x-32">
-            <Fade top distance="20px" duration={1500}>
-              <Service
-                icon={FaLaptopCode}
-                title="Tailored Web Solutions"
-                info="Our experts conduct thorough research about your business to create a bespoke website that maximizes your online presence. Whether you need online appointment booking, e-commerce functionality, or a stunning portfolio, we've got you covered."
-              />
-              <Service
-                icon={FaClipboardCheck}
-                title="Premium Communication"
-                info="We understand the value of effective communication. Throughout the entire process, we keep you informed, listen to your feedback, and ensure that your vision is translated into a premium product that truly represents your brand."
-              />
-              <Service
-                icon={FaVideo}
-                title="Personalized Video Guides"
-                info="As part of our premium package, we provide personalized video guides to walk you through website maintenance and content updates. You'll have the confidence to manage your website effortlessly and maintain a polished online presence."
-              />
-            </Fade>
+    <div className="space-y-16 container xl:max-w-6xl mx-auto px-4 py-16 lg:px-8 lg:py-32">
+      <div class="text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Powerful Tools</h2>
+        <h3 class="text-lg md:text-xl md:leading-relaxed font-medium text-gray-600 lg:w-2/3 mx-auto">
+          We built the best tools to elevate your marketing efforts.
+        </h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-12">
+        <div class="py-5 text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 ml-3 mb-12 relative">
+            <div class="absolute inset-0 rounded-full -m-3 transform translate-x-1 translate-y-1 bg-blue-300"></div>
+            <div class="absolute inset-0 rounded-full -m-3 transform bg-blue-600 bg-opacity-75"></div>
+            <FaLaptopCode/>
           </div>
+          <h4 class="text-xl font-bold mb-2">Automation</h4>
+          <p class="leading-relaxed text-gray-600 text-left">
+            Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit
+            sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis
+            id lectus scelerisque vulputate.
+          </p>
         </div>
-      </Fade>
+        <div class="py-5 text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 ml-3 mb-12 relative">
+            <div class="absolute inset-0 rounded-full -m-3 transform translate-x-1 translate-y-1 bg-blue-300"></div>
+            <div class="absolute inset-0 rounded-full -m-3 transform bg-blue-600 bg-opacity-75"></div>
+            <svg
+              stroke="currentColor"
+              fill="none"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              class="text-white relative transform transition ease-out duration-150 opacity-90 group-hover:scale-125 group-hover:opacity-100 hi-outline hi-device-mobile inline-block w-10 h-10"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+              ></path>
+            </svg>
+          </div>
+          <h4 class="text-xl font-bold mb-2">Schedule</h4>
+          <p class="leading-relaxed text-gray-600 text-left">
+            Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit
+            sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis
+            id lectus scelerisque vulputate.
+          </p>
+        </div>
+        <div class="py-5 text-center">
+          <div class="inline-flex items-center justify-center w-16 h-16 ml-3 mb-12 relative">
+            <div class="absolute inset-0 rounded-full -m-3 transform translate-x-1 translate-y-1 bg-blue-300"></div>
+            <div class="absolute inset-0 rounded-full -m-3 transform bg-blue-600 bg-opacity-75"></div>
+            <span class="font-semibold text-xl text-white relative transform transition ease-out duration-150 opacity-90 group-hover:scale-125 group-hover:opacity-100">
+              JS
+            </span>
+          </div>
+          <h4 class="text-xl font-bold mb-2">Integrations</h4>
+          <p class="leading-relaxed text-gray-600 text-left">
+            Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit
+            sollicitudin orci, eget dictum leo mi nec lectus. Nam commodo turpis
+            id lectus scelerisque vulputate.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

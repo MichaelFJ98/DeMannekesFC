@@ -27,8 +27,11 @@ export default function About() {
   return (
     <div
       id="about"
-      className="bg-background text-text dark:bg-dark-background dark:text-dark-text flex flex-col p-6 h-full items-center pb-20"
+      className="bg-c1 text-text dark:bg-dark-background dark:text-dark-text "
     >
+      <div className="rounded-t-[40px] bg-c2 w-screen flex flex-col h-full items-center ">
+
+      
       <Fade top distance="20" duration={1500}>
         <h1 className="text-4xl font-black tracking-tight md:text-6xl pb-12 text-center text-primary dark:text-dark-primary">
           Our Team
@@ -75,6 +78,7 @@ export default function About() {
           ))}
         </div>
       </Fade>
+      </div>
     </div>
   );
 }

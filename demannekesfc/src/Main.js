@@ -13,7 +13,6 @@ export default function Main() {
   <div className="main" id="main">
     <Nav/>
     <Home/>
-    <Projects/>
     <Services/>
     <About/>
     <Contact/>

@@ -8,8 +8,11 @@ export default function Footer() {
   return (
     <div
       id="footer"
-      className="dark:bg-dark-background bg-background text-text dark:text-dark-text px-7 leading-5 flex flex-col justify-center"
+      className="dark:bg-dark-background bg-c3 text-text dark:text-dark-text  "
     >
+      <div className="bg-l1 w-screen rounded-t-[40px] leading-5 flex flex-col justify-center">
+
+      
       <Fade duration={1500}>
         <div className="py-7 flex flex-col md:flex-row md:justify-between md:self-center w-7/12">
           <div className="md:self-center md:justify-self-start">
@@ -37,6 +40,8 @@ export default function Footer() {
           </p>
         </div>
       </Fade>
+      </div>
     </div>
+    
   );
 }

@@ -9,8 +9,9 @@ export default function Services() {
   return (
     <div
       id="services"
-      className="bg-background p-6 text-text dark:bg-dark-background dark:text-dark-text flex flex-col items-center py-10"
+      className="bg-l1  text-text dark:bg-dark-background dark:text-dark-text "
     >
+      <div className="bg-c1 rounded-t-[40px] w-screen p-7 flex flex-col items-center ">
       <Fade top distance="20px" duration={1500}>
         <h1 className="text-4xl font-black tracking-tight md:text-5xl pb-6 text-center text-primary dark:text-dark-primary">
           WHY US ?
@@ -39,6 +40,7 @@ export default function Services() {
           </div>
         </div>
       </Fade>
+      </div>
     </div>
   );
 }

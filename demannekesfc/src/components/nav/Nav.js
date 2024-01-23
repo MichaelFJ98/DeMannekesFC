@@ -3,7 +3,6 @@ import { Link as ScrollLink } from "react-scroll";
 import { FiMenu, FiX } from "react-icons/fi";
 
 import DarkModeToggle from "../DarkModeToggle.js";
-import Button from "../Button.js";
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);

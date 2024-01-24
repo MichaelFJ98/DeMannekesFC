@@ -3,6 +3,7 @@ import React,{useState} from "react";
 import Fade from "react-reveal/Fade";
 import Calendly from "../Calendly.js";
 import {Link as ScrollLink} from "react-scroll";
+import bg from "../svg/bg.svg"
 
 export default function Home() {
   const handleScrollTo = (to) => {
@@ -32,7 +33,8 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="bg-l1 dark:bg-dark-background text-slate-900 dark:text-dark-text h-screen flex flex-row justify-center"
+      className="bg-l1  text-slate-900 h-screen flex flex-row justify-center "
+      style={{backgroundImage: `url(${bg})`}}
     >
       <Fade duration={1500}>
         <div className="flex row justify-start items-center gap-4 sm:gap-6 w-7/12 h-full ">

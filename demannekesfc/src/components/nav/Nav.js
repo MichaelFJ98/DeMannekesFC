@@ -42,7 +42,7 @@ function Nav() {
 
               <ScrollLink {...createLinkAttributes("packages")}>Packages</ScrollLink>
 
-              <ScrollLink {...createLinkAttributes("projects")}>
+              <ScrollLink {...createLinkAttributes("hosting")}>
                 Hosting
               </ScrollLink>
 

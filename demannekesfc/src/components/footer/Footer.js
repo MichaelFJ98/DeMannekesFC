@@ -8,9 +8,9 @@ export default function Footer() {
   return (
     <div
       id="footer"
-      className="dark:bg-dark-background bg-c3 text-text dark:text-dark-text  "
+      className=" bg-l1 text-l1"
     >
-      <div className="bg-l1 w-screen rounded-t-[40px] leading-5 flex flex-col justify-center">
+      <div className="bg-c2 w-screen rounded-t-[40px] leading-5 flex flex-col justify-center">
 
       
       <Fade duration={1500}>

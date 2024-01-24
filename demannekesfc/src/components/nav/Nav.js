@@ -30,7 +30,7 @@ function Nav() {
   };
 
   return (
-    <nav className="fixed top-0 z-10 w-full bg-c3 text-l1 shadow-md rounded-b-[25px]">
+    <nav className="fixed top-0 z-10 w-full bg-c3 text-l1 shadow-xl rounded-b-[25px]">
       <div className="w-10/12 mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">

@@ -6,15 +6,6 @@ import {Link as ScrollLink} from "react-scroll";
 import bg from "../svg/bg.svg"
 
 export default function Home() {
-  const handleScrollTo = (to) => {
-    const element = document.getElementById(to);
-    if (element) {
-      const yOffset = -58;
-      const y =
-        element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth", duration: 500 });
-    }
-  };
     const [isMeetingPopupOpen, setMeetingPopupOpen] = useState(false);
 
     const createLinkAttributes = (to) => {
@@ -78,7 +69,7 @@ export default function Home() {
 
           <img
             src="assets/images/MichelNew.png"
-            className="hidden lg:block w-5/12 overflow-hidden bg-zinc-300 rounded-xl"
+            className="hidden lg:block w-5/12 overflow-hidden bg-zinc-300 rounded-full"
           ></img>
         </div>
       </Fade>

@@ -10,7 +10,7 @@ export default function Hosting() {
     >
       <div className="bg-l1 rounded-t-[40px] w-screen p-7 flex flex-col items-center  h-full">
       <Fade top distance="20px" duration={1500}>
-        <div className="w-10/12 h-full">
+        <div className="w-8/12 h-full">
             <div className=" flex flex-row justify-between items-center">
                 <div>
                     <h1 className="leading-tight text-3xl md:text-4xl text-slate-900 font-bold ">Our hosting service</h1>

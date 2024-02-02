@@ -4,9 +4,9 @@ import ProjectCard from "../projects/ProjectCard";
 
 export default function Tier2() {
     return(
-    <div className="bg-c1 h-[45rem]">
+    <div className="bg-c3 h-[45rem]">
         <Fade top distance="20px" duration={1500}>
-            <div className="bg-c2 rounded-t-[40px] w-screen  h-full flex justify-center">
+            <div className="bg-c2 rounded-[40px] w-screen  h-full flex justify-center">
                 <div className="flex flex-row  w-10/12 h-full items-center justify-between space-x-20">
                     <div className="w-[38rem]  flex-col space-y-6">
                         <h1 className="text-4xl font-bold text-l1 tracking-wide">Tier 2 package</h1>

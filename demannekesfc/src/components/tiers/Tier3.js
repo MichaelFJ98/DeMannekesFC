@@ -6,7 +6,7 @@ export default function Tier3() {
     return(
     <div className="bg-c2 h-[45rem]">
         <Fade top distance="20px" duration={1500}>
-            <div className="bg-c3 rounded-t-[40px] w-screen  h-full flex justify-center">
+            <div className="bg-c3 w-screen  h-full flex justify-center">
                 <div className="flex flex-row  w-10/12 h-full items-center space-x-20">
                     <ProjectCard image="./assets/images/hairdresser/herobg.webp" alt="barberimg" link="/barber"/>
                     <div className="w-[38rem]  flex-col space-y-6">

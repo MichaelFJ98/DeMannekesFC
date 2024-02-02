@@ -8,13 +8,16 @@ export default function Footer() {
   return (
     <div
       id="footer"
-      className="dark:bg-dark-background bg-background text-text dark:text-dark-text px-7 leading-5 flex flex-col justify-center"
+      className=" bg-l1 text-l1"
     >
+      <div className="bg-c2 w-screen  leading-5 flex flex-col justify-center">
+
+      
       <Fade duration={1500}>
-        <div className="py-7 flex flex-col md:flex-row md:justify-between md:self-center w-7/12">
+        <div className="py-7 flex flex-col md:flex-row md:justify-between md:self-center w-8/12">
           <div className="md:self-center md:justify-self-start">
             <h1 className="font-bold text-2xl pb-4">SOCIALS</h1>
-            <div className="flex gap-2 text-xl">
+            <div className="flex gap-2 text-xl space-x-4">
               <FaLinkedinIn className="hover:text-primary dark:hover:text-dark-primary cursor-pointer" />
               <FaFacebookF className="hover:text-primary dark:hover:text-dark-primary cursor-pointer" />
               <FaInstagram
@@ -37,6 +40,8 @@ export default function Footer() {
           </p>
         </div>
       </Fade>
+      </div>
     </div>
+    
   );
 }

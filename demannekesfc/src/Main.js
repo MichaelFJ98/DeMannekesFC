@@ -1,11 +1,12 @@
 import "./Main.css";
 import Nav from './components/nav/Nav.js';
 import Home from './components/home/Home.js';
-import About from "./components/about/About.js"
-import Projects from './components/projects/Projects.js';
-import Services from "./components/services/Services.js";
-import Contact from './components/contact/Contact.js';
 import Footer from "./components/footer/Footer.js";
+import SellingPoints from "./components/selling_points/SellingPoints.js";
+import Tier1 from "./components/tiers/Tier1.js";
+import Tier2 from "./components/tiers/Tier2.js"
+import Tier3 from "./components/tiers/Tier3.js";
+import Hosting from "./components/hosting/Hosting.js";
 
 
 export default function Main() {
@@ -13,10 +14,11 @@ export default function Main() {
   <div className="main" id="main">
     <Nav/>
     <Home/>
-    <Projects/>
-    <Services/>
-    <About/>
-    <Contact/>
+    <SellingPoints/>
+    <Tier1/>
+    <Tier2/>
+    <Tier3/>
+    <Hosting/>
     <Footer/>
   </div>
   );

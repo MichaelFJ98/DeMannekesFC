@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { FiMenu, FiX } from "react-icons/fi";
+import Calendly from "../Calendly.js";
 
-import DarkModeToggle from "../DarkModeToggle.js";
-import Button from "../Button.js";
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isMeetingPopupOpen, setMeetingPopupOpen] = useState(false);
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -14,7 +14,7 @@ function Nav() {
 
   const createLinkAttributes = (to) => {
     let className =
-      "block pb-4 md:pb-0 md:inline-block mt-2 md:mt-0 cursor-pointer font-medium text-base md:ml-4 md:mr-4 hover:text-temp-secondary transition-colors";
+      "block pb-4  px-2 md:pb-0 md:inline-block mt-2 md:mt-0 cursor-pointer font-semibold text-base md:ml-4 md:mr-4 hover:text-blue-500 transition-colors";
 
     if (to === "contact") {
       className =
@@ -30,8 +30,8 @@ function Nav() {
   };
 
   return (
-    <nav className="fixed top-0 z-10 w-full bg-primary dark:bg-dark-background text-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 z-10 w-full bg-c3 text-l1 shadow-xl rounded-b-[25px]">
+      <div className="w-10/12 mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <span className="font-semibold text-lg">Insiter</span>
@@ -40,25 +40,23 @@ function Nav() {
             <div className="flex items-center">
               <ScrollLink {...createLinkAttributes("home")}>Home</ScrollLink>
 
-              <ScrollLink {...createLinkAttributes("about")}>About</ScrollLink>
+              <ScrollLink {...createLinkAttributes("packages")}>Packages</ScrollLink>
 
-              <ScrollLink {...createLinkAttributes("projects")}>
-                Projects
+              <ScrollLink {...createLinkAttributes("hosting")}>
+                Hosting
               </ScrollLink>
 
-              <ScrollLink {...createLinkAttributes("services")}>
-                Services
-              </ScrollLink>
-
-              <ScrollLink {...createLinkAttributes("contact")}>
-                <div className="bg-dark-primary hover:text-white dark:hover:text-dark-text dark:bg-dark-primary dark:text-dark-text hover:border-white dark:hover:bg-transparent hover:bg-transparent px-4 py-2 rounded-full cursor-pointer transition border-2 border-transparent">
+              <ScrollLink {...createLinkAttributes("contact")} onClick={() => setMeetingPopupOpen(true)}>
+                <div className="bg-blue-500  px-4 py-2 rounded-xl font-semibold hover:bg-blue-600 transition-all shadow-lg duration-300 ease-in-out hover:scale-110 cursor-pointerborder-2 border-transparent">
                   Contact
                 </div>
+             
               </ScrollLink>
+              <Calendly
+              setPopupOpen={setMeetingPopupOpen}
+              isPopupOpen={isMeetingPopupOpen}
+            />
             </div>
-          </div>
-          <div>
-            <DarkModeToggle />
           </div>
           <div className="md:hidden">
             <button
@@ -108,7 +106,7 @@ function Nav() {
 
           <ScrollLink
             {...createLinkAttributes("contact")}
-            onClick={() => setMenuOpen(false)}
+            onClick={() => setMeetingPopupOpen(true)}
           >
             <div className="bg-dark-primary hover:text-white dark:hover:text-dark-text dark:bg-dark-primary dark:text-dark-text hover:border-white dark:hover:bg-transparent hover:bg-transparent px-4 py-2 rounded-full cursor-pointer transition border-2 border-transparent">
               Contact

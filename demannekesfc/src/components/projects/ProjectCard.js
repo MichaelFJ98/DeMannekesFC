@@ -6,15 +6,14 @@ export default function ProjectCard({ image, alt, link }) {
   };
 
   return (
-    <div className="m-2">
+    <>
       <img
         src={image}
         alt={alt}
         onClick={handleClick}
-        width="500px"
-        height="500px"
-        className="rounded-lg aspect-video object-fill object-center shadow-md transition-transform duration-300 hover:scale-95"
+     
+        className=" rounded-lg shadow-md transition-transform duration-300 hover:scale-95 w-[40rem]"
       />
-    </div>
+    </>
   );
 }

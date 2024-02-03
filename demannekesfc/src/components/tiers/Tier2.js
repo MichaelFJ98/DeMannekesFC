@@ -2,7 +2,7 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
 
-export default function Tier1() {
+export default function Tier2() {
     return (
         <div className="bg-l1 h-full xl:h-[45rem]" id="packages">
             <Fade top distance="20px" duration={1500}>

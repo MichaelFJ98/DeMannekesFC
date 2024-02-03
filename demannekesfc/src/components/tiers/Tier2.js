@@ -3,7 +3,7 @@ import Fade from "react-reveal/Fade";
 
 export default function Tier2() {
     return (
-        <div className="bg-l1 h-full xl:h-[45rem]" id="packages">
+        <div className="bg-l1 h-full xl:h-[45rem] border-c2 border-y" id="packages">
             <div className="bg-c3 w-screen h-full flex justify-center">
                 <div className="flex flex-col lg:flex-row w-10/12 h-full items-center lg:space-x-20 p-4">
                     <div className="w-full lg:w-[38rem] flex flex-col space-y-6">

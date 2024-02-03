@@ -7,7 +7,6 @@ export default function Tier1() {
             <Fade top distance="20px" duration={1500}>
                 <div className="bg-c3 rounded-t-[40px] w-screen h-full flex justify-center">
                     <div className="flex flex-col lg:flex-row w-10/12 h-full items-center lg:space-x-20 p-4">
-                        {/* Hide the image on medium and small screens, show on large and extra-large screens */}
                         <img src="./assets/images/hairdresser/herobg.webp" alt="barberimg" className="hidden md:hidden lg:block xl:block w-full lg:w-[30rem] xl:w-[40rem] rounded-md object-cover" />
                         <div className="w-full lg:w-[38rem] flex flex-col space-y-6">
                             <h1 className="text-4xl font-bold text-l1 tracking-wide text-center lg:text-left">Tier 1 package</h1>

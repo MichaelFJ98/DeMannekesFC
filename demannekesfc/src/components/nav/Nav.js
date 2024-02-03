@@ -84,24 +84,17 @@ function Nav() {
           </ScrollLink>
 
           <ScrollLink
-            {...createLinkAttributes("about")}
+            {...createLinkAttributes("packages")}
             onClick={() => setMenuOpen(false)}
           >
-            About
+            Packages
           </ScrollLink>
 
           <ScrollLink
-            {...createLinkAttributes("projects")}
+            {...createLinkAttributes("hosting")}
             onClick={() => setMenuOpen(false)}
           >
-            Projects
-          </ScrollLink>
-
-          <ScrollLink
-            {...createLinkAttributes("services")}
-            onClick={() => setMenuOpen(false)}
-          >
-            Services
+            Hosting
           </ScrollLink>
 
           <ScrollLink

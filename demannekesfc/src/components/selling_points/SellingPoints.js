@@ -7,20 +7,19 @@ export default function SellingPoints() {
     return (
       <div
         id="SellingPoints"
-        className="bg-l1 flex justify-center"
+        className="bg-l1 flex justify-center py-8"
       >
         <Fade duration={1500}>
-            <div className="flex flex-col w-10/12 ">
-                <div className="border-t border-slate-400 "/>
-                <div className="flex flex-row justify-evenly">
-                    <SellingPoint icon={FaRegStar} title="100% quality and service" size={22}/>
-                    <SellingPoint icon={FaHeadset} title="24/7 hosting and support" size={22}/>
-                    <SellingPoint icon={FaClipboardCheck} title="Tailored web solutions" size={22}/>
-                    <SellingPoint icon={FaPlayCircle} title="Personalized videos" size={22}/>
+            <div className="w-full max-w-6xl px-4"> 
+                <div className="border-t border-slate-400"/>
+                <div className="flex flex-wrap justify-around text-center mt-8">
+                    <SellingPoint icon={FaRegStar} title="100% quality and service" size={22} className="mb-4 w-full sm:w-1/2 lg:w-1/4"/>
+                    <SellingPoint icon={FaHeadset} title="24/7 hosting and support" size={22} className="mb-4 w-full sm:w-1/2 lg:w-1/4"/>
+                    <SellingPoint icon={FaClipboardCheck} title="Tailored web solutions" size={22} className="mb-4 w-full sm:w-1/2 lg:w-1/4"/>
+                    <SellingPoint icon={FaPlayCircle} title="Personalized videos" size={22} className="mb-4 w-full sm:w-1/2 lg:w-1/4"/>
                 </div>
-                
             </div>
         </Fade>
       </div>
     );
-  }
+}

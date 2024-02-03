@@ -1,6 +1,5 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
-import ProjectCard from "../projects/ProjectCard";
 
 export default function Tier1() {
     return(
@@ -8,7 +7,7 @@ export default function Tier1() {
         <Fade top distance="20px" duration={1500}>
             <div className="bg-c3 rounded-t-[40px] w-screen  h-full flex justify-center">
                 <div className="flex flex-row  w-10/12 h-full items-center space-x-20">
-                    <ProjectCard image="./assets/images/hairdresser/herobg.webp" alt="barberimg" link="/barber"/>
+                    <img src="./assets/images/hairdresser/herobg.webp" alt="barberimg" class="w-[40rem] rounded-md"/>
                     <div className="w-[38rem]  flex-col space-y-6">
                         <h1 className="text-4xl font-bold text-l1 tracking-wide">Tier 1 package</h1>
                         <p className="text-l2 leading-7">Introducing our premier package, featuring a foundational website seamlessly integrated with an advanced reservation system. Elevate your experience with the assurance of securing the perfect products tailored just for you. Discover the ultimate solution for a streamlined and efficient online presence.</p>

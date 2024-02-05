@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
           </div>
           {/* Copyright Section */}
-          <div className="border-t dark:border-dark-text border-text w-full">
+          <div className="border-t dark:border-dark-text border-c3 w-full">
             <p className="font-thin text-xs py-7 text-center">
               © {currentYear} Insiter. All rights reserved.
             </p>

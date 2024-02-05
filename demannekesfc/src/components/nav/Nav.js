@@ -101,7 +101,7 @@ function Nav() {
             {...createLinkAttributes("contact")}
             onClick={() => setMeetingPopupOpen(true)}
           >
-            <div className="bg-dark-primary hover:text-white dark:hover:text-dark-text dark:bg-dark-primary dark:text-dark-text hover:border-white dark:hover:bg-transparent hover:bg-transparent px-4 py-2 rounded-full cursor-pointer transition border-2 border-transparent">
+            <div className="bg-blue-500 px-4 py-2 rounded-xl font-semibold border-transparent">
               Contact
             </div>
           </ScrollLink>

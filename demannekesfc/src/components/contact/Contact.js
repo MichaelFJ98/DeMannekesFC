@@ -32,7 +32,7 @@ export default function Contact() {
   return (
     <div
       id="contact"
-      className="bg-c2 dark:bg-dark-background "
+      className="bg-c2 "
     >
       <div className="bg-c3 w-screen rounded-t-[40px] py-10 flex items-center justify-around ">
 
@@ -43,7 +43,7 @@ export default function Contact() {
       <div className="flex flex-col text-center w-7/12 items-center">
         <div>
           <Fade top distance="20px" duration={1500}>
-            <h1 className="font-black tracking-tight text-primary dark:text-dark-primary text-2xl md:text-3xl ">
+            <h1 className="font-black tracking-tight text-primary text-2xl md:text-3xl ">
               In need of a website to improve your business?
             </h1>
           </Fade>
@@ -54,7 +54,7 @@ export default function Contact() {
           </Fade>
         </div>
         <Fade top distance="20px" duration={1500}>
-          <p className="text-center text-text dark:text-dark-text text-xs lg:text-lg w-screen lg:w-full px-2 ">
+          <p className="text-center text-text text-xs lg:text-lg w-screen lg:w-full px-2 ">
             Are you ready to take your business to the next level? Let us create
             a remarkable website that drives growth and success for your brand.
             Together, we'll build something extraordinary.

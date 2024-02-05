@@ -14,9 +14,9 @@ export default function Footer() {
             <div className="text-center md:text-left mb-6 md:mb-0">
               <h1 className="font-bold text-2xl pb-4">SOCIALS</h1>
               <div className="flex gap-2 text-xl justify-center md:justify-start">
-                <FaLinkedinIn className="hover:text-primary dark:hover:text-dark-primary cursor-pointer" />
-                <FaFacebookF className="hover:text-primary dark:hover:text-dark-primary cursor-pointer" />
-                <FaInstagram className="hover:text-primary dark:hover:text-dark-primary cursor-pointer" onClick={() => window.open("https://www.instagram.com/insiter.be/", "_blank")} />
+                <FaLinkedinIn className="hover:text-primary cursor-pointer" />
+                <FaFacebookF className="hover:text-primary cursor-pointer" />
+                <FaInstagram className="hover:text-primary cursor-pointer" onClick={() => window.open("https://www.instagram.com/insiter.be/", "_blank")} />
               </div>
             </div>
             {/* Contact Us Section */}
@@ -27,7 +27,7 @@ export default function Footer() {
             </div>
           </div>
           {/* Copyright Section */}
-          <div className="border-t dark:border-dark-text border-c3 w-full">
+          <div className="border-t border-c3 w-full">
             <p className="font-thin text-xs py-7 text-center">
               © {currentYear} Insiter. All rights reserved.
             </p>

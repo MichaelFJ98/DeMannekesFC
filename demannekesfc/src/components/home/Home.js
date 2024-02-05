@@ -10,7 +10,7 @@ export default function Home() {
 
     const createLinkAttributes = (to) => {
       let className =
-        "text-base font-semibold text-primary hover:underline cursor-pointer hover:bg-zinc-300 px-2 py-4 rounded-2xl";
+        "text-base text-center font-semibold text-primary hover:underline cursor-pointer hover:bg-zinc-300 px-2 py-4 rounded-2xl";
   
       return {
         to,
@@ -24,21 +24,21 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="bg-l1  text-slate-900 h-screen flex flex-row justify-center "
+      className="bg-l1 text-slate-900 h-screen flex flex-row justify-center "
       style={{backgroundImage: `url(${bg})`}}
     >
       <Fade duration={1500}>
-        <div className="flex row justify-start items-center gap-4 sm:gap-6 w-7/12 h-full ">
-          <div className="text-left lg:w-7/12">
+        <div className="flex row justify-start items-center gap-4 sm:gap-6 w-10/12 lg:w-7/12 h-full ">
+          <div className="text-center lg:w-7/12">
             <p className="text-lg sm:text-xl md:text-2xl py-3">
               Hi, we are Insiter
             </p>
 
-            <h1 className="leading-tight text-3xl md:text-4xl text-c3 font-black">
+            <h1 className="leading-tight text-4xl text-c3 font-black">
               Full-Stack Developers
             </h1>
 
-            <h1 className="leading-tight text-3xl md:text-4xl text-c3 font-black ">
+            <h1 className="leading-tight text-4xl text-c3 font-black ">
               From Belgium.
             </h1>
 
@@ -47,12 +47,8 @@ export default function Home() {
               products that are optimized for your clients experience.
             </p>
 
-            <div className="flex flex-row gap-4 items-center py-2">
-              <Button
-                text={"Book an appointment"}
-                fontSize={"font-semibold"}
-                onClick={() => setMeetingPopupOpen(true)}
-              />
+            <div className="flex flex-col md:flex-row gap-4 justify-center md:items-center py-2">
+              <button onClick={() => setMeetingPopupOpen(true)}  className="bg-primary hover:bg-blue-600 hover:scale-110 transition-all shadow-lg duration-300 p-4 rounded-2xl text-l1 font-semibold lg:mx-0">Book an appointment</button>
 
               <ScrollLink 
                 {...createLinkAttributes("packages")}

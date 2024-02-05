@@ -29,7 +29,7 @@ export default function Home() {
     >
       <Fade duration={1500}>
         <div className="flex row justify-start items-center gap-4 sm:gap-6 w-10/12 lg:w-7/12 h-full ">
-          <div className="text-center lg:w-7/12">
+          <div className="text-center lg:text-start lg:w-7/12">
             <p className="text-lg sm:text-xl md:text-2xl py-3">
               Hi, we are Insiter
             </p>
@@ -47,7 +47,7 @@ export default function Home() {
               products that are optimized for your clients experience.
             </p>
 
-            <div className="flex flex-col md:flex-row gap-4 justify-center md:items-center py-2">
+            <div className="flex flex-col md:flex-row gap-4 justify-center lg:justify-start md:items-center py-2">
               <button onClick={() => setMeetingPopupOpen(true)}  className="bg-primary hover:bg-blue-600 hover:scale-110 transition-all shadow-lg duration-300 p-4 rounded-2xl text-l1 font-semibold lg:mx-0">Book an appointment</button>
 
               <ScrollLink 

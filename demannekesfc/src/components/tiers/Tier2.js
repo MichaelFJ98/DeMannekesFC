@@ -17,9 +17,10 @@ export default function Tier2() {
                         <Fade top distance="20px" duration={1500} delay={600}>
                             <button className="bg-primary hover:bg-blue-600 hover:scale-110 transition-all shadow-lg duration-300 p-4 rounded-2xl text-l1 font-semibold lg:mx-0">View example website</button>
                         </Fade>
-                        
+                        <img src="./assets/images/hairdresser/herobg.webp" alt="barberimg" className="block md:hidden w-full rounded-md object-cover" />
                     </div>
                     <img src="./assets/images/hairdresser/herobg.webp" alt="barberimg" className="hidden md:hidden lg:block xl:block w-full lg:w-[30rem] xl:w-[40rem] rounded-md object-cover" />
+                    
                 </div>
             </div>
         </div>

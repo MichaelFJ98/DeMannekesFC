@@ -3,8 +3,8 @@ import Fade from "react-reveal/Fade";
 
 export default function Tier2() {
     return (
-        <div className="bg-l1 h-full xl:h-[45rem]" id="packages">
-            <div className="bg-c3 w-screen h-full flex lg:justify-center p-4 lg-p-0">
+        <div className="bg-c3 h-full xl:h-[45rem]" id="packages">
+            <div className="bg-c2 w-screen h-full flex lg:justify-center p-4 lg-p-0 rounded-xl">
                 <div className="flex flex-col lg:flex-row lg:w-10/12 h-full items-center lg:space-x-20 p-4">
                     <img src="./assets/images/hairdresser/herobg.webp" alt="barberimg" className="hidden md:hidden lg:block xl:block w-full lg:w-[30rem] xl:w-[40rem] rounded-md object-cover" />
                     <div className="w-full lg:w-[38rem] flex flex-col space-y-6">

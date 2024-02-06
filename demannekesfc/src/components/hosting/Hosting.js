@@ -1,5 +1,12 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
+import { FaCheck } from "react-icons/fa";
+
+const features = [
+  "24/7 support",
+  "Security updates",
+  "Monthly website changes per request",
+];
 
 export default function Hosting() {
   return (
@@ -19,6 +26,14 @@ export default function Hosting() {
                   className="md:w-[32rem] py-4 text-c3 leading-7"
                 >Discover worry-free online success with our hosting service! We prioritize top-notch security updates to safeguard your website. Our dedicated support team handles all technical aspects, allowing you to focus on your business. Elevate your digital journey with our hosting solution today!
                 </p>
+                <ul className="list-none space-y-2">
+                                {features.map((feature, index) => (
+                                    <li key={index} className="flex items-center space-x-2 text-black">
+                                        <FaCheck className="text-primary" />
+                                        <p dangerouslySetInnerHTML={{ __html: feature }}></p>
+                                    </li>
+                                ))}
+                            </ul>
               </Fade>
             </div>
             <img src="./assets/images/ssl.png" className="block w-auto md:max-w-[300px] lg:max-w-[400px] xl:max-w-[500px] h-auto" alt="ssl"/>

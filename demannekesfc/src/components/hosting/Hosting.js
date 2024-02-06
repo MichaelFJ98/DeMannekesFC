@@ -23,8 +23,8 @@ export default function Hosting() {
               </Fade>
               <Fade top distance="20px" duration={1500} delay={300}>
                 <p 
-                  className="md:w-[32rem] py-4 text-c3 leading-7"
-                >Discover worry-free online success with our hosting service! We prioritize top-notch security updates to safeguard your website. Our dedicated support team handles all technical aspects, allowing you to focus on your business. Elevate your digital journey with our hosting solution today!
+                  className="md:w-[32rem] py-8 text-c3 leading-7"
+                >Opt for Our Hosting Solution: Experience peace of mind with 24/7 support, robust security updates, and flexible monthly website changes on request. Our service ensures your online presence is secure, supported, and tailored to your needs. Simplify your digital journey with our comprehensive hosting solution.
                 </p>
                 <ul className="list-none space-y-2">
                                 {features.map((feature, index) => (

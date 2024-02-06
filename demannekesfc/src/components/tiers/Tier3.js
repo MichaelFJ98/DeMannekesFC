@@ -19,7 +19,7 @@ export default function Tier3() {
                             <h1 className="text-4xl font-semibold lg:font-bold text-l1 tracking-wide lg:text-left">Tier 3 Package</h1>
                         </Fade>
                         <Fade top distance="20px" duration={1500} delay={300}>
-                            <p className="text-l2 leading-7 lg:text-left">Introducing our premier package, featuring a foundational website seamlessly integrated with an advanced reservation system. Elevate your experience with the assurance of securing the perfect products tailored just for you. Discover the ultimate solution for a streamlined and efficient online presence.</p>
+                            <p className="text-l2 leading-7 lg:text-left">Unleash the ultimate website experience with personalized accounts and effortless online payments. Tier 3 combines the best of connectivity and automation with the sophistication of secure logins and seamless transactions. Elevate your business with the pinnacle of digital convenience and security. Choose Tier 3 for a website that does more.</p>
                             <ul className="list-none space-y-2">
                                 {features.map((feature, index) => (
                                     <li key={index} className="flex items-center space-x-2 text-white">

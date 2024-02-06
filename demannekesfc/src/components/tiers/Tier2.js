@@ -20,7 +20,7 @@ export default function Tier2() {
                             <h1 className="text-4xl font-semibold lg:font-bold text-l1 tracking-wide lg:text-left">Tier 2 Package</h1>
                         </Fade>
                         <Fade top distance="20px" duration={1500} delay={300}>
-                            <p className="text-l2 leading-7 lg:text-left">Introducing our premier package, featuring a foundational website seamlessly integrated with an advanced reservation system. Elevate your experience with the assurance of securing the perfect products tailored just for you. Discover the ultimate solution for a streamlined and efficient online presence.</p>
+                            <p className="text-l2 leading-7 lg:text-left">Experience the perfect blend of automation and connectivity! Dive into effortless booking systems, expanded social media presence, and boosted credibility through visible reviews. Opt for Tier 2 and set your business on the path to digital excellence from the start.</p>
                             <ul className="list-none space-y-2">
                                 {features.map((feature, index) => (
                                     <li key={index} className="flex items-center space-x-2 text-white">

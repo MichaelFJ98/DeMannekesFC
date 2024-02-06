@@ -31,7 +31,7 @@ export default function Tier2() {
                             </ul>
                         </Fade>
                         <Fade top distance="20px" duration={1500} delay={600}>
-                            <button className="bg-primary hover:bg-blue-600 hover:scale-110 transition-all shadow-lg duration-300 p-4 rounded-2xl text-l1 font-semibold lg:mx-0">View example website</button>
+                            <button onClick={() => window.location.href='http://www.insiter.be/barber'} className="bg-primary hover:bg-blue-600 hover:scale-110 transition-all shadow-lg duration-300 p-4 rounded-2xl text-l1 font-semibold lg:mx-0">View example website</button>
                         </Fade>
                         <img src="./assets/images/hairdresser/herobg.webp" alt="barberimg" className="block md:hidden w-full rounded-md object-cover pb-4" />
                     </div>

@@ -9,7 +9,7 @@ export default function Tier2() {
                     
                     <div className="w-full lg:w-[38rem] flex flex-col space-y-6">
                         <Fade top distance="20px" duration={1500}>
-                            <h1 className="text-4xl font-semibold lg:font-bold text-l1 tracking-wide lg:text-left">Tier 2 package</h1>
+                            <h1 className="text-4xl font-semibold lg:font-bold text-l1 tracking-wide lg:text-left">Tier 2 Package</h1>
                         </Fade>
                         <Fade top distance="20px" duration={1500} delay={300}>
                             <p className="text-l2 leading-7 lg:text-left">Introducing our premier package, featuring a foundational website seamlessly integrated with an advanced reservation system. Elevate your experience with the assurance of securing the perfect products tailored just for you. Discover the ultimate solution for a streamlined and efficient online presence.</p>

@@ -10,7 +10,6 @@ export default function Footer() {
       <Fade duration={1500}>
         <div className="container mx-auto px-4 py-10">
           <div className="flex flex-col md:flex-row justify-between text-center md:text-left">
-            {/* Align items at the start for desktop */}
             <div className="flex flex-col items-center md:items-start mb-6 md:mb-0 md:flex-1">
               <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
               <div className="flex gap-4">

@@ -11,13 +11,13 @@ const features = [
 
 export default function Tier2() {
     return (
-        <div className="bg-c3 h-full xl:h-[45rem]" id="packages">
+        <div className="bg-c3 h-full xl:h-[45rem]" id="tier2">
             <div className="bg-c2 w-screen h-full flex lg:justify-center p-4 lg-p-0 rounded-2xl">
                 <div className="flex flex-col md:flex-row lg:w-10/12 h-full justify-around items-center md:space-x-20 p-4">
                     
                     <div className="w-full lg:w-[38rem] flex flex-col space-y-8">
                         <Fade top distance="20px" duration={1500}>
-                            <h1 className="text-4xl font-semibold lg:font-bold text-l1 tracking-wide lg:text-left">Tier 2 Package</h1>
+                            <h1 className="text-4xl font-semibold lg:font-bold text-l1 tracking-wide lg:text-left">Premium Package</h1>
                         </Fade>
                         <Fade top distance="20px" duration={1500} delay={300}>
                             <p className="text-l2 leading-7 lg:text-left">Experience the perfect blend of automation and connectivity! Dive into effortless booking systems, expanded social media presence, and boosted credibility through visible reviews. Opt for Tier 2 and set your business on the path to digital excellence from the start.</p>

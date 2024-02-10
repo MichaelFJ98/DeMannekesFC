@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <div
       id="home"
-      className="bg-l1 text-slate-900 h-screen flex flex-row justify-center "
+      className="bg-l1 text-slate-900 h-screen lg:h-[80vh] flex flex-row justify-center "
       style={{backgroundImage: `url(${bg})`}}
     >
       <Fade duration={1500}>
@@ -51,7 +51,7 @@ export default function Home() {
               <button onClick={() => setMeetingPopupOpen(true)}  className="bg-primary hover:bg-blue-600 hover:scale-110 transition-all shadow-lg duration-300 p-4 rounded-2xl text-l1 font-semibold lg:mx-0">Book an appointment</button>
 
               <ScrollLink 
-                {...createLinkAttributes("packages")}
+                {...createLinkAttributes("tier1")}
               >
                 Our Packages 
               </ScrollLink>
@@ -64,8 +64,8 @@ export default function Home() {
           </div>
 
           <img
-            src="assets/images/MichelNew.png"
-            className="hidden lg:block w-5/12 overflow-hidden bg-zinc-300 rounded-full"
+            src="assets/images/home_img.png"
+            className="hidden lg:block w-7/12 overflow-hidden rounded-full"
           ></img>
         </div>
       </Fade>

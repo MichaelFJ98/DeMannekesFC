@@ -6,7 +6,7 @@ import L from "leaflet";
 function Map() {
   let map;
 
-  const coordinates = [51.96245, 19.2935];
+  const coordinates = [50.85045, 4.34878];
   const zoom = 17;
 
   const name = "Majesty Barber";

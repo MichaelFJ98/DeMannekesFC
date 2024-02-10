@@ -38,7 +38,7 @@ function Reviews() {
       role="region"
       aria-label="Client Reviews"
     >
-      <h1 className="text-3xl font-extrabold mb-2">Reviews</h1>
+      <h1 className="text-4xl font-extrabold mb-2 text-slate-800">Reviews</h1>
       <Divider />
       <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {reviewsData.map((review, index) => (

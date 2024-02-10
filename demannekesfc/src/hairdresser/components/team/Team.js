@@ -37,7 +37,7 @@ function Team() {
       aria-label="Team Members"
     >
       <div className="flex flex-col justify-center items-center">
-        <h1 className="text-3xl font-extrabold mb-2 text-center">
+        <h1 className="text-4xl font-extrabold mb-2 text-center text-slate-800">
           Trained professionals
         </h1>
         <Divider />

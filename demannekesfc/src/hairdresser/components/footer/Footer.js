@@ -5,6 +5,9 @@ function Footer() {
     window.open("https://www.insiter.be", "_blank");
   };
 
+  // Get the current year
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer
       role="contentinfo"
@@ -12,12 +15,17 @@ function Footer() {
       className="border-t mx-4 border-temp-gray mt-24"
     >
       <div className="flex items-center justify-between py-6 font-semibold">
-        <h1>Hair Majesty</h1>
+        <h1 className="text-slate-800">Oak Street 3, Prague</h1>
+        <div className="text-center text-slate-800 py-3">
+        <p>
+          &copy; {currentYear} Hair Majesty
+        </p>
+      </div>
         <p className="text-temp-gray font-normal">
           Made by{" "}
           <span
             onClick={handleInsiterClick}
-            className="text-temp-text md:hover:text-temp-accent transition-colors cursor-pointer"
+            className="md:hover:text-temp-accent transition-colors cursor-pointer text-slate-800 font-bold"
           >
             Insiter
           </span>

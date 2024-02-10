@@ -21,10 +21,10 @@ function Review({ displayName, comment, rating, createTime }) {
   return (
     <div className="border p-4 rounded-md shadow-md flex flex-col overflow-hidden">
       <div className="mb-4">
-        <h2 className="text-lg mb-1 font-semibold">{displayName}</h2>
+        <h2 className="text-lg mb-1 font-semibold text-slate-800">{displayName}</h2>
         <div className="flex space-x-4">
-          <div className="flex items-center">{stars}</div>
-          <div className="text-temp-gray text-sm">{formattedDate}</div>
+          <div className="flex items-center text-slate-800">{stars}</div>
+          <div className="text-temp-gray text-sm text-slate-800">{formattedDate}</div>
         </div>
       </div>
       <p className="mb-4 text-temp-gray overflow-hidden">{comment}</p>

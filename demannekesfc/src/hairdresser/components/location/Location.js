@@ -38,38 +38,38 @@ function Location() {
       id="contact"
       role="region"
       aria-label="Contact Information"
-      className="pt-12 md:pt-24 mx-4 flex flex-col lg:flex-row items-center"
+      className="pt-12 md:pt-24 mx-4 mr-8 flex flex-col lg:flex-row items-center"
     >
       <div className="lg:aspect-square lg:w-1/2 md:pr-8 flex flex-col items-center md:items-start">
-        <h1 className="text-3xl font-extrabold mb-4 text-center">
+        <h1 className="text-4xl font-extrabold mb-4 text-center text-slate-800">
           Where to Find Us
         </h1>
         <Divider />
 
         <div className="mt-6 self-start space-y-4">
           <p
-            className="flex items-center text-lg cursor-pointer md:hover:text-temp-accent transition-colors"
+            className="flex items-center text-lg cursor-pointer md:hover:text-temp-accent transition-colors text-slate-800"
             onClick={() => window.open("tel:+3224455507")}
           >
-            <BiSolidPhoneCall className="text-xl mr-3" />
+            <BiSolidPhoneCall className="text-xl mr-3 text-slate-800" />
             +322 445 55 07
           </p>
           <p
-            className="flex items-center text-lg cursor-pointer md:hover:text-temp-accent transition-colors"
+            className="flex items-center text-lg cursor-pointer md:hover:text-temp-accent transition-colors text-slate-800"
             onClick={() => window.open("mailto:hairmajesty@gmail.com")}
           >
-            <BiEnvelope className="text-xl mr-3" />
+            <BiEnvelope className="text-xl mr-3 text-slate-800" />
             hairmajesty@gmail.com
           </p>
           <p
-            className="flex items-center text-lg cursor-pointer md:hover:text-temp-accent transition-colors"
+            className="flex items-center text-lg cursor-pointer md:hover:text-temp-accent transition-colors text-slate-800"
             onClick={handleInstagramClick}
           >
             <BsInstagram className="text-xl mr-3" />
             @HairMajesty
           </p>
           <div
-            className="flex items-center text-lg cursor-pointer md:hover:text-temp-accent transition-colors"
+            className="flex items-center text-lg cursor-pointer md:hover:text-temp-accent transition-colors text-slate-800"
             onClick={handleGoogleMapsClick}
           >
             <IoLocation className="text-xl mr-3" />
@@ -78,26 +78,26 @@ function Location() {
         </div>
 
         <div className="mt-8 self-start space-y-4">
-          <h2 className="text-xl font-semibold mb-4">Business Hours</h2>
+          <h2 className="text-xl font-semibold mb-4 text-slate-800">Business Hours</h2>
           <div className="flex items-center">
-            <GoClock className="text-xl mr-3" />
+            <GoClock className="text-xl mr-3 text-slate-800" />
             <div>
-              <p className="text-lg">Monday - Thursday:</p>
-              <p className="text-lg">10:00h - 19:00h</p>
+              <p className="text-lg text-slate-800">Monday - Thursday:</p>
+              <p className="text-lg text-slate-800">10:00h - 19:00h</p>
             </div>
           </div>
           <div className="flex items-center">
-            <GoClock className="text-xl mr-3" />
+            <GoClock className="text-xl mr-3 text-slate-800" />
             <div>
-              <p className="text-lg">Friday:</p>
-              <p className="text-lg">10:00h - 17:00h</p>
+              <p className="text-lg text-slate-800">Friday:</p>
+              <p className="text-lg text-slate-800">10:00h - 17:00h</p>
             </div>
           </div>
-          <div className="flex items-center">
+          <div className="flex items-center text-slate-800">
             <GoClock className="text-xl mr-3" />
             <div>
-              <p className="text-lg">Saturday:</p>
-              <p className="text-lg">10:00h - 17:00h</p>
+              <p className="text-lg text-slate-800">Saturday:</p>
+              <p className="text-lg text-slate-800">10:00h - 17:00h</p>
             </div>
           </div>
         </div>

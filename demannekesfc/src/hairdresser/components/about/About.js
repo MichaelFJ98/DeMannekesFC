@@ -20,7 +20,7 @@ function About() {
         />
       </div>
       <div className="w-full lg:w-1/2 flex flex-col justify-center items-center">
-        <h1 className="text-3xl font-extrabold mb-2 text-center">
+        <h1 className="text-4xl font-extrabold mb-2 text-center text-slate-800">
           We care about you
         </h1>
         <Divider />

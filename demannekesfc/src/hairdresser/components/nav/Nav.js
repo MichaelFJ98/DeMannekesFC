@@ -21,9 +21,9 @@ function Nav() {
     let className =
       "block pb-4 md:pb-0 md:inline-block pt-2 md:pt-0 cursor-pointer font-medium text-base md:ml-4 md:mr-4 md:hover:text-temp-accent transition-colors";
 
-    if (to == "contact")
+    if (to === "contact")
       className =
-        "py-1 px-6 md:mr-16 lg:mr-4 ml-2 inline-block border transition-colors duration-300 ease-in-out font-semibold md:hover:bg-temp-accent md:hover:text-black cursor-pointer";
+        "py-1 px-6 md:mr-16 lg:mr-4 ml-2 inline-block border transition-colors duration-300 ease-in-out font-semibold bg-temp-accent rounded-md md:hover:bg-transparent md:hover:text-white cursor-pointer";
 
     return {
       to,
@@ -38,9 +38,9 @@ function Nav() {
     <nav
       role="navigation"
       aria-label="Main Navigation"
-      className={"fixed top-0 left-0 z-10 w-full bg-temp-background text-white"}
+      className={"fixed top-0 left-0 z-10 w-full bg-slate-800 text-white"}
     >
-      <div className="flex max-w-screen-xl mx-auto items-center justify-between h-16">
+      <div className="flex max-w-screen-xl mx-auto items-center justify-between h-20">
         <h2
           className="font-semibold text-xl cursor-pointer ml-4 md:ml-16 lg:ml-4"
           onClick={scrollToTop}

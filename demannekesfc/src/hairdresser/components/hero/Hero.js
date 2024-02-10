@@ -4,11 +4,34 @@ import { IoClose } from "react-icons/io5";
 import { GoClock } from "react-icons/go";
 import { GiPositionMarker } from "react-icons/gi";
 import { BiSolidPhoneCall } from "react-icons/bi";
-import ImageFade from "../ImageFade";
+import { Slide } from 'react-slideshow-image';
+import 'react-slideshow-image/dist/styles.css';
 
 const phone = "+322 445 55 07";
 const bookingURL =
   "https://booking.setmore.com/scheduleappointment/3f967fb4-e07f-4eaa-bb87-9553decfbdc2";
+
+const divStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  backgroundSize: 'cover',
+  height: '400px'
+}
+const slideImages = [
+  {
+    url: '../../../../public/assets/images/hairdresser/herobg.webp',
+    caption: 'Slide 1'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1506710507565-203b9f24669b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1536&q=80',
+    caption: 'Slide 2'
+  },
+  {
+    url: 'https://images.unsplash.com/photo-1536987333706-fc9adfb10d91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80',
+    caption: 'Slide 3'
+  },
+];
 
 const Hero = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -55,30 +78,30 @@ const Hero = () => {
       className="flex flex-col mx-4 lg:flex-row lg:space-x-16 items-center lg:items-start pt-40 text-center lg:text-left"
     >
       <div className="w-full lg:w-1/2">
-        <h1 className="font-bold text-4xl mb-2">Quality Haircuts</h1>
-        <h1 className="font-bold text-4xl mb-2">and Beard Trimming</h1>
-        <p className="text-temp-gray mb-6">
+        <h1 className="font-bold text-6xl mb-2 text-slate-800">Quality Haircuts</h1>
+        <h1 className="font-bold text-5xl mb-2 text-slate-800">and Beard Trimming</h1>
+        <p className="text-temp-gray text-lg mb-6">
           Professional haircuts and beard trimming.
         </p>
         <button
           onClick={openModal}
-          className="bg-temp-accent transition-colors duration-300 ease-in-out md:hover:bg-transparent border md:hover:text-temp-text border-temp-accent py-2 px-4 text-black font-bold"
+          className="bg-temp-accent transition-colors duration-300 ease-in-out md:hover:bg-transparent border md:hover:text-slate-800 border-temp-accent py-2 px-4 text-slate-100 font-bold"
         >
           Book appointment
         </button>
         <div className="flex flex-col lg:flex-row items-center mt-6">
-          <GoClock className="mr-2 text-2xl mb-2 lg:mb-0" />
+          <GoClock className="mr-2 text-2xl mb-2 lg:mb-0 text-slate-800" />
           <div className="flex flex-col justify-center text-temp-gray">
             <p>Monday - Friday</p>
             <p>9:00am - 7:00pm</p>
           </div>
         </div>
         <div className="flex flex-col lg:flex-row items-center mt-4">
-          <GiPositionMarker className="mr-2 text-2xl mb-2 lg:mb-0" />
+          <GiPositionMarker className="mr-2 text-2xl mb-2 lg:mb-0 text-slate-800" />
           <p className="text-temp-gray">Oak Street 3, Prague</p>
         </div>
         <div className="flex flex-col lg:flex-row items-center mt-4">
-          <BiSolidPhoneCall className="mr-2 text-2xl mb-2 lg:mb-0" />
+          <BiSolidPhoneCall className="mr-2 text-2xl mb-2 lg:mb-0 text-slate-800" />
           <p className="text-temp-gray">{phone}</p>
         </div>
         <Modal
@@ -110,10 +133,15 @@ const Hero = () => {
         </Modal>
       </div>
       <div className="w-1/2 hidden lg:block">
-        <ImageFade
-          imageSrc={"assets/images/hairdresser/herobg.webp"}
-          fadeLeft={true}
-        />
+        <Slide>
+          {slideImages.map((slideImage, index) => (
+            <div key={index}>
+              <div style={{ ...divStyle, 'backgroundImage': `url(${slideImage.url})` }}>
+                {/* nothing */}
+              </div>
+            </div>
+          ))}
+        </Slide>
       </div>
     </div>
   );

@@ -12,7 +12,7 @@ function Gallery() {
       id="gallery"
       className="pt-24 mx-4 flex flex-col items-center"
     >
-      <h1 className="text-3xl font-extrabold mb-2">Gallery</h1>
+      <h1 className="text-4xl font-extrabold mb-2 text-slate-800">Gallery</h1>
       <Divider />
 
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4">

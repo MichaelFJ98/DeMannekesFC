@@ -34,13 +34,14 @@ function Nav() {
       <div className="w-10/12 mx-auto px-4 sm:px-6 lg:px-8 ">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <span className="font-semibold text-lg">Insiter</span>
+            <img src="assets/images/logo.png" className="w-5"></img>
+            <span className="font-semibold text-lg pl-2">Insiter</span>
           </div>
           <div className="hidden md:flex md:items-center">
             <div className="flex items-center">
               <ScrollLink {...createLinkAttributes("home")}>Home</ScrollLink>
 
-              <ScrollLink {...createLinkAttributes("packages")}>Packages</ScrollLink>
+              <ScrollLink {...createLinkAttributes("tier1")}>Packages</ScrollLink>
 
               <ScrollLink {...createLinkAttributes("hosting")}>
                 Hosting
@@ -61,7 +62,7 @@ function Nav() {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="block text-white hover:text-temp-secondary focus:outline-none"
+              className="block text-white focus:outline-none"
             >
               {menuOpen ? (
                 <FiX className="h-6 w-6" />
@@ -84,7 +85,7 @@ function Nav() {
           </ScrollLink>
 
           <ScrollLink
-            {...createLinkAttributes("packages")}
+            {...createLinkAttributes("tier1")}
             onClick={() => setMenuOpen(false)}
           >
             Packages

@@ -39,6 +39,7 @@ function Nav() {
       role="navigation"
       aria-label="Main Navigation"
       className={"fixed top-0 left-0 z-10 w-full bg-slate-800 text-white"}
+      style={{ zIndex:  10000 }}
     >
       <div className="flex max-w-screen-xl mx-auto items-center justify-between h-20">
         <h2
@@ -53,19 +54,19 @@ function Nav() {
               {...createLinkAttributes("about")}
               onClick={() => setMenuOpen(false)}
             >
-              About
+              About Us
             </ScrollLink>
             <ScrollLink
               {...createLinkAttributes("team")}
               onClick={() => setMenuOpen(false)}
             >
-              Team
+              Our Team
             </ScrollLink>
             <ScrollLink
               {...createLinkAttributes("services")}
               onClick={() => setMenuOpen(false)}
             >
-              Services
+              Pricing
             </ScrollLink>
             <ScrollLink
               {...createLinkAttributes("gallery")}

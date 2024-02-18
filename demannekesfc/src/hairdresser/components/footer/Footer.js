@@ -15,7 +15,7 @@ function Footer() {
       className="border-t mx-4 border-temp-gray mt-24"
     >
       <div className="flex items-center justify-between py-6 font-semibold">
-        <h1 className="text-slate-800">Oak Street 3, Prague</h1>
+        <span className="text-slate-800">Oak Street 3, Prague</span>
         <div className="text-center text-slate-800 py-3">
         <p>
           &copy; {currentYear} Hair Majesty

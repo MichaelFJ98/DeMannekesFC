@@ -56,8 +56,8 @@ const Hero = () => {
     >
       <div className="w-full lg:w-1/2">
         <h1 className="font-bold text-6xl mb-2 text-slate-800">Quality Haircuts</h1>
-        <h1 className="font-bold text-5xl mb-2 text-slate-800">and Beard Trimming</h1>
-        <p className="text-temp-gray text-lg mb-6">
+        <h1 className="font-bold text-6xl mb-2 text-slate-800">and Beard Trimming</h1>
+        <p className="text-temp-gray text-lg mt-4 mb-6">
           Professional haircuts and beard trimming.
         </p>
         <button

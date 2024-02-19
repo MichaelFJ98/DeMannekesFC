@@ -26,6 +26,6 @@ p {
 }
 
 .content {
-  @apply text-[aliceblue] absolute w-full z-[5] text-center backdrop-blur-[2px] duration-[1s] px-0 py-[15px] left-0 bottom-0;
-  background: #ffffff22;
+  @apply text-[aliceblue] absolute w-full z-[5] text-center backdrop-blur-[5px] duration-[1s] px-0 py-[15px] left-0 bottom-0;
+  background: #00000022;
 }
